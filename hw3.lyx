@@ -1,0 +1,635 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205A - HW3
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Monotone Convergence Theorem
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(i)
+\series default
+ We have 
+\begin_inset Formula $\mathbb{E}X_{n}<\infty$
+\end_inset
+
+ for some n, since we are working with limit, we can assume 
+\begin_inset Formula $\mathbb{E}X_{1}<\infty$
+\end_inset
+
+ (reindex the sequence).
+ Let 
+\begin_inset Formula $Y_{n}=X_{1}-X_{n},Y=X_{1}-X$
+\end_inset
+
+ we have: 
+\begin_inset Formula $0=Y_{1}\le Y_{2}\le Y_{3}\le...,$
+\end_inset
+
+ almost surely, and 
+\begin_inset Formula $\lim Y_{n}=\lim(X_{1}-X_{n})=X_{1}-\lim X_{n}=X_{1}-X=Y.$
+\end_inset
+
+ So 
+\begin_inset Formula $Y_{n}\uparrow Y$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is bounded below by 0, thus 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mathbb{E}Y_{n}=\mathbb{E}Y\Rightarrow\lim_{n\rightarrow\infty}\mathbb{E}[X_{1}-X_{n}]=\mathbb{E}[X_{1}-X]\Rightarrow\lim_{n\rightarrow\infty}\mathbb{E}X_{n}=\mathbb{E}X,$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbb{E}X_{1}<\infty.$
+\end_inset
+
+ (It seems we don't need condition 
+\begin_inset Formula $X_{n}\ge0$
+\end_inset
+
+ ??)
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(ii)
+\series default
+ Let 
+\begin_inset Formula $X_{n}=|X|\mathbb{I}[|X|>n],$
+\end_inset
+
+ then 
+\begin_inset Formula $X_{1}\ge X_{2}\ge X_{3}\ge...$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbb{I}[|X|>m]\ge\mathbb{I}[|X|>n],\forall m<n.$
+\end_inset
+
+ Also 
+\begin_inset Formula $X_{n}\ge0,\forall n$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}X_{1}<\mathbb{E}|X|<\infty.$
+\end_inset
+
+ Also, 
+\begin_inset Formula $\lim_{n\rightarrow\infty}X_{n}=0.$
+\end_inset
+
+ Thus by (i) we have 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mathbb{E}X_{n}=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(iii)
+\series default
+ Let 
+\begin_inset Formula $Y_{n}=X_{n}-X_{1},$
+\end_inset
+
+ then 
+\begin_inset Formula $0\le Y_{n}\uparrow X-X_{1}$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbb{E}X_{1}<\infty.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\lim\mathbb{E}Y_{n}=\mathbb{E}[X-X_{1}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $\mathbb{E}|X|=\infty\Rightarrow\mathbb{E}|X|-\mathbb{E}|X_{1}|=\infty\Rightarrow\mathbb{E}|X-X_{1}|\ge\mathbb{E}\left[|X|-|X_{1}|\right]=\mathbb{E}|X|-\mathbb{E}|X_{1}|=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\mathbb{E}|X-X_{1}|=\infty\Rightarrow\mathbb{E}[X-X_{1}]=\mathbb{E}|X-X_{1}|=\infty$
+\end_inset
+
+ since 
+\begin_inset Formula $X\ge X_{1}$
+\end_inset
+
+ almost surely.
+ So 
+\begin_inset Formula $\lim\mathbb{E}Y_{n}=\infty\Rightarrow\lim\mathbb{E}X_{n}=\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $\mathbb{E}X_{1}<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Else if 
+\begin_inset Formula $\mathbb{E}|X|<\infty\Rightarrow\mathbb{E}X\le\mathbb{E}|X|<\infty.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\lim\mathbb{E}Y_{n}=\mathbb{E}[X-X_{1}]=\mathbb{E}X-\mathbb{E}X_{1}\Rightarrow\lim\mathbb{E}X_{n}=\mathbb{E}X$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbb{E}X_{1}<\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(iv)
+\series default
+ Let 
+\begin_inset Formula $X_{n}=\sum_{i=1}^{n}\mathbb{I}[X\ge i],$
+\end_inset
+
+ then we have 
+\begin_inset Formula $0\le X_{1}=\mathbb{I}[X\ge1]\le X_{2}=\mathbb{I}[X\ge1]+\mathbb{I}[X\ge2]\le X_{3}\le...$
+\end_inset
+
+ We need to prove that 
+\begin_inset Formula $\lim X_{n}=X,$
+\end_inset
+
+ which by definition means 
+\begin_inset Formula $\mathbb{P}\{\omega\mid X_{n}(\omega)\rightarrow X(\omega)\}=1.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ be arbitrarym let 
+\begin_inset Formula $m=X(\omega)$
+\end_inset
+
+ then 
+\begin_inset Formula $m\in\mathbb{N}^{+}.$
+\end_inset
+
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X(\omega)=1,X_{2}(\omega)=2,...,X_{m-1}(\omega)=m-1,X_{m}(\omega)=m,$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall n>m,X_{n}(\omega)=m$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\lim_{n\rightarrow\infty}X_{n}(\omega)=m=X(\omega).$
+\end_inset
+
+ So 
+\begin_inset Formula $\lim X_{n}=X$
+\end_inset
+
+ almost surely.
+ Thus by the monotone convergence theorem, 
+\begin_inset Formula $\lim\mathbb{E}X_{n}=\mathbb{E}X\Rightarrow\sum_{n=1}^{\infty}\mathbb{P}(X\ge n)=\mathbb{E}X.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Problem
+Variance of simple function
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(i) 
+\series default
+We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+{\rm Var}[X]= & \mathbb{E}\left[(X-\mathbb{E}X)^{2}\right]=\mathbb{E}\left[X^{2}\right]-(\mathbb{E}X)^{2}\\
+= & \mathbb{E}\left[\left(\sum_{i=1}^{n}\mathbb{I}[A_{i}]\right)^{2}\right]-\left(\sum_{i=1}^{n}\mathbb{P}[A_{i}]\right)^{2}\\
+= & \sum_{i=1}^{n}\sum_{j=1}^{n}\mathbb{E}\left[\mathbb{I}[A_{i}]\mathbb{I}[A_{j}]\right]-\left(\sum_{i=1}^{n}\mathbb{P}[A_{i}]\right)^{2}\\
+= & \sum_{i=1}^{n}\mathbb{P}[A_{i}]+2\sum_{i\neq j}\mathbb{P}\left[A_{i}\cap A_{j}\right]-\left(\sum_{i=1}^{n}\mathbb{P}[A_{i}]\right)^{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(ii)
+\series default
+ Let 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ be the event that box 
+\begin_inset Formula $i'th$
+\end_inset
+
+ is empty.
+ We need to 
+\begin_inset Formula ${\rm Var}[X]={\rm Var}\left[\sum_{i=1}^{n}\mathbb{I}[A_{i}]\right].$
+\end_inset
+
+ From (i), we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+{\rm Var}[X]= & \sum_{i=1}^{n}\mathbb{P}[A_{i}]+2\sum\mathbb{P}\left[A_{i}\cap A_{j}\right]-\left(\sum_{i=1}^{n}\mathbb{P}[A_{i}]\right)^{2}\\
+= & n\left(\frac{n-1}{n}\right)^{k}+2\frac{n(n-1)}{2}\left(\frac{n-2}{n}\right)^{k}-\left(n\left(\frac{n-1}{n}\right)^{k}\right)^{2}\\
+= & \frac{(n-1)^{k}}{n^{k-1}}+\frac{(n-1)(n-2)^{k}}{n^{k-1}}-\frac{(n-1)^{2k}}{n^{2k-2}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Markov Inequality
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(i)
+\series default
+ Consider 
+\begin_inset Formula $\phi(x)=(x+b)^{2}.$
+\end_inset
+
+ According to the General Markov Inequality, 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}[X\ge a]\le & \frac{\mathbb{E}\phi(X)}{\phi(a)},\forall b\\
+\Rightarrow\mathbb{P}[X\ge a]\le & \frac{\sigma^{2}+b^{2}}{(a+b)^{2}},\forall b\\
+= & \frac{\sigma^{2}+b^{2}}{a^{2}+2ab+b^{2}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We need to find b such that:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{\sigma^{2}+b^{2}}{a^{2}+2ab+b^{2}}\le & \frac{\sigma^{2}}{\sigma^{2}+a^{2}}\\
+\Leftrightarrow\sigma^{4}+\sigma^{2}a^{2}+\sigma^{2}b^{2}+a^{2}b^{2}\le & \sigma^{2}a^{2}+2ab\sigma^{2}+b^{2}\sigma^{2}\\
+\Leftrightarrow\sigma^{4}+a^{2}b^{2}\le & 2ab\sigma^{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+But with A.C.
+ inequality we have: 
+\begin_inset Formula $\sigma^{4}+a^{2}b^{2}\ge2ab\sigma^{2},$
+\end_inset
+
+ the equality hold iff 
+\begin_inset Formula $\sigma^{4}=a^{2}b^{2}\Leftrightarrow b=\sigma^{2}/|a|=\sigma^{2}/a$
+\end_inset
+
+ since 
+\begin_inset Formula $a>0.$
+\end_inset
+
+ So if we pick 
+\begin_inset Formula $b=\sigma^{2}/a,$
+\end_inset
+
+ then we have the inequality that we need to prove.
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+(ii)
+\series default
+ We need to prove:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}[X>0]\ge & \frac{\left(\mathbb{E}X\right)^{2}}{\mathbb{E}X^{2}}\\
+\Leftrightarrow(\mathbb{E}X^{2})\mathbb{P}[X>0]\ge & (\mathbb{E}X)^{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Y=\mathbb{I}[X>0]$
+\end_inset
+
+ then Y is a random variable.
+ According to the Cauchy-Schwarz inequality:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+(\mathbb{E}X^{2})(\mathbb{E}Y^{2})\ge & (\mathbb{E}[XY])^{2}\\
+\Leftrightarrow(\mathbb{E}X^{2})\mathbb{E}Y\ge & (\mathbb{E}[X\mathbb{I}[X>0]])^{2}\\
+\Leftrightarrow\mathbb{E}X^{2}\mathbb{P}[X>0]\ge & (\mathbb{E}X)^{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Chebyshev's other inequality
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be an independent copy of 
+\begin_inset Formula $X.$
+\end_inset
+
+ Since 
+\begin_inset Formula $f(x),g(x)$
+\end_inset
+
+ is an increasing bounded function, and 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ independent, we have: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\big(f(X)-f(Y)\big)\big(g(X)-g(Y)\big)\ge & 0\\
+\Rightarrow f(X)g(X)+f(Y)g(Y)\ge & f(X)g(Y)+f(Y)g(X)\\
+\Rightarrow\mathbb{E}\left[f(X)g(X)+f(Y)g(Y)\right]\ge & \mathbb{E}\left[f(X)g(Y)+f(Y)g(X)\right]\\
+\Rightarrow\mathbb{E}\left[f(X)g(X)\right]+\mathbb{E}\left[f(Y)g(Y)\right]\ge & \mathbb{E}\left[f(X)g(Y)\right]+\mathbb{E}\left[f(Y)g(X)\right]\\
+\Rightarrow2\mathbb{E}\left[f(X)g(X)\right]\ge & \mathbb{E}[f(X)]\mathbb{E}[g(Y)]+\mathbb{E}[f(Y)]\mathbb{E}[g(X)]\\
+\Rightarrow2\mathbb{E}[f(X)g(X)]\ge & 2\mathbb{E}[f(X)]\mathbb{E}[g(X)]\\
+\Rightarrow\mathbb{E}[f(X)g(X)]\ge & \mathbb{E}[f(X)]\mathbb{E}[g(X)]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+Moment Generating Function for 
+\begin_inset Formula $X\sim Poisson(\lambda)$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Proof
+We have
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\exp(uX)\right]= & \sum_{x=0}^{\infty}\exp(ux)\exp(-\lambda)\frac{\lambda^{x}}{x!}\\
+= & \sum_{x=0}^{\infty}\exp(-\lambda)\frac{(\lambda\exp(u))^{x}}{x!}\\
+= & \sum_{x=0}^{\infty}\exp(-\lambda+\lambda\exp u)\exp(-\lambda\exp u)\frac{(\lambda\exp(u))^{x}}{x!}\\
+= & \exp(\lambda(\exp u-1))\sum_{x=0}^{\infty}\exp(-\lambda\exp u)\frac{(\lambda\exp(u))^{x}}{x!}\\
+= & \exp(\lambda(\exp u-1))
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Difference of Poisson random variable
+\end_layout
+
+\begin_layout Proof
+(i) Applying the general Markov Inequality (special version Elementary Large
+ Deviation inequality) we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}[X\ge Y]= & \mathbb{P}[X-Y\ge0]\\
+\le & \inf_{\theta}\exp(-\theta\times0)\mathbb{E}[\exp\{\theta(X-Y)\}]\\
+= & \inf_{\theta}\mathbb{E}[\exp(\theta X)\exp(-\theta Y)]\\
+= & \inf_{\theta}\mathbb{E}[\exp(\theta X)]\mathbb{E}[\exp(-\theta Y)]\\
+= & \inf_{\theta}\exp(\lambda(\exp\theta-1)+2\lambda(\exp-\theta-1))\\
+= & \inf_{\theta}\exp(-3\lambda+\lambda\exp\theta+2\lambda\exp(-\theta))
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Applying the A.C.
+ inequality we have: 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\exp\theta+2\exp(-\theta)\ge & 2\sqrt{2\exp(\theta)\exp(-\theta)}=2\sqrt{2}\\
+\Rightarrow\mathbb{P}[X\ge Y]\le & \exp((-3+\sqrt{8})\lambda)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(Equality for A.C.
+ hold iff 
+\begin_inset Formula $\theta$
+\end_inset
+
+=0)
+\end_layout
+
+\begin_layout Proof
+(ii) Applying the Large Deviation inequality and Cauchy-Schwarz inequality
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}[X\ge Y]\le & \inf_{\theta}\mathbb{E}[\exp(\theta X)\exp(-\theta Y)]\\
+\le & \inf_{\theta}\left(\left(\mathbb{E}[\exp^{2}(\theta X)]\right)\left(\mathbb{E}[\exp^{2}(\theta Y)]\right)\right)^{1/2}\\
+= & \inf_{\theta}\left(\left(\mathbb{E}[\exp(2\theta X)]\right)\left(\mathbb{E}[\exp(2\theta Y)]\right)\right)^{1/2}\\
+= & \inf_{\theta}\big(\exp(\lambda(\exp(2\theta)-1)+2\lambda(\exp(-2\theta)-1))\big)^{1/2}\\
+= & \inf_{\theta}\exp\left(-\frac{3\lambda}{2}+\frac{\lambda}{2}\exp(2\theta)+\lambda\exp(-2\theta)\right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Applying the A.C.
+ inequality we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{1}{2}\exp(2\theta)+\exp(-2\theta)\ge & \sqrt{2}\\
+\Rightarrow\mathbb{P}[X\ge Y]\le & \exp((-\frac{3}{2}+\sqrt{2})\lambda).
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

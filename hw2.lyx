@@ -1,0 +1,1128 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205A - HW2
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Let 
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mu:\mathcal{B}(\mathbb{R}) & \rightarrow\{0,1\}\\
+\mu(B) & \mapsto\begin{cases}
+1 & \exists(0,\epsilon)\subset B\\
+0 & \not\exists
+\end{cases}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Prove that 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is not finitely additive on 
+\begin_inset Formula $\mathcal{B}(\mathbb{R})$
+\end_inset
+
+, and that 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is finitely additive but not countable additive on the field 
+\begin_inset Formula $\mathcal{B}_{0}$
+\end_inset
+
+ of finite disjoint unions of intervals 
+\begin_inset Formula $(a,b].$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+a.
+ Let 
+\begin_inset Formula $A=\mathbb{Q},B=\mathbb{R}\backslash\mathbb{Q}.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\mathbb{Q}\in\mathcal{B}(\mathbb{R})$
+\end_inset
+
+ since each set of one element in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\mathcal{B}(\mathbb{R})$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ is the coutable union of sets of signal rational number.
+ Thus 
+\begin_inset Formula $\mathbb{R}\backslash\mathbb{Q}\in\mathcal{B}(\mathbb{R}).$
+\end_inset
+
+ Now 
+\begin_inset Formula $\mu(\mathbb{Q})=0,\mu(\mathbb{R}\backslash\mathbb{Q})=0$
+\end_inset
+
+ (due to the denseness of rational numbers), but 
+\begin_inset Formula $\mu(\mathbb{Q\cup\mathbb{R}}/\mathbb{Q})=\mu(\mathbb{R})=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}/\mathbb{Q}$
+\end_inset
+
+ are disjoint.
+ Thus 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is not finitely additive on 
+\begin_inset Formula $\mathcal{B}(\mathbb{R}).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+b.
+ Let 
+\begin_inset Formula $(a_{i},b_{i}],i=\bar{1,n}$
+\end_inset
+
+ be pairwise disjoint.
+ Then there are at most one interval that contains 
+\begin_inset Formula $(0,\epsilon),$
+\end_inset
+
+ since if there are two of them, then they are not disjoint.
+ 
+\end_layout
+
+\begin_layout Proof
+Now if there is no interval 
+\begin_inset Formula $(a_{i},b_{i}]$
+\end_inset
+
+ that contains any 
+\begin_inset Formula $(0,\epsilon),$
+\end_inset
+
+ then if 
+\begin_inset Formula $\exists\epsilon>0,(0,\epsilon)\subset\bigcup(a_{i},b_{i}]\Rightarrow\exists i,(0,\epsilon)\in(a_{i},b_{i}]$
+\end_inset
+
+ since 
+\begin_inset Formula $(a_{i},b_{i}]$
+\end_inset
+
+ are disjoint, which is a contradiction.
+ Thus the union also does not contain any 
+\begin_inset Formula $(0,\epsilon).$
+\end_inset
+
+ So 
+\begin_inset Formula $\mu(\bigcup(a_{i},b_{i}])=0=\sum\mu(a_{i},b_{i}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Secone case 
+\begin_inset Formula $\exists!(a_{i},b_{i}]:\exists\epsilon,(0,\epsilon)\in(a_{i},b_{i}].$
+\end_inset
+
+ Then 
+\begin_inset Formula $\sum\mu(a_{i},b_{i}]=1.$
+\end_inset
+
+ And 
+\begin_inset Formula $(0,\epsilon)\in\bigcup(a_{i},b_{i}]\Rightarrow\mu(\bigcup(a_{i},b_{i}])=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+So in both case 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is additive.
+ 
+\end_layout
+
+\begin_layout Proof
+Now we will prove that 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is not coutably additive.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\forall i\in\mathbb{N},\mu\bigg(\big(\frac{1}{i+1},\frac{1}{i}\big]\bigg) & =0\\
+\Rightarrow\sum_{i=1}^{\infty}\mu\bigg(\big(\frac{1}{i+1},\frac{1}{i}\big]\bigg) & =0\\
+\mu\bigg(\bigcup\bigg(\frac{1}{i+1},\frac{1}{i}\big]\bigg) & =\mu\big((0,1]\big)\\
+ & =1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is not countably additive.
+ 
+\end_layout
+
+\begin_layout Problem
+Prove that in the definition of probability measure, countably additive
+ is equivalent to finitely additive and condition 
+\begin_inset Formula $A_{n}\downarrow\emptyset\Rightarrow\mu(A_{n})\rightarrow0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+a.
+ First we'll prove the 
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+ direction.
+ Let 
+\begin_inset Formula $A_{1},A_{2},...$
+\end_inset
+
+ be disjoint sets.
+ Let
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+A= & \bigcup_{i=1}^{\infty}A_{i}\\
+B_{n}= & A\backslash\bigcup_{i=1}^{n}A_{i}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Then 
+\begin_inset Formula $B_{n+1}\subset B_{n},\forall n\in\mathbb{N}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $B=\bigcup_{n=1}^{\infty}B_{n}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $B\neq\emptyset\Rightarrow\exists b\in B\Rightarrow b\in B_{n},\forall n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\Rightarrow & b\in A\wedge b\not\in\bigcup_{i=1}^{n}A_{n},\forall n
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+But since 
+\begin_inset Formula $b\in A\Rightarrow\exists n\in\mathbb{N},b\in A_{n}\Rightarrow b\in\bigcup_{i=1}^{n}A_{n}$
+\end_inset
+
+ which is a contradiction.
+ So 
+\begin_inset Formula $B=\emptyset$
+\end_inset
+
+ or 
+\begin_inset Formula $B_{n}\downarrow\emptyset.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\lim_{n\rightarrow+\infty}\mu(B_{n})=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\Rightarrow\lim_{n\rightarrow\infty}\mu(A\backslash\bigcup_{i=1}^{n}A_{i}) & =0\\
+\Rightarrow\mu(A)-\sum_{i=1}^{\infty}\mu(A_{n}) & \overset{(1)}{=}\lim_{n\rightarrow\infty}\bigg(\mu(A)-\sum_{i=1}^{n}\mu(A_{i})\bigg)\\
+ & \overset{(2)}{=}\lim_{n\rightarrow\infty}\bigg(\mu(A)-\mu\big(\bigcup_{i=1}^{n}A_{i}\big)\bigg)\\
+ & \overset{(3)}{=}\lim_{n\rightarrow\infty}\bigg(\mu\big(A\backslash\bigcup_{i=1}^{n}A_{i}\big)\bigg)\\
+ & =0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Where (1) is true by the definition of series (this series converges because
+ it is increasing and bounded above by 1), (2) is true because of finite
+ additivity, (3) is true because also of finite additivity as 
+\begin_inset Formula $A=\big(\bigcup_{i=1}^{n}A_{i}\big)\cup\big(A\backslash\bigcup_{i=1}^{n}A_{i}\big)$
+\end_inset
+
+ and the two sets on the right are disjoint.
+ 
+\end_layout
+
+\begin_layout Proof
+So we have finite additivity and 
+\begin_inset Formula $A_{n}\downarrow\emptyset\Rightarrow\lim\mu(A_{n})=0$
+\end_inset
+
+ imply countable additivity.
+ 
+\end_layout
+
+\begin_layout Proof
+b.
+ Now we'll prove the 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ direction.
+ Obviously we have finite additivity from countable additivity.
+ Now let 
+\begin_inset Formula $B_{0},B_{1},...$
+\end_inset
+
+ such that 
+\begin_inset Formula $B_{n}\downarrow\emptyset,$
+\end_inset
+
+ we need to prove that 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mu(B_{n})=0.$
+\end_inset
+
+ Let 
+\begin_inset Formula $A=B_{0}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A_{n}=B_{n-1}\backslash B_{n},$
+\end_inset
+
+ then we have 
+\begin_inset Formula $A_{n}'s$
+\end_inset
+
+ are disjoint, 
+\begin_inset Formula $A=\bigcup_{i=1}^{\infty}A_{i},$
+\end_inset
+
+ and 
+\begin_inset Formula $A=B_{n}\cup\bigcup_{i=1}^{n}A_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mu\bigg(\bigcup_{i=1}^{\infty}A_{i}\bigg) & =\sum_{i=1}^{\infty}\mu(A_{n})\\
+\Rightarrow\lim_{n\rightarrow\infty}\mu(B_{n}) & =\lim_{n\rightarrow\infty}\mu(A/\bigcup_{i=1}^{n-1}A_{i})\\
+ & =\lim_{n\rightarrow\infty}(\mu(A)-\mu(\bigcup_{i=1}^{n-1})\\
+ & =\mu(A)-\lim_{n\rightarrow\infty}\sum_{i=1}^{n}\mu(A_{i})\\
+ & =0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So we have countable additivity implies finite additivity and 
+\begin_inset Formula $A_{n}\downarrow\emptyset\Rightarrow\lim_{n\rightarrow\infty}\mu(A_{n})=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Two separated measures for a sigma algebra generated from a collection of
+ sets that have measure agree on the collection of sets.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $S=\{1,2,3,4\},\mathcal{A}=\{\{1,2\},\{1,3\}\}.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\mathcal{S}=\sigma(\mathcal{A})=2^{S}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Define:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mu:\mathcal{S} & \rightarrow\mathbb{R}\\
+\{1\} & \mapsto\frac{1}{2}\\
+\{2\} & \mapsto0\\
+\{3\} & \mapsto0\\
+\{4\} & \mapsto\frac{1}{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Then 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is a probability measure and 
+\begin_inset Formula $\mu(\{1,2\})=\mu(\{1,3\})=\frac{1}{2}.$
+\end_inset
+
+ Define:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\nu:\mathcal{S} & \rightarrow\mathbb{R}\\
+\{1\} & \mapsto0\\
+\{2\} & \mapsto\frac{1}{2}\\
+\{3\} & \mapsto\frac{1}{2}\\
+\{4\} & \mapsto0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Then 
+\begin_inset Formula $\nu$
+\end_inset
+
+ is also a probability measure and 
+\begin_inset Formula $\nu(\{1,2\})=\mu(\{1,3\})=\frac{1}{2}.$
+\end_inset
+
+ But apparently 
+\begin_inset Formula $\mu\neq\nu.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+Let 
+\begin_inset Formula $(S,\mathcal{S},\mu)$
+\end_inset
+
+ be the probability measure triple.
+ 
+\begin_inset Formula $\forall A,B\in\mathcal{S},\mu(A\cup B)\le\mu(A)+\mu(B).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+The proof follows easily from the countable additivity of probability measure:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mu(A\cup B) & =\mu((A\backslash B)\cup(B\backslash A)\cup(A\cap B))\\
+ & =\mu(A\backslash B)+\mu(B\backslash A)+\mu(A\cap B)\\
+ & \le\mu(A\backslash B)+\mu(B\backslash A)+2\mu(A\cap B)\\
+ & =\mu(A)+\mu(B)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The equality holds iff 
+\begin_inset Formula $A,B$
+\end_inset
+
+ are disjoint.
+ 
+\end_layout
+
+\begin_layout Proof
+Similarly we have the property for finite number of set, as well as countable
+ number of sets.
+\end_layout
+
+\begin_layout Lemma
+Let 
+\begin_inset Formula $A,B,C,D$
+\end_inset
+
+ be sets.
+ Then 
+\begin_inset Formula $(A\cup B)\Delta(C\cup D)\subset(A\Delta C)\cup(B\Delta D)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $x\in(A\cup B)\Delta(C\cup D)$
+\end_inset
+
+ be arbitrary.
+ W.L.O.G assume that 
+\begin_inset Formula $x\in A\cup B\wedge x\not\in C\cup D$
+\end_inset
+
+.
+ Thus:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & x\in A\wedge x\not\in C\\
+\Rightarrow & x\in A\Delta C\\
+ & x\in B\wedge x\not\in D\\
+\Rightarrow & x\in B\Delta D\\
+\Rightarrow & x\in(A\Delta C)\cup(B\Delta D)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $(A\cup B)\Delta(C\cup D)\subset(A\Delta C)\cup(B\Delta D)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Similarly we have the property for arbitrary number of sets: 
+\begin_inset Formula $\bigg(\bigcup A_{i}\bigg)\Delta\bigg(\bigcup B_{i}\bigg)\subset\bigcup(A_{i}\Delta B_{i}).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Problem
+Measure on a field and 
+\begin_inset Formula $\sigma-field.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\mathcal{T}=\{B\in\mathcal{S}\mid\forall\epsilon>0,\exists A\in\mathcal{F},\mu(B\Delta A)<\epsilon\}$
+\end_inset
+
+.
+ We will prove that 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-algebra.$
+\end_inset
+
+ Given that 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-algebra,$
+\end_inset
+
+ it follows that 
+\begin_inset Formula $\mathcal{S}\subset\mathcal{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{T\subset\mathcal{S}}$
+\end_inset
+
+ thus 
+\begin_inset Formula $\mathcal{S}=\mathcal{T}$
+\end_inset
+
+ and so we have any 
+\begin_inset Formula $\forall B\in\mathcal{S},\forall\epsilon>0,\exists A\in\mathcal{F},\mu(A\Delta B)=0.$
+\end_inset
+
+ Now let's prove that 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-algebra.$
+\end_inset
+
+ We will use the two lemmas above throughout this proof.
+ We'll check the three condition:
+\end_layout
+
+\begin_layout Proof
+a.
+ Since 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is a field 
+\begin_inset Formula $\Rightarrow\mathcal{F}\neq\emptyset.$
+\end_inset
+
+ But 
+\begin_inset Formula $\mathcal{F}\subset\mathcal{T}\Rightarrow\mathcal{T}\neq\emptyset.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+b.
+ Let 
+\begin_inset Formula $B\in\mathcal{T}$
+\end_inset
+
+ be arbitrary.
+ Then:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\forall\epsilon>0,\exists A\in\mathcal{F}, & \mu(B\Delta A)<\epsilon\\
+ & B\Delta A=B^{C}\Delta A^{C}\\
+\Rightarrow & \mu(B^{C}\Delta A^{C})<\epsilon
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $A\in\mathcal{F}\Rightarrow A^{C}\in\mathcal{F}.$
+\end_inset
+
+ So we found 
+\begin_inset Formula $A^{C}\in\mathcal{F}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mu(B^{C}\Delta A^{C})<\epsilon.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $B^{C}\in\mathcal{T}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+c.
+ Let 
+\begin_inset Formula $\mathcal{B}=\{B_{i}\in\mathcal{T}\mid i\in\mathbb{N}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ Let 
+\begin_inset Formula $C_{1}=B_{1},C_{n}=B_{n}\backslash\bigcup_{i=1}^{n-1}B_{i},\forall n>1.$
+\end_inset
+
+ Then we have 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ are disjoint and 
+\begin_inset Formula $\bigcup_{i=1}^{n}B_{i}=\bigcup_{i=1}^{n}C_{i}$
+\end_inset
+
+.
+ We also have 
+\begin_inset Formula $C_{i}\in\mathcal{S},\forall i\in\mathbb{N}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $B=\bigcup_{i=1}^{\infty}B_{i}=\bigcup_{i=1}^{\infty}C_{i}.$
+\end_inset
+
+ Then we have 
+\begin_inset Formula $\sum_{i=1}^{n}\mu(C_{i})$
+\end_inset
+
+ is an increasing series with limit equal to 
+\begin_inset Formula $\mu(B).$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\exists N\in\mathbb{N},\sum_{i=N+1}^{\infty}\mu(C_{i})<\epsilon/2.$
+\end_inset
+
+ Now,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\forall i\le N,\exists A_{i}\in\mathcal{F},\mu(A_{i}\Delta B_{i}) & <\epsilon/(2N)\\
+\Rightarrow\mu(\bigcup_{i=1}^{N}B_{i}\Delta\bigcup_{i=1}^{N}A_{i}) & \le\mu(\bigcup_{i=1}^{N}B_{i}\Delta A_{i})\\
+ & \le\sum_{i=1}^{N}\mu(B_{i}\Delta A_{i})\\
+ & <N\frac{\epsilon}{2N}=\frac{\epsilon}{2}.
+\end{alignat*}
+
+\end_inset
+
+ So let 
+\begin_inset Formula $A=\bigcup_{i=1}^{N}A_{i}$
+\end_inset
+
+ then 
+\begin_inset Formula $A\in\mathcal{F}$
+\end_inset
+
+ since 
+\begin_inset Formula $A_{i}\in\mathcal{F},\forall i\le N.$
+\end_inset
+
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\bigcup_{i=1}^{\infty}B_{i} & =\bigcup_{i=1}^{\infty}C_{i}\\
+ & =\bigg(\bigcup_{i=1}^{N}C_{i}\bigg)\cup\bigg(\bigcup_{i=N+1}^{\infty}C_{i}\bigg)\\
+ & =\bigg(\bigcup_{i=1}^{N}B_{i}\bigg)\cup\bigg(\bigcup_{i=N+1}^{\infty}C_{i}\bigg)\\
+\Rightarrow\mu\bigg(\big(\bigcup_{i=1}^{\infty}B_{i}\big)\Delta A\bigg) & \le\mu\bigg(\bigg(\bigcup_{i=1}^{N}B_{i}\Delta A\bigg)\cup\bigg(\bigcup_{i=N+1}^{\infty}C_{i}\Delta\emptyset\bigg)\bigg)\\
+ & \le\mu\bigg(\bigcup_{i=1}^{N}B_{i}\Delta A\bigg)+\mu\bigg(\bigcup_{i=N+1}^{\infty}C_{i}\Delta\emptyset\bigg)\\
+ & =\mu\bigg(\bigcup_{i=1}^{N}B_{i}\Delta A\bigg)+\mu\bigg(\bigcup_{i=N+1}^{\infty}C_{i}\bigg)\\
+ & \le\mu\bigg(\bigcup_{i=1}^{N}B_{i}\Delta A\bigg)+\sum_{i=N+1}^{\infty}\mu(C_{i})\\
+ & <\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\bigcup_{i=1}^{\infty}B_{i}\in\mathcal{T}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+From a., b., and c., we have 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-algebra.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+Any open subset of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is a countable union of disjoint open intervals.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $U\subset\mathbb{R}$
+\end_inset
+
+ be an arbitrary open set.
+ Define a relation in 
+\begin_inset Formula $U$
+\end_inset
+
+: 
+\begin_inset Formula $\forall a,b\in U,a\sim b\Leftrightarrow(a,b)\subset U\vee(b,a)\subset U.$
+\end_inset
+
+ It follows that this relation is an equivalence relation, and the equivalent
+ classes are pairwise disjoint.
+ Let 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ be the set of equivalence classes.
+ Then 
+\begin_inset Formula $U=\bigcup\mathcal{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is countable (since each element in 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ contains at least one rational number, and there are only countable number
+ of rational number).
+ Also, each equivalent class in 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is an open interval.
+ Thus we have the proof.
+ 
+\end_layout
+
+\begin_layout Problem
+Approximate Lebesgue integrable function with continuous function
+\end_layout
+
+\begin_layout Proof
+We will prove through three steps.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ 
+\end_layout
+
+\begin_layout Proof
+a.
+ By the construction of Lebesque integration, integration of a (non-negative)
+ function f on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ w.r.t.
+ Lebesque measure 
+\begin_inset Formula $dL$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $\sup\{\int sdL\mid s\le f,s=\sum_{i=1}^{n}a_{i}1_{A_{i}},Y_{i}\in\mathcal{B}([0,1]),a_{i}\in\mathbb{R}^{+}\}$
+\end_inset
+
+.
+ As such 
+\begin_inset Formula $\exists s=\sum_{i=1}^{n}a_{i}1_{A_{i}},\int\mid f(x)-s(x)\mid dx<\epsilon/2.$
+\end_inset
+
+ For a general function (not neccessary non-negative), we can use the same
+ trick in defining integration of 
+\begin_inset Formula $f^{-},f^{+},$
+\end_inset
+
+ and we'll also have a simple function 
+\begin_inset Formula $g(x)=\sum_{i=1}^{n}b_{i}1_{B_{i}},B_{i}\in\mathcal{B}([0,1]),b_{i}\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\int\mid f(x)-g(x)\mid dx<\epsilon/3.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+b.
+ Now for each 
+\begin_inset Formula $B_{i}\in\mathcal{B}([0,1]),$
+\end_inset
+
+ by the regularity of Lebesque measure, 
+\begin_inset Formula $\exists C_{i}$
+\end_inset
+
+ open, 
+\begin_inset Formula $B_{i}\subset C_{i},\mu(C_{i}\backslash B_{i})<\epsilon/(3|b_{i}|)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $h(x)=\sum_{i=1}^{n}b_{i}1_{C_{i}},$
+\end_inset
+
+ then 
+\begin_inset Formula $\int\mid g(x)-h(x)\mid dx<\epsilon/3.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+c.
+ For each 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ open, 
+\begin_inset Formula $C_{i}=\bigcup_{i=1}^{\infty}D_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ pairwise disjoint and open interval (Lemma 3).
+ Now 
+\begin_inset Formula $\mu(C_{i})=\mu(\bigcup_{i=1}^{\infty}D_{i})=\sum_{i=1}^{\infty}\mu(D_{i})$
+\end_inset
+
+, for 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the Lebesque measure.
+ By the definition of limit, 
+\begin_inset Formula $\exists N_{i},\forall n\ge N_{i},|\mu(C_{i})-\sum_{i=1}^{n}\mu(D_{i})|<\epsilon/(3|b_{i}|).$
+\end_inset
+
+ Let 
+\begin_inset Formula $k(x)=\sum_{i=1}^{n}b_{i}\sum_{j=1}^{N_{i}}1_{D_{ij}}$
+\end_inset
+
+ for 
+\begin_inset Formula $D_{ij}'s$
+\end_inset
+
+ are open intervals.
+ Then 
+\begin_inset Formula $\int\mid h(x)-k(x)\mid dx<\epsilon/3.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+d.
+ 
+\begin_inset Formula $k(x)$
+\end_inset
+
+ can be rewritten as 
+\begin_inset Formula $\sum_{i=1}^{N}e_{i}1_{E_{i}}$
+\end_inset
+
+ for 
+\begin_inset Formula $E_{i}'s$
+\end_inset
+
+ are disjoint open interval.
+ Define 
+\begin_inset Formula $l(x)$
+\end_inset
+
+ such as 
+\begin_inset Formula $l(x)=0,\forall x\not\in\bigcup_{i=1}^{N}E_{i}.$
+\end_inset
+
+ For each 
+\begin_inset Formula $D_{i}=(a_{i},b_{i}),$
+\end_inset
+
+ define 
+\begin_inset Formula $l(a_{i})=l(b_{i})=0,l(x)=2-\frac{2}{b_{i}-a_{i}}\mid2x-a_{i}-b_{i}\mid,$
+\end_inset
+
+ then 
+\begin_inset Formula $l(x)$
+\end_inset
+
+ has an isosceles triangle shape with area equal to 
+\begin_inset Formula $|b_{i}-a_{i}|.$
+\end_inset
+
+ Then we have 
+\begin_inset Formula $\int|k(x)-l(x)|dx=0$
+\end_inset
+
+ and 
+\begin_inset Formula $l(x)$
+\end_inset
+
+ is continuous.
+ 
+\end_layout
+
+\begin_layout Proof
+From a., b., c., and d., apply the triangle inequality for the absolute value,
+ we have
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\int\mid f(x)-l(x)\mid dx<3\epsilon/3=\epsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $l(x)$
+\end_inset
+
+ is continuous.
+ 
+\end_layout
+
+\end_body
+\end_document
