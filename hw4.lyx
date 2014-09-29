@@ -356,10 +356,20 @@ Prove that:
 
 \begin_layout Lemma
 \begin_inset Formula 
-\begin{alignat*}{1}
-\lim\sup A_{n}\cap\lim\sup A_{n+1}= & \lim\sup A_{n}\cap A_{n+1}^{C}\\
-= & \lim\sup A_{n}^{C}\cap A_{n+1}
-\end{alignat*}
+\begin{equation}
+\lim\sup A_{n}\cap\lim\sup A_{n+1}=\lim\sup A_{n}\cap A_{n+1}^{C}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{equation}
+\lim\sup A_{n}\cap\lim\sup A_{n+1}=\lim\sup A_{n}^{C}\cap A_{n+1}
+\end{equation}
 
 \end_inset
 
@@ -398,6 +408,161 @@ Note that it suffices to show just one of the equality, as the second follows
 \end_inset
 
  Direction.
+ Let 
+\begin_inset Formula $\omega\in LHS$
+\end_inset
+
+ of (1).
+ We will need to prove that 
+\begin_inset Formula $\omega\in RHS$
+\end_inset
+
+ of (1), which means 
+\begin_inset Formula $\omega$
+\end_inset
+
+ happens infinitely often in 
+\begin_inset Formula $A_{n}\cap A_{n+1}^{C}.$
+\end_inset
+
+ This is equivalent to proving 
+\begin_inset Formula $\forall n\in\mathbb{N},\exists k>n:\omega\in A_{k}\cap A_{k+1}^{C}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ be arbitrary.
+ Let 
+\begin_inset Formula $m\ge n$
+\end_inset
+
+ be such that 
+\begin_inset Formula $\omega\in A_{m}.$
+\end_inset
+
+ m exists because 
+\begin_inset Formula $\omega$
+\end_inset
+
+ happens infinitely often in 
+\begin_inset Formula $A_{n}.$
+\end_inset
+
+ Now let 
+\begin_inset Formula $k=\inf\{j>m:\omega\in A_{j}^{C}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+First case: 
+\begin_inset Formula $k=m+1.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\omega\in A_{k}^{C}\cap A_{m}=A_{k}^{C}\cap A_{k-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Second case: 
+\begin_inset Formula $k\ge m+2.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\omega\not\in A_{k-1}^{C}$
+\end_inset
+
+ since k is the smallest such index bigger than m.
+ 
+\begin_inset Formula $\Rightarrow\omega\in A_{k-1}\Rightarrow\omega\in A_{k}^{C}\cap A_{k-1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+So in both case: 
+\begin_inset Formula $\omega\in A_{k}^{C}\cap A_{k-1}.$
+\end_inset
+
+ Thus we have the 
+\begin_inset Formula $\subset$
+\end_inset
+
+ direction.
+ 
+\end_layout
+
+\begin_layout Lemma
+Let 
+\begin_inset Formula $(\Omega,\mathcal{A},\mathbb{P})$
+\end_inset
+
+ be a probability space, and 
+\begin_inset Formula $A_{n}\in\mathcal{A},\forall n\ge1$
+\end_inset
+
+.
+ Then:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{equation}
+\mathbb{P}\left[\lim\inf A_{n}\right]\le\lim\inf\mathbb{P}\left[A_{n}\right]\le\lim\sup\mathbb{P}\left[A_{n}\right]\le\mathbb{P}\left[\lim\sup A_{n}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\lim\sup A_{n}\right]= & \lim_{n\rightarrow\infty}\mathbb{P}\left[\bigcup_{k=n}^{\infty}A_{k}\right]\ge\lim_{n\rightarrow}\sup\mathbb{P}\left[A_{n}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left(\lim\inf A_{n}\right)^{C}= & \lim\sup A_{n}^{C}\\
+\Rightarrow\mathbb{P}\left[\lim\inf A_{n}\right]= & 1-\mathbb{P}\left[\lim\sup A_{n}^{C}\right]\\
+\le & 1-\lim\sup\mathbb{P}\left[A_{n}^{C}\right]\\
+= & \lim\inf\mathbb{P}\left[A_{n}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And obviously, 
+\begin_inset Formula $\lim\inf\mathbb{P}\left[A_{n}\right]\le\lim\sup\mathbb{P}\left[A_{n}\right].$
+\end_inset
+
  
 \end_layout
 
@@ -438,6 +603,169 @@ We have:
 \le & \lim\inf\mathbb{P}A_{n}=0
 \end{alignat*}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For arbitrary set 
+\begin_inset Formula $A,B,$
+\end_inset
+
+ we have 
+\begin_inset Formula $A\subset\left[(A\cap B)\cup B^{C}\right]$
+\end_inset
+
+.
+ Thus: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\lim\sup A_{n}\right]\le & \mathbb{P}\left[\lim\sup A_{n}\cap\lim\sup A_{n}^{C}\right]+\mathbb{P}\left[\left(\lim\sup A_{n}^{C}\right)^{C}\right]\\
+= & \mathbb{P}\left[\lim\sup A_{n}^{C}\cap A_{n+1}\right]+\mathbb{P}\left[\lim\inf A_{n}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{P}\left[\lim\sup A_{n}^{C}\cap A_{n+1}\right]=0$
+\end_inset
+
+ according to Borel Cantelli Lemma 1.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{P}\left[\lim\inf A_{n}\right]\le\lim\inf\mathbb{P}A_{n}=0$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\mathbb{P}\left[\lim\sup A_{n}\right]=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Normal Dist
+\end_layout
+
+\begin_layout Proof
+(a) We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{z\rightarrow\infty}\frac{\mathbb{P}\left[Z>z\right]}{\frac{1}{z\sqrt{2\pi}}\exp\left(-\frac{1}{2}z^{2}\right)}= & \lim_{z\rightarrow\infty}\frac{\int_{z}^{\infty}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}x^{2}\right)dx}{\frac{1}{z\sqrt{2\pi}}\exp\left(-\frac{1}{2}z^{2}\right)}\\
+\overset{L'Hopital}{=} & \lim_{z\rightarrow\infty}\frac{-\exp\left(-\frac{1}{2}z^{2}\right)}{-\frac{1}{z^{2}}\exp\left(-\frac{1}{2}z^{2}\right)-\frac{1}{z}z\exp\left(-\frac{1}{2}z^{2}\right)}\\
+= & \lim_{z\rightarrow\infty}\frac{1}{\frac{1}{z^{2}}+1}=1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(b) For a constant 
+\begin_inset Formula $a>0$
+\end_inset
+
+, from (a) we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X_{n}>a\sqrt{2\log n}\right]\sim & \frac{1}{\sqrt{2\pi}a\sqrt{2\log n}}\exp\left(-\frac{1}{2}a^{2}2\log n\right)\\
+= & \frac{1}{2a\sqrt{\pi}\sqrt{\log n}n^{a^{2}}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From calculus, we have 
+\begin_inset Formula $\sum\frac{1}{n^{a}\log n}$
+\end_inset
+
+ converges for 
+\begin_inset Formula $a>1,$
+\end_inset
+
+ diverges for 
+\begin_inset Formula $0\le a\le1$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $a=1.$
+\end_inset
+
+ From the comparision test for series, we have: 
+\begin_inset Formula $\sum_{i=1}^{n}\mathbb{P}\left[X_{n}>a\sqrt{2\log n}\right]$
+\end_inset
+
+ also converges for 
+\begin_inset Formula $a>1,$
+\end_inset
+
+ diverges for 
+\begin_inset Formula $0\le a\le1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary, 
+\begin_inset Formula $(\epsilon<1).$
+\end_inset
+
+ Then:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\sum_{i=1}^{n}\mathbb{P}\left[X_{n}>(1+\epsilon)\sqrt{2\log n}\right]= & b<\infty\\
+\overset{BC1}{\Rightarrow}\mathbb{P}\left[\lim\sup\frac{X_{n}}{\sqrt{2\log n}}>1+\epsilon\right]= & 0\\
+\lim_{n\rightarrow\infty}\sum_{i=1}^{n}\mathbb{P}\left[X_{n}>(1-\epsilon)\sqrt{2\log n}\right]= & \infty\\
+\overset{BC2}{\Rightarrow}\mathbb{P}\left[\lim\sup\frac{X_{n}}{\sqrt{2\log n}}>1-\epsilon\right]= & 1\\
+\Rightarrow\mathbb{P}\left[\lim\sup\frac{X_{n}}{\sqrt{2\log n}}\le1-\epsilon\right]= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus for arbitrary 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\Rightarrow\mathbb{P}\left[\lim\sup\frac{X_{n}}{\sqrt{2\log n}}\le1-\epsilon\right]=\mathbb{P}\left[\lim\sup\frac{X_{n}}{\sqrt{2\log n}}>1+\epsilon\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\mathbb{P}\left[\lim\sup\frac{X_{n}}{\sqrt{2\log n}}=1\right]=1$
 \end_inset
 
 
