@@ -302,6 +302,105 @@ Thus
 .
 \end_layout
 
+\begin_layout Lemma
+Prove that:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim\sup A_{n}\cap B_{n}\subset & \lim\sup A_{n}\cap\lim\sup B_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+A_{n}\cap B_{n}\subset & A_{n},\forall n\\
+\Rightarrow\bigcup_{k=n}^{\infty}A_{k}\cap B_{k}\subset & \bigcup_{k=n}^{\infty}A_{k}\\
+\Rightarrow\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_{k}\cap B_{k}\subset & \bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_{k}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Similarly:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_{k}\cap B_{k}\subset & \bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}B_{k}\\
+\Rightarrow\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_{k}\cap B_{k}\subset & \left[\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_{k}\right]\cup\left[\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}B_{k}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+Prove that:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim\sup A_{n}\cap\lim\sup A_{n+1}= & \lim\sup A_{n}\cap A_{n+1}^{C}\\
+= & \lim\sup A_{n}^{C}\cap A_{n+1}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This proof follows directly from the book The Borel Cantelli Lemma by Tapas
+ Kumar Chandra.
+ 
+\end_layout
+
+\begin_layout Proof
+Note that it suffices to show just one of the equality, as the second follows
+ by replacing 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ by 
+\begin_inset Formula $A_{n}^{C}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\supset$
+\end_inset
+
+ Direction follows from lemma 1.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\subset$
+\end_inset
+
+ Direction.
+ 
+\end_layout
+
 \begin_layout Problem
 Borel Cantelli.
  Given:
@@ -328,7 +427,20 @@ Prove:
 \end_layout
 
 \begin_layout Proof
-a
+We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\lim\sup A_{n}^{C}\cap A_{n+1}\right]\le & \mathbb{P}\left[\lim\sup A_{n}^{C}\right]\\
+= & \mathbb{P}\left[\lim\inf A_{n}\right]\\
+\le & \lim\inf\mathbb{P}A_{n}=0
+\end{alignat*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
