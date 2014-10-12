@@ -1,0 +1,1062 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{bbm}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205A - Homework 6
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $(X_{i})$
+\end_inset
+
+ be independent, 
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i},S_{n}^{*}=\max_{i\le n}\left|S_{i}\right|.$
+\end_inset
+
+ Prove that:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[S_{n}^{*}>2a\right]\le & \frac{\mathbb{P}\left[\left|S_{n}\right|>a\right]}{\min_{j\le n}\mathbb{P}\left[\left|S_{n}-S_{j}\right|\le a\right]},a>0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left(\left|S_{j}\right|>2a\right)\wedge\left(\left|S_{n}-S_{j}\right|\le2a\right)\Rightarrow\left(\left|S_{n}\right|>a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\left\{ \omega\bigg|\left(\left|S_{j}(\omega)\right|>2a\right)\wedge\left(\left|S_{n}(\omega)-S_{j}(\omega)\right|\le a\right)\right\} \subset\left\{ \omega\bigg|\left(\left|S_{n}(\omega)\right|>a\right)\right\} $
+\end_inset
+
+ (*)
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $A_{j}=\left\{ \omega\bigg|\left(\left|S_{j}(\omega)\right|>2a\right)\wedge\left(\left|S_{k}(\omega)\right|\le2a,\forall k\in\{1,...,j-1\}\right)\right\} $
+\end_inset
+
+, then 
+\begin_inset Formula $A_{j}$
+\end_inset
+
+ are disjoint.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $B_{j}=\left\{ \omega\bigg|\left|S_{n}(\omega)-S_{j}(\omega)\right|\le a\right\} $
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(*)$
+\end_inset
+
+ is true for all j, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{P}\bigcup_{j=1}^{n}\left(A_{j}\cap B_{j}\right)\le\mathbb{P}\left\{ \omega\bigg|\left(\left|S_{n}(\omega)\right|>a\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Leftrightarrow\sum_{j=1}^{n}\mathbb{P}\left(A_{j}\cap B_{j}\right)\le\mathbb{P}\left\{ \omega\bigg|\left(\left|S_{n}(\omega)\right|>a\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Leftrightarrow\sum_{j=1}^{n}\mathbb{P}\left[A_{j}\right]\mathbb{P}\left[B_{j}\right]$
+\end_inset
+
+ because 
+\begin_inset Formula $\sigma(A_{j})\subset\sigma(X_{1},...,X_{j})$
+\end_inset
+
+ is independent with 
+\begin_inset Formula $\sigma(B_{j})\subset\sigma(X_{j+1},...,X_{n})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\min_{j\le n}\mathbb{P}\left[B_{j}\right]\sum_{j=1}^{n}\mathbb{P}\left[A_{j}\right]\le\mathbb{P}\left\{ \omega\bigg|\left(\left|S_{n}(\omega)\right|>a\right)\right\} .$
+\end_inset
+
+ Now let 
+\begin_inset Formula $k=\arg\max_{i\le n}\left|S_{i}\right|.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\mathbb{P}\left[S_{n}^{*}>2a\right]=\mathbb{P}\left[\left|S_{k}\right|>2a\right]=\mathbb{P}\left[A_{k}\right].$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\mathbb{P}\left[S_{n}^{*}>2a\right]\le\sum_{j=1}^{n}\mathbb{P}\left[A_{j}\right].$
+\end_inset
+
+ So:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{P}\left[S_{n}^{*}>2a\right]\min_{j\le n}\mathbb{P}\left[\left|S_{n}-S_{j}\right|\le a\right]\le\min_{j\le n}\mathbb{P}\left[B_{j}\right]\sum_{j=1}^{n}\mathbb{P}\left[A_{j}\right]\le\mathbb{P}\left[\left|S_{n}\right|>a\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(i) If 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ converges in probability then 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ converges a.s.
+ 
+\end_layout
+
+\begin_layout Problem
+(ii) If 
+\begin_inset Formula $(X_{i})$
+\end_inset
+
+ are identically distributed and 
+\begin_inset Formula $n^{-1}S_{n}\rightarrow0$
+\end_inset
+
+ in probability then 
+\begin_inset Formula $n^{-1}\max_{m\le n}S_{m}\rightarrow0$
+\end_inset
+
+ in probability,
+\end_layout
+
+\begin_layout Proof
+(i) We state a lemma without proving, the proof is found in Chandra (2012)
+ - The Borel-Cantelli Lemma book.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ a.s.
+ iff 
+\begin_inset Formula $\mathbb{P}\left[\left|X_{n}-X\right|>\epsilon\text{ i.o.}\right]=0,\forall\epsilon>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Assuming that 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ converges in probability, W.L.O.G, assume that 
+\begin_inset Formula $S_{n}\rightarrow0,$
+\end_inset
+
+ otherwise we can change 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ by an appropriate amount.
+ Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{P}\left[\left|S_{n}\right|>\epsilon\text{ i.o.}\right]=\mathbb{P}\bigcap_{n=1}^{\infty}\bigcup_{m=n}^{\infty}\left\{ \omega\bigg|\left|S_{m}(\omega)\right|>\epsilon\right\} =\lim_{n\rightarrow\infty}\mathbb{P}\bigcup_{m=n}^{\infty}\left\{ \omega\bigg|\left|S_{m}(\omega)\right|>\epsilon\right\} =$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $=\lim_{n\rightarrow\infty}\lim_{N\rightarrow\infty}\mathbb{P}\bigcup_{m=n}^{N}\left\{ \omega\bigg|\left|S_{m}(\omega)\right|>\epsilon\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Fix an n here now consider:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\bigcup_{m=n}^{N}\left\{ \omega\bigg|\left|S_{m}(\omega)\right|>\epsilon\right\} = & \mathbb{P}\left\{ \omega\bigg|\max_{n\le m\le N}\left|S_{m}\right|>\epsilon\right\} \\
+\le & \frac{\mathbb{P}\left[\left|S_{N}\right|>\epsilon/2\right]}{\min_{n\le m\le N}\mathbb{P}\left[\left|S_{N}-S_{m}\right|\le\epsilon/2\right]}\text{ (*)}\\
+= & \frac{\mathbb{P}\left[\left|S_{N}\right|>\epsilon/2\right]}{1-\max_{n\le m\le N}\mathbb{P}\left[\left|S_{N}-S_{m}\right|>\epsilon/2\right]}\text{ (**)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Where 
+\begin_inset Formula $(*)$
+\end_inset
+
+ is true by applying what we prove in question 1 to the sequence 
+\begin_inset Formula $(Y_{k})$
+\end_inset
+
+ defined as 
+\begin_inset Formula $Y_{0}=X_{1}+...+X_{n},Y_{1}=X_{n+1},Y_{2}=X_{n+2}$
+\end_inset
+
+ and so on.
+ 
+\end_layout
+
+\begin_layout Proof
+As 
+\begin_inset Formula $N\rightarrow\infty,$
+\end_inset
+
+ the numerator of (**) 
+\begin_inset Formula $\rightarrow0$
+\end_inset
+
+ because 
+\begin_inset Formula $S_{n}\rightarrow0$
+\end_inset
+
+ in probability (implies 
+\begin_inset Formula $\left|S_{n}\right|\rightarrow0$
+\end_inset
+
+ in probability).
+ For the denominator, we can bound 
+\begin_inset Formula $\max_{n\le m\le N}\mathbb{P}\left[\left|S_{N}-S_{m}\right|>\epsilon/2\right]$
+\end_inset
+
+ within any arbitrary range 
+\begin_inset Formula $[0,a),a>0,$
+\end_inset
+
+ because 
+\begin_inset Formula $\left|S_{n}\right|\rightarrow0$
+\end_inset
+
+ in probability, thus 
+\begin_inset Formula $\exists N_{0},\forall m,N>N_{0},\mathbb{P}\left[\left|S_{m}\right|>\epsilon/4\right]<a,\mathbb{P}\left[\left|S_{m}\right|>\epsilon/4\right]<a,$
+\end_inset
+
+ which implies 
+\begin_inset Formula $\mathbb{P}\left[\left|S_{N}-S_{m}\right|>\epsilon/2\right]<a,$
+\end_inset
+
+ because the event 
+\begin_inset Formula $\left|S_{n}-S_{m}\right|>\epsilon/2$
+\end_inset
+
+ implies 
+\begin_inset Formula $\left[\left|S_{m}\right|>\epsilon/4\right]\vee\mathbb{P}\left[\left|S_{m}\right|>\epsilon/4\right].$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+In conclusion, 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\lim_{N\rightarrow\infty}\mathbb{P}\bigcup_{m=n}^{N}\left\{ \omega\bigg|\left|S_{m}(\omega)\right|>\epsilon\right\} =0$
+\end_inset
+
+ as the numerator of 
+\begin_inset Formula $(**)$
+\end_inset
+
+ goes to zero and the denominator is bounded around 1.
+ 
+\end_layout
+
+\begin_layout Proof
+(ii) Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ Since 
+\begin_inset Formula $(X_{i})$
+\end_inset
+
+ are i.i.d, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\min_{j\le n}\mathbb{P}\left[\frac{\left|S_{n}-S_{j}\right|}{n}\le\epsilon\right]= & \min_{j\le n-1}\mathbb{P}\left[\frac{\left|S_{j}\right|}{n}\le\epsilon\right]\ge\min_{j\le n-1}\mathbb{P}\left[\frac{\left|S_{j}\right|}{j}\le\epsilon\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since we have: 
+\begin_inset Formula $\lim_{j\rightarrow\infty}\mathbb{P}\left[\frac{\left|S_{j}\right|}{j}>\epsilon\right]=0$
+\end_inset
+
+.
+ Pick 
+\begin_inset Formula $1/2$
+\end_inset
+
+ as an arbitrary choice of number between 0 and 1, then 
+\begin_inset Formula $\exists N_{0}\in\mathbb{N}$
+\end_inset
+
+ such that: 
+\begin_inset Formula $\forall j\ge N_{0},\mathbb{P}\left[\frac{\left|S_{j}\right|}{j}>\epsilon\right]<1/2\Rightarrow\mathbb{P}\left[\frac{\left|S_{j}\right|}{j}\le\epsilon\right]\ge\frac{1}{2}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+We now use the previous observation that the inequality in question 1 also
+ holds true when changing form to:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[S_{N}>2a\right]\le & \frac{\mathbb{P}\left[\left|S_{N}\right|>a\right]}{\min_{N_{0}\le j\le N}\mathbb{P}\left[\left|S_{N}-S_{j}\right|\le a\right]},a>0.
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus we have 
+\begin_inset Formula $\forall N\ge N_{0}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[N^{-1}\max_{m\le N}S_{m}>\epsilon\right]\le & \mathbb{P}\left[S_{N}^{*}>N\epsilon\right]\\
+\le & \frac{\mathbb{P}\left[\left|S_{N}\right|>N\epsilon/2\right]}{\min_{N_{0}\le j\le N}\mathbb{P}\left[\left|S_{N}-S_{j}\right|\le N\epsilon/2\right]}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The denominator as proved above is 
+\begin_inset Formula $\ge1/2$
+\end_inset
+
+ for 
+\begin_inset Formula $\forall N\ge N_{0}.$
+\end_inset
+
+ And the numerator goes to zero as 
+\begin_inset Formula $n^{-1}S_{n}\rightarrow0$
+\end_inset
+
+ in probability implying 
+\begin_inset Formula $n^{-1}\left|S_{n}\right|\rightarrow0$
+\end_inset
+
+ in probability.
+ 
+\end_layout
+
+\begin_layout Theorem
+Stolz-Cesaro Theorem for sequences going to infinity.
+ 
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ be two sequences of real numbers.
+ Assuming that 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ is strictly increasing and divergent sequence.
+ If:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\frac{a_{n+1}-a_{n}}{b_{n+1}-b_{n}}= & l
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\frac{a_{n}}{b_{n}}= & l
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Stolz-Cesaro Theorem for sequences going to zero.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $(a_{b})$
+\end_inset
+
+ and 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ be two sequences of real numbers.
+ Assuming that 
+\begin_inset Formula $(b_{n})$
+\end_inset
+
+ is strictly decreasing to zero.
+ If:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\frac{a_{n}-a_{n+1}}{b_{n}-b_{n+1}}= & l
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\frac{a_{n}}{b_{n}}= & l
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $(X_{i})$
+\end_inset
+
+ be i.i.d taking values in 
+\begin_inset Formula $\{-1,1,3,7,15,...\}.$
+\end_inset
+
+ And
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X_{1}=2^{k}-1\right]= & \frac{1}{k(k+1)2^{k}},k\ge1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(a) We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}X_{1}= & -1\times\left(1-\sum_{k=1}^{\infty}\mathbb{P}\left[X_{1}=2^{k}-1\right]\right)+\sum_{k=1}^{\infty}\left(2^{k}-1\right)\mathbb{P}\left[X_{1}=2^{k}-1\right]\\
+= & -1+\sum_{k=1}^{\infty}\frac{2^{k}}{k(k+1)2^{k}}\\
+= & -1+\sum_{k=1}^{\infty}\left(\frac{1}{k}-\frac{1}{k+1}\right)\\
+= & -1+1-\lim_{n\rightarrow\infty}\frac{1}{n+1}=0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(b) We use the following Theorem, which is derived from Theorem 2.2.6 in Durrett:
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(X_{n})$
+\end_inset
+
+ be i.i.d random variables, 
+\begin_inset Formula $b(n)$
+\end_inset
+
+ be s.t.
+ for 
+\begin_inset Formula $\bar{X}_{n}=X_{n}\mathbb{I}\left\{ \left|X_{n}\right|\le b_{n}\right\} $
+\end_inset
+
+ and:
+\end_layout
+
+\begin_layout Proof
+(i) 
+\begin_inset Formula $n\mathbb{P}\left[\left|X_{n}\right|>b_{n}\right]\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(ii) 
+\begin_inset Formula $\frac{n}{b_{n}^{2}}\mathbb{E}\left[\bar{X}_{n}^{2}\right]\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Then 
+\begin_inset Formula $\frac{S_{n}-a_{n}}{b_{n}}\rightarrow0$
+\end_inset
+
+ where 
+\begin_inset Formula $a_{n}=n\mathbb{E}\bar{X}_{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+For our problem, let 
+\begin_inset Formula $b_{n}=2^{m(n)}$
+\end_inset
+
+ where 
+\begin_inset Formula $m(n)=\min\left\{ m\in\mathbb{N}:2^{-m}m^{-3/2}\le n^{-1}\right\} $
+\end_inset
+
+ as suggested in Durrett's book.
+ For simplicity of notation, we denote 
+\begin_inset Formula $p_{k}=\mathbb{P}\left[X_{1}=2^{k}-1\right],k\ge1,p_{0}=\mathbb{P}\left[X_{1}=-1\right].$
+\end_inset
+
+ We will check the first condition.
+ For n big enough (so we don't have to worry about 
+\begin_inset Formula $X=-1$
+\end_inset
+
+), 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+n\mathbb{P}\left[\left|X_{n}\right|>b_{n}\right]= & n\mathbb{P}\left[\left|X_{n}\right|>2^{m(n)}\right]\\
+= & n\left(p_{m(n)+1}+p_{m(n)+2}+...\right)\\
+\le & 2^{m(n)}m^{3/2}(n)\sum_{k=m(n)+1}^{\infty}\frac{1}{k(k+1)2^{k}}\\
+= & 2^{m}m^{3/2}\sum_{k=m+1}^{\infty}\frac{1}{k(k+1)2^{k}}\text{ (For simplicity of notation)}\\
+= & \frac{\sum_{k=m+1}^{\infty}\frac{1}{k(k+1)2^{k}}}{\frac{1}{2^{m}m^{3/2}}}:=\frac{A_{m}}{B_{m}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Applying the Stolz-Cesaro theorem for two sequences going to zero, and noticing
+ that:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{m\rightarrow\infty}\frac{A_{m}-A_{m+1}}{B_{m}-B_{m+1}}= & \lim_{m\rightarrow\infty}\frac{\frac{1}{(m+1)(m+2)2^{m+1}}}{\frac{1}{2^{m}m^{3/2}}-\frac{1}{2^{m+1}(m+1)^{3/2}}}\\
+= & \lim_{m\rightarrow\infty}\frac{m^{3/2}(m+1)^{3/2}}{(m+1)(m+2)(2(m+1)^{3/2}-m^{3/2})}\\
+= & \lim_{m\rightarrow\infty}\frac{\left(1+\frac{1}{m}\right)^{m/2}\bigg/m^{1/2}}{\left(1+\frac{1}{m}\right)\left(1+\frac{2}{m}\right)\left(2\left(1+\frac{1}{m}\right)^{3/2}-1\right)}\text{ (Dividing by }m^{7/2})\\
+= & \lim_{m\rightarrow\infty}\frac{1}{m^{1/2}}=0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\lim\frac{A_{m}}{B_{m}}=0$
+\end_inset
+
+ by the Stolz-Cesaro Theorem.
+ And it is obvious that 
+\begin_inset Formula $n\rightarrow\infty\Leftrightarrow m\rightarrow\infty,$
+\end_inset
+
+ also our original sequence which is always non-negative is bounded by a
+ sequence that is going to zero.
+ Thus we have 
+\begin_inset Formula $\lim_{n\rightarrow\infty}n\mathbb{P}\left[\left|X_{n}\right|>b_{n}\right]=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Now we check the second condition.
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{n}{b_{n}^{2}}\mathbb{E}\left[\bar{X}_{n}^{2}\right]\le & \frac{n}{b_{n}^{2}}\sum_{k=1}^{m(n)}p_{k}(2^{k}-1)^{2}\\
+\le & \frac{n}{b_{n}^{2}}\sum_{k=1}^{m(n)}p_{k}2^{2k}\\
+\le & \frac{2^{m(n)}m^{3/2}(n)}{2^{2m(n)}}\sum_{k=1}^{m(n)}p_{k}2^{2k}\\
+= & \frac{2^{m}m^{3/2}}{2^{2m}}\sum_{k=1}^{m}p_{k}2^{2k}\text{ (Simplify notation)}\\
+= & \frac{m^{3/2}}{2^{m}}\sum_{k=1}^{m}\frac{2^{2k}}{k(k+1)2^{k}}\\
+= & \frac{\sum_{k=1}^{m}\frac{2^{k}}{k(k+1)}}{\frac{2^{m}}{m^{3/2}}}:=\frac{C_{m}}{D_{m}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Applying the Stolz-Cesaro for two sequences going to positive infinity,
+ and noticing that:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{m\rightarrow\infty}\frac{C_{m+1}-C_{m}}{D_{m+1}-D_{m}}= & \lim_{m\rightarrow\infty}\frac{\frac{2^{m+1}}{(m+1)(m+2)}}{\frac{2^{m+1}}{(m+1)^{3/2}}-\frac{2^{m}}{m^{3/2}}}\\
+= & \lim_{m\rightarrow\infty}\frac{2(m+1)^{3/2}m^{3/2}}{(m+1)(m+2)\left(2m^{3/2}-(m+1)^{3/2}\right)}\\
+= & \lim_{m\rightarrow\infty}\frac{1}{m^{1/2}}=0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\lim_{m\rightarrow\infty}\frac{C_{m}}{D_{m}}=0.$
+\end_inset
+
+ Again since 
+\begin_inset Formula $m\rightarrow\infty\Leftrightarrow n\rightarrow\infty$
+\end_inset
+
+, and the sequence 
+\begin_inset Formula $a_{n}=\frac{n}{b_{n}^{2}}\mathbb{E}\left[\bar{X}_{n}^{2}\right]$
+\end_inset
+
+ is always non-negative bounded above by a sequence going to zero, the sequence
+ 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ is also going to zero as 
+\begin_inset Formula $n\rightarrow\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Now we calculate: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+a_{n}= & n\mathbb{E}\bar{X}_{n}\\
+= & n\left(\sum_{k=1}^{m(n)}p_{k}(2^{k}-1)+\sum_{k=1}^{\infty}p_{k}-1\right)\\
+= & n\left(\sum_{k=1}^{m(n)}p_{k}2^{k}+\sum_{k=m(n)+1}^{\infty}p_{k}-1\right)\\
+= & n\left(1-\frac{1}{m(n)+1}+\sum_{k=m(n)+1}^{\infty}p_{k}-1\right)\\
+= & n\left(\sum_{k=m(n)+1}^{\infty}p_{k}-\frac{1}{m(n)+1}\right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By Theorem 2.6.6 in Durrett, we have 
+\begin_inset Formula $\frac{S_{n}-a_{n}}{b_{n}}\rightarrow0$
+\end_inset
+
+ in probability.
+ We will argue that of the two term in 
+\begin_inset Formula $a_{n},$
+\end_inset
+
+ the term 
+\begin_inset Formula $n\sum_{k=m(n)+1}^{\infty}$
+\end_inset
+
+ is relatively 
+\begin_inset Quotes eld
+\end_inset
+
+insignificant
+\begin_inset Quotes erd
+\end_inset
+
+.
+ We consider the residual part: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{n}{b_{n}}\sum_{k=m(n)+1}^{\infty}p_{k}\le & \frac{2^{m(n)}m^{3/2}(n)}{2^{m(n)}}\sum_{k=m(n)+1}^{\infty}p_{k}\\
+= & \frac{\sum_{k=m+1}^{\infty}p_{k}}{\frac{1}{m^{3/2}}}:=\frac{E_{m}}{F_{m}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Again applying the Stolz-Cesaro Theorem for two sequences going down to
+ zero, and notice that:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{E_{m}-E_{m+1}}{F_{m}-F_{m+1}}= & \frac{p_{m+1}}{\frac{1}{m^{3/2}}-\frac{1}{(m+1)^{3/2}}}\\
+= & \frac{m^{3/2}(m+1)^{3/2}}{(m+1)(m+2)2^{m}\left((m+1)^{3/2}-m^{3/2}\right)}\\
+= & \frac{m^{3/2}(m+1)^{1/2}\left((m+1)^{3/2}+m^{3/2}\right)}{(m+2)2^{m}\left((m+1)^{3}-m^{3}\right)}\text{ (Squareroot Conjugate)}\\
+= & \frac{O(m^{7/2})}{O(m^{3})2^{m}}\\
+\Rightarrow\lim_{m\rightarrow\infty}\frac{E_{m}-E_{m+1}}{F_{m}-F_{m+1}}= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Because the term 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ dominate all other term.
+ Thus 
+\begin_inset Formula $\lim_{m\rightarrow\infty}\frac{E_{m}}{F_{m}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So we have the remaining part in 
+\begin_inset Formula $\frac{S_{n}}{b_{n}}-\frac{a_{n}}{b_{n}}$
+\end_inset
+
+ which is 
+\begin_inset Formula $\frac{S_{n}}{b_{n}}-\frac{n}{b_{n}}\left(-\frac{1}{m(n)+1}\right)$
+\end_inset
+
+ goes to zero in probability.
+\end_layout
+
+\begin_layout Proof
+This means 
+\begin_inset Formula $\frac{S_{n}}{b_{n}}+\frac{n}{b_{n}(m(n)+1)}\rightarrow0$
+\end_inset
+
+ in probability.
+ By the construction of 
+\begin_inset Formula $m(n),$
+\end_inset
+
+ we have: 
+\begin_inset Formula $2^{m(n)-1}\left(m(n)-1\right)^{3/2}<n\le2^{m(n)}m^{3/2}(n)$
+\end_inset
+
+.
+ So we can consider 
+\begin_inset Formula $n\approx2^{m(n)}m^{3/2}(n)$
+\end_inset
+
+.
+ With this we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{S_{n}}{2^{m(n)}}+\frac{2^{m(n)}m^{3/2}(n)}{2^{m(n)}(m(n)+1)}\rightarrow^{P} & 0\\
+\Rightarrow\frac{S_{n}}{2^{m(n)}}+\frac{m^{3/2}(n)}{(m(n)+1)}\rightarrow^{P} & 0\\
+\Rightarrow\frac{S_{n}}{2^{m(n)}}+m^{1/2}(n)\rightarrow^{P} & 0\\
+\Rightarrow\frac{S_{n}}{2^{m(n)}m^{1/2}(n)}+1\rightarrow^{P} & 0\\
+\Rightarrow\frac{S_{n}}{2^{m(n)}m^{3/2}(n)/m(n)}+1\rightarrow^{P} & 0\\
+\Rightarrow\frac{S_{n}}{2^{m(n)}m^{3/2}(n)\bigg/\left(m(n)+\frac{3}{2}\log_{2}m(n)\right)}+1\rightarrow^{P} & 0\\
+\Rightarrow\frac{S_{n}}{n/\log_{2}n}+1\rightarrow^{P} & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\forall\epsilon>0,$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}\left[\frac{S_{n}}{n/\log_{2}n}+1\ge\epsilon\right]\rightarrow0\Rightarrow\mathbb{P}\left[\frac{S_{n}}{n/\log_{2}n}+1<\epsilon\right]\rightarrow1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\mathbb{P}\left[S_{n}<(\epsilon-1)\frac{n}{\log_{2}n}\right]\rightarrow1.$
+\end_inset
+
+ Let 
+\begin_inset Formula $\alpha=1-\epsilon<1$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbb{P}\left[S_{n}<\alpha\frac{n}{\log_{2}n}\right]\rightarrow1.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Remark: For the last part when dealing with convergence in probability,
+ we assume without proving a 
+\begin_inset Quotes eld
+\end_inset
+
+lemma
+\begin_inset Quotes erd
+\end_inset
+
+ that for 
+\begin_inset Formula $(X_{n})$
+\end_inset
+
+ sequence of random variable, 
+\begin_inset Formula $a_{n},b_{n}$
+\end_inset
+
+ sequence of real numbers, then:
+\end_layout
+
+\begin_layout Proof
+(i) If 
+\begin_inset Formula $X_{n}+a_{n}+b_{n}\rightarrow X$
+\end_inset
+
+ in probability, and 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{b_{n}}{a_{n}}=0$
+\end_inset
+
+ then 
+\begin_inset Formula $X_{n}+a_{n}\rightarrow X$
+\end_inset
+
+ in probability.
+\end_layout
+
+\begin_layout Proof
+(ii) If 
+\begin_inset Formula $X_{n}(a_{n}+b_{n})\rightarrow X$
+\end_inset
+
+ in probability, and 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{b_{n}}{a_{n}}=0$
+\end_inset
+
+ then 
+\begin_inset Formula $X_{n}a_{n}\rightarrow X$
+\end_inset
+
+ in probability
+\end_layout
+
+\begin_layout Proof
+(iii) If 
+\begin_inset Formula $\frac{X_{n}}{a_{n}+b_{n}}\rightarrow X$
+\end_inset
+
+ in probability, and 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{b_{n}}{a_{n}}=0$
+\end_inset
+
+ then 
+\begin_inset Formula $X_{n}/a_{n}\rightarrow X$
+\end_inset
+
+ in probability.
+ 
+\end_layout
+
+\end_body
+\end_document

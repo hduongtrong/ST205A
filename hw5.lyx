@@ -1,0 +1,1137 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205A - Homework 5
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $(X_{n})$
+\end_inset
+
+ i.i.d.
+ 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|<\infty.$
+\end_inset
+
+ 
+\begin_inset Formula $M_{n}=\max(X_{1},...,X_{n}).$
+\end_inset
+
+ Prove that: 
+\begin_inset Formula $n^{-1}M_{n}\rightarrow0$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\mu=\mathbb{E}\left|X_{i}\right|<\infty.$
+\end_inset
+
+ 
+\begin_inset Formula $P_{n}=\max(\left|X_{1}\right|,...,\left|X_{n}\right|).$
+\end_inset
+
+ Then 
+\begin_inset Formula $0\le M_{n}\le P_{n}$
+\end_inset
+
+.
+ By SLLN, 
+\begin_inset Formula $\lim\frac{P_{n}}{n}=\mu\text{ a.s.}$
+\end_inset
+
+ Thus:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\frac{\left|X_{n}\right|}{n}= & \lim_{n\rightarrow\infty}\frac{P_{n}}{n}-\frac{P_{n-1}}{n}\\
+= & \lim_{n\rightarrow\infty}\frac{P_{n}}{n}-\frac{n-1}{n}\frac{P_{n-1}}{n-1}\\
+= & \mu-\mu=0,\text{ a.s.}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By the deterministic lemma: If 
+\begin_inset Formula $x_{n}\ge0$
+\end_inset
+
+ and 
+\begin_inset Formula $0<b_{n}\uparrow\infty,$
+\end_inset
+
+ then 
+\begin_inset Formula $\limsup\frac{\max(x_{1},...,x_{n})}{b_{n}}=\limsup\frac{x_{n}}{b_{n}},$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\limsup n^{-1}P_{n}= & \limsup\frac{\left|X_{n}\right|}{n}=0\text{ a.s.}\\
+\Rightarrow\limsup n^{-1}M_{n}= & 0\text{ a.s.}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Durrett 2.3.2
+\end_layout
+
+\begin_layout Proof
+We have:
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ Since 
+\begin_inset Formula $\mathbb{E}X_{n}\sim an^{\alpha}\Leftrightarrow\lim\frac{\mathbb{E}X_{n}}{an^{\alpha}}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\exists N\in\mathbb{N},\forall n\ge N,\left|\frac{\mathbb{E}X_{n}}{an^{\alpha}}-1\right|<\frac{\epsilon}{2}$
+\end_inset
+
+.
+ By the Chebysev inequality, and for 
+\begin_inset Formula $n\ge N$
+\end_inset
+
+, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\left|X_{n}-\mathbb{E}X_{n}\right|\ge\frac{\epsilon}{2}an^{\alpha}\right]\le & \frac{4{\rm Var}X_{n}}{\epsilon^{2}a^{2}n^{2\alpha}}\text{ (Chebysev)}\\
+\Leftrightarrow\mathbb{P}\left[\left|\frac{X_{n}}{an^{\alpha}}-\frac{\mathbb{E}X_{n}}{an^{\alpha}}\right|\ge\frac{\epsilon}{2}\right]\le & \frac{4{\rm Var}X_{n}}{\epsilon^{2}a^{2}n^{2\alpha}}\\
+\Leftrightarrow\mathbb{P}\left[\left|\frac{X_{n}}{an^{\alpha}}-1+1-\frac{\mathbb{E}X_{n}}{an^{\alpha}}\right|\ge\frac{\epsilon}{2}\right]\le & \frac{4{\rm Var}X_{n}}{\epsilon^{2}a^{2}n^{2\alpha}}\text{ (1)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We have for any real number 
+\begin_inset Formula $x,$
+\end_inset
+
+ having 
+\begin_inset Formula $\left|x\right|\ge\epsilon\Rightarrow\left|x+a\right|\ge\epsilon/2$
+\end_inset
+
+ for any 
+\begin_inset Formula $a\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<\epsilon/2$
+\end_inset
+
+.
+ Thus having
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left|\frac{X_{n}}{an^{\alpha}}-1\right|\ge\epsilon\Rightarrow & \left|\frac{X_{n}}{an^{\alpha}}-1+1-\frac{\mathbb{E}X_{n}}{an^{\alpha}}\right|\ge\frac{\epsilon}{2}\\
+\Rightarrow\mathbb{P}\left[\left|\frac{X_{n}}{an^{\alpha}}-1\right|\ge\epsilon\right]\le & \mathbb{P}\left[\left|\frac{X_{n}}{an^{\alpha}}-1+1-\frac{\mathbb{E}X_{n}}{an^{\alpha}}\right|\ge\frac{\epsilon}{2}\right]\text{ (Prob of smaller set is smaller)}\\
+\le & \frac{4{\rm Var}X_{n}}{\epsilon^{2}a^{2}n^{2\alpha}}\text{ (From (1))}\\
+\le & \frac{4B}{\epsilon^{2}a^{2}}\frac{1}{n^{2\alpha-\beta}}\text{ (2)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $2\alpha>\beta,$
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1}{n^{2\alpha-\beta}}\rightarrow0$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty.$
+\end_inset
+
+ So we have convergence in probability.
+ 
+\end_layout
+
+\begin_layout Proof
+Now we follow the method of the proof of Theorem 2.3.8 in Durrett to have
+ convergence almost surely.
+ Due to the convergence property of series 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{c}},$
+\end_inset
+
+ which converges iff 
+\begin_inset Formula $c>1.$
+\end_inset
+
+ We consider two cases:
+\end_layout
+
+\begin_layout Proof
+Case 1: 
+\begin_inset Formula $2\alpha-\beta>1.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\sum_{k=0}^{\infty}\mathbb{P}\left[\left|\frac{X_{n_{k}}}{an^{\alpha}}-1\right|\ge\epsilon\right]<\infty,$
+\end_inset
+
+ and the First Borel-Cantell lemma implies that 
+\begin_inset Formula $\mathbb{P}\left[\left|\frac{X_{n}}{an^{\alpha}}-1\right|\ge\epsilon\text{ i.o.}\right]=0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ was arbitrary, it follows that 
+\begin_inset Formula $\left(X_{n_{k}}/an_{k}^{\alpha}\right)\rightarrow1$
+\end_inset
+
+ a.s..
+\end_layout
+
+\begin_layout Proof
+Case 2: 
+\begin_inset Formula $2\alpha-\beta\le1.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $n_{k}=\inf\{n:n^{2\alpha-\beta}\ge k^{2}\}$
+\end_inset
+
+.
+ Then we have: 
+\begin_inset Formula $k^{2}\le n_{k}^{2\alpha-\beta}\le k^{2}+1,$
+\end_inset
+
+ (*) where the later inequality is true because 
+\begin_inset Formula $0<2\alpha-\beta<1$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $2\alpha-\beta>0,$
+\end_inset
+
+ it is obvious that 
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ is an increasing sequence going to 
+\begin_inset Formula $\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+By construction, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\left|\frac{X_{n_{k}}}{an_{k}^{\alpha}}-1\right|\ge\epsilon\right]\le & \frac{4B}{\epsilon^{2}a^{2}}\frac{1}{n_{k}^{2\alpha-\beta}}\text{ (from (2))}\\
+\le & \frac{4B}{\epsilon^{2}a^{2}}\frac{1}{k^{2}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\sum_{k=0}^{\infty}\mathbb{P}\left[\left|\frac{X_{n_{k}}}{an^{\alpha}}-1\right|\ge\epsilon\right]<\infty,$
+\end_inset
+
+ and the First Borel-Cantelli lemma implies 
+\begin_inset Formula $\mathbb{P}\left[\left|\frac{X_{n_{k}}}{an_{k}^{\alpha}}-1\right|\ge\epsilon\text{ i.o.}\right]=0.$
+\end_inset
+
+ Since 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ was arbitrary, it follows that 
+\begin_inset Formula $\left(X_{n_{k}}/an_{k}^{\alpha}\right)\rightarrow1$
+\end_inset
+
+ a.s.
+ Now to show 
+\begin_inset Formula $X_{n}/an^{\alpha}$
+\end_inset
+
+ a.s., pick an 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ so that 
+\begin_inset Formula $X_{n_{k}}(\omega)/an_{k}^{\alpha}\rightarrow1$
+\end_inset
+
+, and observe that 
+\begin_inset Formula $\forall n\in\mathbb{N}$
+\end_inset
+
+ sufficiently big, 
+\begin_inset Formula $\exists k:n_{k}\le n<n_{k+1}$
+\end_inset
+
+ since 
+\begin_inset Formula $n_{k}\uparrow\infty$
+\end_inset
+
+.
+ Using the fact that 
+\begin_inset Formula $0\le X_{1}\le X_{2}\le...$
+\end_inset
+
+, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{X_{n_{k}}(\omega)}{an_{k+1}^{\alpha}}\le & \frac{X_{n}(\omega)}{an^{\alpha}}\le\frac{X_{n_{k+1}}(\omega)}{an_{k}^{\alpha}}\\
+\Rightarrow\frac{n_{k}^{\alpha}}{n_{k+1}^{\alpha}}\frac{X_{n_{k}}(\omega)}{an_{k}^{\alpha}}\le & \frac{X_{n}(\omega)}{an^{\alpha}}\le\frac{n_{k+1}^{\alpha}}{n_{k}^{\alpha}}\frac{X_{n_{k+1}}(\omega)}{an_{k+1}^{\alpha}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now from (*):
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+k^{2} & \le n_{k}^{2\alpha-\beta}\le n_{k+1}^{2\alpha-\beta}\le(k+1)^{2}+1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Abd since 
+\begin_inset Formula $\lim_{k\rightarrow\infty}\frac{(k+1)^{2}+1}{k^{2}}=1,$
+\end_inset
+
+ we have 
+\begin_inset Formula $\lim_{k\rightarrow\infty}\frac{n_{k}^{\alpha}}{n_{k+1}^{\alpha}}=\lim_{k\rightarrow\infty}\frac{n_{k+1}^{\alpha}}{n_{k}^{\alpha}}=1.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Thus by the Sandwich Limit Theorem, 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{X_{n}(\omega)}{an^{\alpha}}=1$
+\end_inset
+
+.
+ So we have 
+\begin_inset Formula $\frac{X_{n}}{an^{\alpha}}\rightarrow1$
+\end_inset
+
+ a.s.
+\end_layout
+
+\begin_layout Problem
+Prove that the following are equivalent
+\end_layout
+
+\begin_layout Problem
+(i) 
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ in probability (
+\begin_inset Formula $\Leftrightarrow\forall\epsilon>0,\lim_{n\rightarrow\infty}\mathbb{P}\left[\left|X_{n}-X\right|>\epsilon\right]=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Problem
+(ii) 
+\begin_inset Formula $\exists\epsilon_{n}\downarrow0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbb{P}\left[\left|X_{n}-X\right|>\epsilon_{n}\right]\le\epsilon_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+(iii) 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mathbb{E}\min\left(\left|X_{n}-X\right|,1\right)=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+(ii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(i)
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\series default
+Direction: Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary.
+ Since 
+\begin_inset Formula $\epsilon_{n}\downarrow0,\exists N,\forall n\ge N,\epsilon_{n}<\epsilon.$
+\end_inset
+
+ Now we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\forall n\ge N,0\le\mathbb{P}\left[\left|X_{n}-X\right|>\epsilon\right]\le & \mathbb{P}\left[\left|X_{n}-X\right|>\epsilon_{n}\right]\text{ (Since \ensuremath{\epsilon>\epsilon_{n}})}\\
+\le & \epsilon_{n}\text{ (This is given)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\epsilon_{n}=0,$
+\end_inset
+
+ by the Sandwich Theorem, 
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ in probability.
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+(i) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(ii)
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ Direction: 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $a_{1}=1,$
+\end_inset
+
+ then we have 
+\begin_inset Formula $\forall n,\mathbb{P}\left[\left|X_{n}-X\right|>a_{1}\right]\le a_{1}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $N_{1}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $a_{2}=\frac{1}{2}.$
+\end_inset
+
+ Since 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mathbb{P}\left[\left|X_{n}-X\right|>1/2\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists N_{2}>N_{1},\forall n\ge N_{2},\mathbb{P}\left[\left|X_{n}-X\right|>1/2\right]<\frac{1}{2}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $a_{3}=\frac{1}{3}.$
+\end_inset
+
+ 
+\begin_inset Formula $\exists N_{3}>N_{2},\forall n\ge N_{3},\mathbb{P}\left[\left|X_{n}-X\right|>1/3\right]<\frac{1}{3}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+and so on for 
+\begin_inset Formula $a_{k}=\frac{1}{k},\exists N_{k}>N_{k-1},\forall n\ge N_{k-1},\mathbb{P}\left[\left|X_{n}-X\right|>1/k\right]<\frac{1}{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Thus if we construct 
+\begin_inset Formula $\epsilon_{i}=1,N_{1}\le i<N_{2},\epsilon_{i}=\frac{1}{2},N_{2}\le i<N_{3},...,\epsilon_{i}=\frac{1}{k},N_{k}\le i<N_{k+1}.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\epsilon_{n}\downarrow0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{P}\left[\left|X_{n}-X\right|>\epsilon_{n}\right]\le\epsilon_{n}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+(iii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (i)
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ Direction: Let 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ be arbitrary, applying the general Markov inequality for 
+\begin_inset Formula $\phi(x)=\min\left(|x|,1\right),$
+\end_inset
+
+ which is non-decreasing, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\left|X_{n}-X\right|>\epsilon\right]\le & \frac{\mathbb{E}\phi(\left|X_{n}-X\right|)}{\phi(\epsilon)}=\frac{\mathbb{E}\min\left(\left|X_{n}-X\right|,1\right)}{\min(1,\epsilon)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\lim\mathbb{P}_{n\rightarrow\infty}\left[\left|X_{n}-X\right|>\epsilon\right]=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+(i) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iii)
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ Direction: For simplicity of notation let 
+\begin_inset Formula $Y_{n}=\left|X_{n}-X\right|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\epsilon\in(0,1).$
+\end_inset
+
+ We have 
+\begin_inset Formula $\forall\epsilon>0,\lim\mathbb{P}\left[Y_{n}>\epsilon\right]=0\Rightarrow\lim\mathbb{P}\left[Y_{n}\in[\epsilon_{1},\epsilon_{2})\right]=0,\forall0<\epsilon_{1}<\epsilon_{2}$
+\end_inset
+
+ (*).
+ Fix 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\mathbb{E}\min\left(Y_{n},1\right)= & \lim_{n\rightarrow\infty}\left\{ \mathbb{P}\left[Y_{n}\le1\right]\mathbb{E}\left[Y_{n}\mid Y_{n}<1\right]+\mathbb{P}\left[Y_{n}>1\right]\right\} \text{ (Tower Property)}\\
+= & \lim_{n\rightarrow\infty}\mathbb{P}\left[Y_{n}\le1\right]\mathbb{E}\left[Y_{n}\mid Y_{n}<1\right]\\
+= & \lim_{n\rightarrow\infty}\sum_{i=1}^{k}\mathbb{P}\left[Y_{n}\in[\frac{i-1}{k},\frac{i}{k})\right]\mathbb{E}\left[Y_{n}\mid Y_{n}\in[\frac{i-1}{k},\frac{i}{k})\right]\\
+:= & \lim_{n\rightarrow\infty}\mathbb{P}\left[Y_{n}\in[0,\frac{1}{k})\right]\mathbb{E}\left[Y_{n}\mid Y_{n}\in[0,\frac{1}{k})\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since all other term for 
+\begin_inset Formula $i\ge2$
+\end_inset
+
+ disappears because of (*).
+ Now taking the limit of k and applying the Monotone Convergence Theorem
+ we can interchenge the two limit operations, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\mathbb{E}\min\left(Y_{n},1\right)= & \lim_{k\rightarrow\infty}\lim_{n\rightarrow\infty}\mathbb{P}\left[Y_{n}\in[0,\frac{1}{k})\right]\mathbb{E}\left[Y_{n}\mid Y_{n}\in[0,\frac{1}{k})\right]\\
+= & \lim_{n\rightarrow\infty}\lim_{k\rightarrow\infty}\mathbb{P}\left[Y_{n}\in[0,\frac{1}{k})\right]\mathbb{E}\left[Y_{n}\mid Y_{n}\in[0,\frac{1}{k})\right]\text{ (Monotone Convergence)}\\
+\le & \lim_{n\rightarrow\infty}\lim_{k\rightarrow\infty}1\times\frac{1}{k}=0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $0\le\lim_{n\rightarrow\infty}\mathbb{E}\min(Y_{n},1),$
+\end_inset
+
+ by the Sandwich Theorem, we have 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mathbb{E}\min(Y_{n},1)=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Investment Problem
+\end_layout
+
+\begin_layout Proof
+(i) We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+W_{n+1}= & (ap+(1-p)V_{n})W_{n}\\
+\Rightarrow\log W_{n+1}= & \log(ap+(1-p)V_{n})+\log W_{n}\\
+= & \log(ap+(1-p)V_{n})+\log(ap+(1-p)V_{n-1})+\log W_{n-1}\\
+= & ...\\
+= & \sum_{i=0}^{n}\log(ap+(1-p)V_{i})\\
+\Rightarrow n^{-1}\log W_{n}= & \frac{1}{n}\sum_{i=0}^{n-1}\log(ap+(1-p)V_{i})
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We want to apply SLLN, thus we need 
+\begin_inset Formula $\mathbb{E}\log(ap+(1-p)V_{i})<\infty.$
+\end_inset
+
+ Consider 
+\begin_inset Formula $a+bV_{i},a\ge0,b>0.$
+\end_inset
+
+ We have 
+\begin_inset Formula $\mathbb{E}\left[V_{n}^{-2}\right]<\infty\Rightarrow\mathbb{E}\left[\frac{1}{(V+a/b)^{2}}\right]\le\mathbb{E}\left[\frac{1}{V^{2}}\right]<\infty\Rightarrow\mathbb{E}\left[\frac{1}{(bV+a)^{2}}\right]<\infty.$
+\end_inset
+
+ We also have 
+\begin_inset Formula $\mathbb{E}\left[(bV+a)^{2}\right]<\infty.$
+\end_inset
+
+ Also, 
+\begin_inset Formula $\varphi(x)=\frac{1}{4}x^{2}+\log(x)+\frac{1}{12x^{2}},x>0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\varphi'(x)= & x/2+\frac{1}{x}-\frac{1}{6x^{3}}\\
+\Rightarrow\varphi''(x)= & 1/2-\frac{1}{x^{2}}+\frac{1}{2x^{4}}\ge0,\forall x>0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ is convex, and thus 
+\begin_inset Formula $\varphi(ap+(1-p)x)$
+\end_inset
+
+ is also convex since 
+\begin_inset Formula $1-p>0.$
+\end_inset
+
+ Applying Jensen theorem we have, and let 
+\begin_inset Formula $\mathbb{E}V=\mu<\infty$
+\end_inset
+
+ (since 
+\begin_inset Formula $\mathbb{E}V^{2}<\infty)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\varphi(ap+(1-p)V_{i})\le & \varphi(\mathbb{E}(ap+(1-p)V_{i}))\text{ (Jensen)}\\
+\Leftrightarrow\mathbb{E}\varphi(ap+(1-p)V_{i})\le & \varphi(ap+(1-p)\mu)<\infty\\
+\Leftrightarrow\frac{1}{4}\mathbb{E}(ap+(1-p)V_{i})^{2}+ & \mathbb{E}\log(ap+(1-p)V_{i})+\frac{1}{12}\mathbb{E}(ap+(1-p)V_{i})^{-2}<\infty\\
+\Rightarrow\mathbb{E}\log(ap+(1-p)V_{i})< & \infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus we can apply SLLN, and have 
+\begin_inset Formula $n^{-1}\log W_{n}\rightarrow\mathbb{E}\log(ap+(1-p)V_{i}):=c(p)$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+(ii) We make the assumption that we can interchange the differential and
+ expectation (as in Durrett Theorem A.5.1) sign, then we will have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{\partial^{2}}{\partial p^{2}}c(p)= & \frac{\partial^{2}}{\partial p^{2}}\mathbb{E}\log(pa+(1-p)V_{n})\\
+= & \mathbb{E}\frac{\partial^{2}}{\partial p^{2}}\log(pa+(1-p)V_{n})\text{ (Interchange differential and expectation)}\\
+= & \mathbb{E}\frac{\partial}{\partial p}\frac{a-V_{n}}{(pa+(1-p)V_{n})}\\
+= & \mathbb{E}-\frac{(a-V_{n})^{2}}{(pa+(1-p)V_{n})^{2}}\le0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $c(p)$
+\end_inset
+
+ is concave.
+ 
+\end_layout
+
+\begin_layout Proof
+(iii) For a concave function 
+\begin_inset Formula $f$
+\end_inset
+
+ on a open interval 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, it attains a maximum on the open interval 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ iff 
+\begin_inset Formula $f'(a)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $f'(b)<0.$
+\end_inset
+
+ Again, assuming the four condition for interchanging expectation and derivative
+ hold, we have :
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+c'(p)= & \mathbb{E}\frac{a-V_{n}}{pa+(1-p)V_{n}}\text{ (Interchange \ensuremath{\partial} and \ensuremath{\mathbb{E}})}\\
+\Rightarrow c'(0)= & \mathbb{E}\frac{a-V_{n}}{V_{n}}=\mathbb{E}\frac{a}{V_{n}}-1\\
+c'(0)> & 0\\
+\Leftrightarrow\mathbb{E}\frac{a}{V_{n}}> & 1\\
+\Leftrightarrow\mathbb{E}\frac{1}{V_{n}}> & \frac{1}{a}\\
+c'(1)= & \mathbb{E}\frac{a-V_{n}}{a}=1-\mathbb{E}\frac{V_{n}}{a}\\
+c'(1)< & 0\\
+\Leftrightarrow1< & \mathbb{E}\frac{V_{n}}{a}\\
+\Leftrightarrow\mathbb{E}V_{n}> & a
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So the condition is 
+\begin_inset Formula $\mathbb{E}V_{n}>a,$
+\end_inset
+
+ meaning stock on average has higher return than bond (otherwise one will
+ put all money on bond), and 
+\begin_inset Formula $\mathbb{E}\frac{1}{V_{n}}>\frac{1}{a}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+(iv) First we need the condition, 
+\begin_inset Formula $\mathbb{E}V_{n}=2.5>a,\mathbb{E}\frac{1}{V_{n}}=\frac{1}{2}+\frac{1}{8}=\frac{1}{1.6}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $1.6<a<2.5.$
+\end_inset
+
+ When 
+\begin_inset Formula $1.6<a<2.5,$
+\end_inset
+
+ then the optimal p is attained when 
+\begin_inset Formula $c'(p)=0:$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\frac{a-V_{n}}{pa+(1-p)V_{n}} & =0\\
+\Leftrightarrow\frac{1}{2}\frac{a-1}{pa+(1-p)}+\frac{1}{2}\frac{a-4}{pa+4(1-p)} & =0\\
+\Leftrightarrow\frac{a-1}{pa+1-p} & =\frac{4-a}{pa+4-4p}\\
+\Leftrightarrow(a-1)(pa+4-4p) & =(4-a)(pa+1-p)\\
+\Leftrightarrow pa^{2}+4a-4pa-pa-4+4p & =4pa+4-4p-a^{2}p-a+ap\\
+\Leftrightarrow pa^{2}-5pa+4a+4p-4 & =-pa^{2}+5ap-4p-a+4\\
+\Leftrightarrow2pa^{2}-10ap+5a+8p-8 & =0\\
+\Leftrightarrow p(2a^{2}-10a+8) & =8-5a\\
+\Leftrightarrow p & =\frac{8-5a}{2(a-1)(a-4)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We can see that p is between 0 and 1 iff 
+\begin_inset Formula $1.6<a<2.5.$
+\end_inset
+
+ And 
+\begin_inset Formula $p=0$
+\end_inset
+
+ if 
+\begin_inset Formula $a=1.6$
+\end_inset
+
+ or 
+\begin_inset Formula $p=2.5.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Problem
+Glivenko-Cantelli Theorem
+\end_layout
+
+\begin_layout Proof
+Fix 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $1\le j\le k-1,$
+\end_inset
+
+ let 
+\begin_inset Formula $x_{j,k}=\inf\{y:F(y)\ge j/k\}.$
+\end_inset
+
+ And let 
+\begin_inset Formula $x_{0,k}=-\infty,x_{k,k}=\infty.$
+\end_inset
+
+ The pointwise convergence of 
+\begin_inset Formula $F_{n}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{n}(x-)$
+\end_inset
+
+ imply that we can pick 
+\begin_inset Formula $N_{k}$
+\end_inset
+
+ so that if 
+\begin_inset Formula $n\ge N_{k},$
+\end_inset
+
+ then for 
+\begin_inset Formula $0\le j\le k$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left|F_{n}(x_{j,k})-F(x_{j,k})\right|<k^{-1}\text{ and } & \left|F_{n}(x_{j,k}-)-F(x_{j,k}-)\right|<k^{-1}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $x\in(x_{j-1,k},x_{j,k})$
+\end_inset
+
+ with 
+\begin_inset Formula $1\le j\le k$
+\end_inset
+
+ and 
+\begin_inset Formula $n\ge N_{k}$
+\end_inset
+
+ then using the monotonicity of 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+, and 
+\begin_inset Formula $F(x_{j,k}-)-F(x_{j-1,k})\le k^{-1},$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+F_{n}(x)\le & F_{n}(x_{j,k}-)\le F(x_{j,k}-)+k^{-1}\le F(x_{j-1,k})+2k^{-1}\le F(x)+2k^{-1}\\
+F_{n}(x)\ge & F_{n}(x_{j-1,k})\ge F(x_{j-1,k})-k^{-1}\ge F(x_{j,k}-)-2k^{-1}\ge F(x)-2k^{-1}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\sup_{x}\left|F_{n}(x)-F(x)\right|\le2k^{-1},$
+\end_inset
+
+ thus 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\sup_{x}\left|F_{n}(x)-F(x)\right|=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document

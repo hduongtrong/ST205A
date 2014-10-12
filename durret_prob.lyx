@@ -1,0 +1,1393 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-sec-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Durret Probability
+\end_layout
+
+\begin_layout Standard
+Hoang Duong
+\end_layout
+
+\begin_layout Subsection
+Property of Integral
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Jensen's inequality
+\series default
+.
+ Suppose 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is convex, that is,
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lambda\varphi(x)+(1-\lambda)\varphi(y)\ge & \varphi(\lambda x+(1-\lambda)y),\forall\lambda\in(0,1),x,y\in\mathbb{R}.
+\end{alignat*}
+
+\end_inset
+
+ If 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is a probability measure, and f and 
+\begin_inset Formula $\varphi(f)$
+\end_inset
+
+ are integrable, then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\varphi(\int fd\mu)\le & \int\varphi(f)d\mu
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Holder's inequality
+\series default
+.
+ If 
+\begin_inset Formula $p,q\in(1,\infty)$
+\end_inset
+
+ with 
+\begin_inset Formula $1/p+1/q=1.$
+\end_inset
+
+ Then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\int\left|fg\right|d\mu\le & \|f\|_{p}\|g\|_{q}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The special case 
+\begin_inset Formula $p=q=2$
+\end_inset
+
+ is called 
+\series bold
+Cauchy-Schwarz
+\series default
+ inequality
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Bounded Convergenge Theorem
+\series default
+.
+ Let E be a set, 
+\begin_inset Formula $\mu(E)<\infty.$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+vanishes on 
+\begin_inset Formula $E^{c},\left|f_{n}(x)\right|\le M,$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{n}\rightarrow f$
+\end_inset
+
+ in measure.
+ Then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\int fd\mu= & \lim_{n\rightarrow\infty}\int f_{n}d\mu
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Fatou's Lemma
+\series default
+.
+ If 
+\begin_inset Formula $f_{n}\ge0,$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\liminf_{n\rightarrow\infty}\int f_{n}d\mu\ge & \int\left(\liminf_{n\rightarrow\infty}f_{n}\right)d\mu
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Monotone Convergence Theorem
+\series default
+.
+ If 
+\begin_inset Formula $f_{n}\ge0,$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{n}\uparrow f,$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\int f_{n}d\mu\uparrow & \int fd\mu
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Dominated Convergence Theorem
+\series default
+.
+ If 
+\begin_inset Formula $f_{n}\rightarrow f$
+\end_inset
+
+ a.e., 
+\begin_inset Formula $\left|f_{n}\right|\le g,\forall n$
+\end_inset
+
+, and g is integrable, then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\int f_{n}d\mu\rightarrow & \int fd\mu
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $(X,\mathcal{A},\mu_{1}),(Y,\mathcal{B},\mu_{2})$
+\end_inset
+
+ be two 
+\begin_inset Formula $\sigma-finite$
+\end_inset
+
+ measure spaces.
+ Let
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{1}
+\Omega= & X\times y\\
+\mathcal{S}= & \left\{ A\times B\mid A\in\mathcal{A},B\in\mathcal{B}\right\} \\
+\mathcal{F}= & \mathcal{A}\times\mathcal{B}=\sigma(\mathcal{S}).
+\end{alignat*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+There is a uniqye measure 
+\begin_inset Formula $\mu$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ with:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mu(A\times B)= & \mu_{1}(A)\mu_{2}(B)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Fubini's Theorem.
+ If 
+\begin_inset Formula $f\ge0$
+\end_inset
+
+ or 
+\begin_inset Formula $\int\left|f\right|d\mu<\infty$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\int_{X}\int_{Y}f(x,y)\mu_{2}(dy)\mu_{1}(dx)= & \int_{X\times Y}fd\mu=\int_{Y}\int_{X}f(x,y)\mu_{1}d(x)\mu_{2}(dx)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Laws of Large Number
+\end_layout
+
+\begin_layout Subsection
+Independence
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(\Omega,\mathcal{F},\mathbb{P});A,B\in\mathcal{F}$
+\end_inset
+
+ are called independent if 
+\begin_inset Formula $\mathbb{P}(A\cap B)=\mathbb{P}(A)]\mathbb{P}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Two 
+\begin_inset Formula $\sigma-fields$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{G},\mathcal{H}$
+\end_inset
+
+ are independent if 
+\begin_inset Formula $\mathbb{P}(A\cap B)=\mathbb{P}(A)]\mathbb{P}(B),\forall A\in\mathcal{G},B\in\mathcal{H}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Two random variable 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ are independent iff 
+\begin_inset Formula $\sigma(X),\sigma(Y)$
+\end_inset
+
+ are independent.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\pi-system$
+\end_inset
+
+ if it is closed under intersection.
+ 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\lambda-system$
+\end_inset
+
+ if (i) 
+\begin_inset Formula $\Omega\in\mathcal{L}$
+\end_inset
+
+, (ii) 
+\begin_inset Formula $\forall A,B\in\mathcal{L},A\subset B$
+\end_inset
+
+ then 
+\begin_inset Formula $B-A\in\mathcal{L},$
+\end_inset
+
+ and (iii) If 
+\begin_inset Formula $A_{n}\in\mathcal{L},A_{n}\uparrow A$
+\end_inset
+
+ then 
+\begin_inset Formula $A\in\mathcal{L}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\pi-\lambda$
+\end_inset
+
+ Theorem.
+ If 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\pi-system$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\lambda-system$
+\end_inset
+
+ that contains 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ then 
+\begin_inset Formula $\sigma(\mathcal{P})\subset\mathcal{L}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Suppose 
+\begin_inset Formula $\mathcal{A}_{1},\mathcal{A}_{2},...,\mathcal{A}_{n}$
+\end_inset
+
+ are independent and each 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\pi-system$
+\end_inset
+
+, then 
+\begin_inset Formula $\sigma(A_{1}),\sigma(A_{2}),...,\sigma(A_{n})$
+\end_inset
+
+ are independent.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+In order for 
+\begin_inset Formula $X_{1},X_{2},...,X_{n}$
+\end_inset
+
+ to be independent, it is sufficient that for all 
+\begin_inset Formula $x_{1},...,x_{n}\in\mathbb{R},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X_{1}\le1,...,X_{n}\le x_{n}\right]= & \prod_{i=1}^{n}\mathbb{P}\left[X_{i}\le x_{i}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Suppose 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ are independent random variables and 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ has distribution 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $\left(X_{1},...,X_{n}\right)$
+\end_inset
+
+ has distribution 
+\begin_inset Formula $\mu_{1}\times\mu_{2}...\times\mu_{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+If X and Y are independent, then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X+Y\le z\right]= & \int F(z-y)dG(y)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Weak Laws of Large Number
+\end_layout
+
+\begin_layout Definition
+We say 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ converges to Y in probability if 
+\begin_inset Formula $\forall\epsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mathbb{P}\left[\left|Y_{n}-Y\right|<\epsilon\right]=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+If 
+\begin_inset Formula $p>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}\left|Z_{n}\right|^{p}\rightarrow0$
+\end_inset
+
+ then 
+\begin_inset Formula $Z_{n}\rightarrow0$
+\end_inset
+
+ in probability.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{2}$
+\end_inset
+
+ weak law.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be uncorrelated random variables with 
+\begin_inset Formula $\mathbb{E}X_{i}=\mu$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm Var}(X_{i})\le C<\infty.$
+\end_inset
+
+ If 
+\begin_inset Formula $S_{n}=X_{1}+...+X_{n}$
+\end_inset
+
+ then 
+\begin_inset Formula $S_{n}/n\rightarrow\mu$
+\end_inset
+
+ in 
+\begin_inset Formula $L^{2}$
+\end_inset
+
+ and in probability.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{1}$
+\end_inset
+
+ weak law.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d with 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|<\infty$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $S_{n}/n\rightarrow\mathbb{E}X_{1}$
+\end_inset
+
+ in probability
+\end_layout
+
+\begin_layout Subsection
+Borel-Cantelli Lemmas
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $A_{n}\subset\Omega.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{alignat*}{1}
+\limsup A_{n}= & \lim_{m\rightarrow\infty}\bigcup_{n=m}^{\infty}A_{n}=\left\{ \omega\text{ that are in infinitely many }A_{n}\right\} \\
+\liminf A_{n}= & \lim_{m\rightarrow\infty}\bigcap_{n=m}^{\infty}A_{n}=\left\{ \omega\text{ that are in all but finitely many }A_{n}\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The First Borel-cantelli Lemma.
+ If 
+\begin_inset Formula $\sum_{n=1}^{\infty}\mathbb{P}A_{n}<\infty$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[A_{n}\text{ i.o.}\right]= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Relation between Convergence in Probability and Almose Surely.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ in probability iff for every subsequence 
+\begin_inset Formula $X_{n(m)}$
+\end_inset
+
+ there is a further subsequence 
+\begin_inset Formula $X_{n(m_{k})}$
+\end_inset
+
+ that converges almost surely to X.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+If f is continuous and 
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ in probability then 
+\begin_inset Formula $f(X_{n})\rightarrow f(X)$
+\end_inset
+
+ in probability.
+ If, in addition, f is bounded then 
+\begin_inset Formula $\mathbb{E}f(X_{n})\rightarrow\mathbb{E}f(X).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{4}$
+\end_inset
+
+ Strong Law of Large Number 1.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d with 
+\begin_inset Formula $\mathbb{E}X_{i}=\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}X_{i}^{4}<\infty$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $S_{n}/n\rightarrow\mu$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+The Second Borel-Cantelli Lemma.
+ If 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ are independent then 
+\begin_inset Formula $\sum\mathbb{P}A_{n}=\infty$
+\end_inset
+
+ implies 
+\begin_inset Formula $\mathbb{P}\left[A_{n}\text{ i.o.}\right]=1.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Quotes eld
+\end_inset
+
+Anti
+\begin_inset Quotes erd
+\end_inset
+
+ LLN.
+ If 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are i.i.d with 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|=\infty,$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbb{P}\left[\left|X_{n}\right|\ge n\text{ i.o.}\right]=1.$
+\end_inset
+
+ So 
+\begin_inset Formula $\mathbb{P}\left[\lim S_{n}/n=a\in(-\infty,\infty)\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $A_{1},A_{2},...$
+\end_inset
+
+ are pairwise independent and 
+\begin_inset Formula $\sum_{n=1}^{\infty}\mathbb{P}(A_{n})=\infty$
+\end_inset
+
+ then as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sum_{m=1}^{n}\mathbb{I}[A_{m}]\bigg/\sum_{m=1}^{n}\mathbb{P}[A_{m}]\rightarrow & 1\text{ a.s.}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Strong Law of Large Numbers
+\end_layout
+
+\begin_layout Theorem
+SLLN.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be pairwise independent identically distributed random variables with 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|=\mu<\infty.$
+\end_inset
+
+ Then 
+\begin_inset Formula $S_{n}/n\rightarrow\mu$
+\end_inset
+
+ a.s.
+ as 
+\begin_inset Formula $n\rightarrow\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d with 
+\begin_inset Formula $\mathbb{E}X_{i}^{+}=\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}X^{-}<\infty$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $S_{n}/n\Rightarrow\infty$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+Renewal Theory.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d with , 
+\begin_inset Formula $T_{n}=X_{1}+X_{_{2}}+...+X_{n}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $N_{t}=\sup\{n:T_{n}\le t\}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathbb{E}X_{i}=\mu\le\infty,$
+\end_inset
+
+ then as 
+\begin_inset Formula $t\rightarrow\infty,$
+\end_inset
+
+ 
+\begin_inset Formula $N_{t}/t\rightarrow1/\mu$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+Empirical Distribution Functions.
+ Let 
+\begin_inset Formula $X_{1},X_{2},$
+\end_inset
+
+...
+ be i.i.d.
+ with distribution 
+\begin_inset Formula $F$
+\end_inset
+
+ and let:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{alignat*}{1}
+F_{n}(x)= & n^{-1}\sum_{m=1}^{n}\mathbb{I}(X_{m}\le x).
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+The Glivenko-Cantelli theorem states that as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\sup_{x}\left|F_{n}(x)-F(x)\right|\rightarrow0$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Subsection
+Convergence of Random Series
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Tail 
+\begin_inset Formula $\sigma-field.$
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula $\mathcal{F}_{n}^{'}:=\sigma(X_{n},X_{n+1},...).$
+\end_inset
+
+ Tail 
+\begin_inset Formula $\sigma-field$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $\mathcal{T}=\bigcap_{n}\mathcal{F}_{n}^{'}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+E.g.
+ If 
+\begin_inset Formula $B_{n}\in\mathbb{R}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ X_{n}\in B_{n}i.o.\right\} \in\mathcal{T}.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\left\{ A_{n}i.o.\right\} \in\mathcal{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Kolmogorov's 0-1 law
+\series default
+.
+ If 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ are independent and 
+\begin_inset Formula $A\in\mathcal{T}$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbb{P}A=0$
+\end_inset
+
+ or 1.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Kolmogorov's maximal inequality
+\series default
+.
+ Suppose 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ are independent with 
+\begin_inset Formula $\mathbb{E}X_{i}=0$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm Var}(X_{i})<\infty.$
+\end_inset
+
+ If 
+\begin_inset Formula $S_{n}=X_{1}+...+X_{n}$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\max_{1\le k\le n}\left|S_{k}\right|\ge x\right]\le & x^{-2}{\rm Var}(S_{n})
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+This is slightly better than Chebyshev's inequality.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ are independent and have 
+\begin_inset Formula $\mathbb{E}X_{n}=0.$
+\end_inset
+
+ If 
+\begin_inset Formula $\sum_{n=1}^{\infty}{\rm Var}(X_{n})<\infty$
+\end_inset
+
+ then with probability one 
+\begin_inset Formula $\sum_{n=1}^{\infty}X_{n}(\omega)$
+\end_inset
+
+ converges.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Kolmogorov's Three-series Theorem.
+ Let 
+\begin_inset Formula $X_{1},X_{2}...$
+\end_inset
+
+ be independent.
+ Let 
+\begin_inset Formula $A>0$
+\end_inset
+
+ and let 
+\begin_inset Formula $Y_{i}=X_{i}\mathbb{I}\left\{ \left|X_{i}\right|\le A\right\} .$
+\end_inset
+
+ In order that 
+\begin_inset Formula $\sum X_{n}$
+\end_inset
+
+ converges a.s., it is necessary and sufficient that:
+\end_layout
+
+\begin_layout Theorem
+(i) 
+\begin_inset Formula $\sum_{n=1}^{\infty}\mathbb{P}\left[\left|X_{n}\right|>A\right]<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(ii) 
+\begin_inset Formula $\sum\mathbb{E}Y_{n}$
+\end_inset
+
+converges
+\end_layout
+
+\begin_layout Theorem
+(iii) 
+\begin_inset Formula $\sum{\rm Var}Y_{n}<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Kronecker's lemma.
+ If 
+\begin_inset Formula $a_{n}\uparrow\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{n=1}^{\infty}x_{n}/a_{n}$
+\end_inset
+
+ converges then: 
+\begin_inset Formula $a_{n}^{-1}\sum_{m=1}^{n}x_{m}\rightarrow0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+The SLLN.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d random variables with 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|<\infty.$
+\end_inset
+
+ Let 
+\begin_inset Formula $\mathbb{E}X_{i}=\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{1}=X_{1}+X_{2}+...+X_{n}.$
+\end_inset
+
+ Then 
+\begin_inset Formula $S_{n}/n\rightarrow\mu$
+\end_inset
+
+ a.s.
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Rates of Convergence.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d random variables with 
+\begin_inset Formula $\mathbb{E}X_{i}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}X_{i}^{2}=\sigma^{2}<\infty.$
+\end_inset
+
+ Let 
+\begin_inset Formula $S_{1}=X_{1}+X_{2}+...+X_{n}.$
+\end_inset
+
+ If 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+S_{n}/n^{1/2}(\log n)^{1/2+\epsilon}\rightarrow0 & a.s.
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d with 
+\begin_inset Formula $\mathbb{E}X_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}\left|X_{1}\right|^{p}<\infty$
+\end_inset
+
+ where 
+\begin_inset Formula $1<p<2.$
+\end_inset
+
+ Then 
+\begin_inset Formula $S_{n}/n^{1/p}\rightarrow0$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Infinite Mean.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d with 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|=\infty.$
+\end_inset
+
+ Let 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ be a sequence of positive numbers with 
+\begin_inset Formula $a_{n}/n$
+\end_inset
+
+ increasing.
+ Then 
+\begin_inset Formula $\lim\sup_{n\rightarrow\infty}\left|S_{n}\right|/a_{n}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $\infty$
+\end_inset
+
+ according as 
+\begin_inset Formula $\sum_{n}\mathbb{P}\left[\left|X_{1}\right|\ge a_{n}\right]<\infty$
+\end_inset
+
+ or 
+\begin_inset Formula $=\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document
