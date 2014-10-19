@@ -1389,5 +1389,298 @@ Infinite Mean.
  
 \end_layout
 
+\begin_layout Subsection
+Large Deviation
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d.
+ and let 
+\begin_inset Formula $S_{n}=X_{1}+X_{2}+...+X_{n}.$
+\end_inset
+
+ We are interested in the rate at which
+\begin_inset Formula $\mathbb{P}\left[S_{n}>na\right]\rightarrow0$
+\end_inset
+
+ for 
+\begin_inset Formula $a>\mu=\mathbb{E}X_{i}.$
+\end_inset
+
+ We will ultimately conclude that if 
+\begin_inset Formula $\varphi(\theta)=\mathbb{E}\exp(\theta X_{i})<\infty$
+\end_inset
+
+ for some 
+\begin_inset Formula $\theta>0,\mathbb{P}\left[S_{n}\ge na\right]\rightarrow0$
+\end_inset
+
+ exponentiaally rapidly and we will identify:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{1}
+\gamma(a)= & \lim_{n\rightarrow\infty}\frac{1}{n}\log\mathbb{P}\left[S_{n}\ge na\right]\text{}(1)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first step is to prove that the limit exists.
+ Let 
+\begin_inset Formula $\pi_{m}=\mathbb{P}\left[S_{n}\ge na\right].$
+\end_inset
+
+ Then 
+\begin_inset Formula $\pi_{m+n}\ge\pi_{m}\pi_{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+If 
+\begin_inset Formula $\gamma_{m+n}\ge\gamma_{m}+\gamma_{n}$
+\end_inset
+
+ then as 
+\begin_inset Formula $n\rightarrow\infty,\gamma_{n}/n\rightarrow\sup_{m}\gamma_{m}/m.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+This Lemma implies that 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{1}{n}\log\mathbb{P}\left[S_{n}\ge na\right]$
+\end_inset
+
+ exists.
+ (1) can also be rewritted as 
+\begin_inset Formula $\mathbb{P}\left[S_{n}\ge na\right]\le\exp(n\gamma(a))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that the following are equivalent:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\gamma(a)=-\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}\left[X_{1}\ge a\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}\left[S_{n}\ge na\right]=0,\forall n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the definition, we can conclude that 
+\begin_inset Formula $\forall\lambda\in\mathbb{Q}\cap[0,1],$
+\end_inset
+
+ then 
+\begin_inset Formula $\gamma(\lambda a+(1-\lambda)b)\ge\lambda\gamma(a)+(1-\lambda)\gamma(b)$
+\end_inset
+
+.
+ Thus by the argument of monotonicity, we have this inequality holds for
+ all 
+\begin_inset Formula $\lambda\in[0,1].$
+\end_inset
+
+ So 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is concave and henc Lipschitz continuous on compact subset of 
+\begin_inset Formula $\left\{ a\mid\gamma(a)>-\infty\right\} .$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we make the assumption:
+\end_layout
+
+\begin_layout Standard
+(H1) 
+\begin_inset Formula $\varphi(\theta)=\mathbb{E}\exp(\theta X_{i})<\infty$
+\end_inset
+
+ for some 
+\begin_inset Formula $\theta>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\theta_{+}=\sup\left\{ \theta\mid\varphi(\theta)<\infty\right\} ,\theta_{-}=\inf\left\{ \theta\mid\varphi(\theta)<\infty\right\} $
+\end_inset
+
+ then 
+\begin_inset Formula $\varphi(\theta)<\infty,\forall\theta\in(\theta_{-},\theta_{+}).$
+\end_inset
+
+ We note that 
+\begin_inset Formula $\varphi(0)=0$
+\end_inset
+
+ so the interval 
+\begin_inset Formula $(\theta_{-},\theta_{+})$
+\end_inset
+
+ contains a neighborhood around 0.
+ If 
+\begin_inset Formula $\theta>0,$
+\end_inset
+
+ Chebysev's inequality implies:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{1}
+\exp\left(\theta na\right)\mathbb{P}\left[S_{n}\ge na\right]\le & \mathbb{E}\exp M\left(\theta S_{n}\right)=\varphi^{n}(\theta)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\kappa(\theta)=\log\varphi(\theta)$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[S_{n}\ge na\right]\le & \exp\left(-n\left(a\theta-\kappa(\theta)\right)\right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+If 
+\begin_inset Formula $a>\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta>0$
+\end_inset
+
+ is small then 
+\begin_inset Formula $a\theta-\kappa(\theta)>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+So we were able to find an upper bound for 
+\begin_inset Formula $\mathbb{P}\left[S_{n}\ge na\right]$
+\end_inset
+
+ (which is meaningful as it is <1 by the Lemma).
+ We now find the optimal 
+\begin_inset Formula $\theta$
+\end_inset
+
+ by setting the first derivative equal to zero, and checking the second
+ derivative of 
+\begin_inset Formula $a\theta-\kappa(\theta).$
+\end_inset
+
+ We find 
+\begin_inset Formula $\theta$
+\end_inset
+
+ to be the solution to 
+\begin_inset Formula $a=\varphi'(\theta)/\varphi(\theta).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+Suppose in addition to (H1) and (H2) that there is a 
+\begin_inset Formula $\theta_{a}\in(0,\theta_{+})$
+\end_inset
+
+ so that 
+\begin_inset Formula $a=\varphi'(\theta)/\varphi(\theta).$
+\end_inset
+
+ Then as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+n^{-1}\log\mathbb{P}\left[S_{n}\ge na\right]\rightarrow & -a\theta_{a}+\log\varphi(\theta_{a}).
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that we already prove that part 
+\begin_inset Formula $\lim\sup LHS\le RHS$
+\end_inset
+
+ from above.
+ We can also prove that 
+\begin_inset Formula $\lim\inf LHS\ge RHS,$
+\end_inset
+
+ which will complete the proof for Theorem 1.25.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document
