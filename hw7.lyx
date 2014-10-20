@@ -1,0 +1,951 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205A - Homework 7
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Basic Stopping Time
+\end_layout
+
+\begin_layout Proof
+(a) 
+\begin_inset Formula $\left\{ \min(S,T)=n\right\} =A_{1}\cup A_{2}\cup A_{3},$
+\end_inset
+
+ for: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+A_{1}= & \left\{ S=n\right\} \cap\left\{ T=n\right\} \in\mathcal{F}_{n}\\
+A_{2}= & \left\{ S=n\right\} \cap\left\{ T>n\right\} =\left\{ S=n\right\} \cap\left\{ T\le n\right\} ^{C}\in\mathcal{F}_{n}\\
+A_{3}= & \left\{ T=n\right\} \cap\left\{ S>n\right\} =\left\{ T=n\right\} \cap\left\{ S\le n\right\} ^{C}\in\mathcal{F}_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\left\{ \min(S,T)=n\right\} \in\mathcal{F}_{n},$
+\end_inset
+
+ so it is a stopping time.
+ 
+\end_layout
+
+\begin_layout Proof
+(b) 
+\begin_inset Formula $\left\{ \max(S,T)=n\right\} =B_{1}\cup B_{2}\cup B_{3},$
+\end_inset
+
+ for:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+B_{1}= & A_{1}\in\mathcal{F}_{n}\\
+B_{2}= & \left\{ S=n\right\} \cap\left\{ T<n\right\} \in\mathcal{F}_{n}\\
+B_{3}= & \left\{ T=n\right\} \cap\left\{ S<n\right\} \in\mathcal{F}_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\left\{ \max(S,T)=n\right\} \in\mathcal{F}_{n},$
+\end_inset
+
+ so it is a stopping time.
+\end_layout
+
+\begin_layout Proof
+(c) 
+\begin_inset Formula $\left\{ S+T=n\right\} =\bigcup_{i=1}^{n-1}A_{i},$
+\end_inset
+
+ for:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+A_{i}= & \left\{ S_{i}=i\right\} \cap\left\{ T_{i}=n-i\right\} \in\mathcal{F}_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+since 
+\begin_inset Formula $i,n-i<n.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\left\{ S+T=n\right\} \in\mathcal{F}_{n},$
+\end_inset
+
+ so it is a stopping time.
+\end_layout
+
+\begin_layout Problem
+Wald's Second Equation
+\end_layout
+
+\begin_layout Proof
+(a) Counter example.
+ Let 
+\begin_inset Formula $X_{i}=Bernoulli(0.5).$
+\end_inset
+
+ 
+\begin_inset Formula $T=1$
+\end_inset
+
+ if 
+\begin_inset Formula $X_{1}=0,$
+\end_inset
+
+ 
+\begin_inset Formula $T=2$
+\end_inset
+
+ if 
+\begin_inset Formula $X_{1}=1.$
+\end_inset
+
+ Then: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}S_{T}= & \mathbb{E}X_{1}\mathbb{E}T=\frac{1}{2}\times\frac{3}{2}=\frac{3}{4}\\
+\mathbb{E}S_{T}^{2}= & \mathbb{E}\left[S_{T}^{2}\mid X_{1}=0,T=1\right]\mathbb{P}\left[X_{1}=0,T=1\right]+\mathbb{E}\left[S_{T}^{2}\mid X_{1}=1,T=2\right]\mathbb{P}\left[X_{1}=1,T=2\right]\\
+= & 0+\frac{1}{2}\mathbb{E}\left[\left(X_{1}+X_{2}\right)^{2}\bigg|X_{1}=1\right]=\frac{5}{4}\\
+\Rightarrow{\rm Var}S_{T}= & \frac{5}{4}-\frac{9}{16}=\frac{11}{16}\\
+{\rm Var}X_{1}= & \mathbb{E}X_{1}^{2}-(\mathbb{E}X_{1})^{2}=\frac{1}{2}-\frac{1}{4}=\frac{1}{4}\\
+\mathbb{E}T= & \frac{3}{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula ${\rm Var}S_{T}=\frac{11}{16},$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm Var}X_{1}\mathbb{E}T=\frac{3}{8},$
+\end_inset
+
+ and they are not equal.
+ 
+\end_layout
+
+\begin_layout Proof
+(b) From Durrett's book
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\sigma^{2}=\mathbb{E}X_{i}^{2}.$
+\end_inset
+
+ Denote 
+\begin_inset Formula $T\wedge n=\min\left\{ T,n\right\} .$
+\end_inset
+
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+S_{T\wedge n}^{2}= & S_{T\wedge(n-1)}^{2}+\left(2X_{n}S_{n-1}+X_{n}^{2}\right)\mathbb{I}_{\left\{ T\ge n\right\} }\\
+\Rightarrow\mathbb{E}S_{T\wedge n}^{2}= & \mathbb{E}S_{T\wedge(n-1)}^{2}+\sigma^{2}\mathbb{P}\left[T\ge n\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{n-1}$
+\end_inset
+
+ are independent, 
+\begin_inset Formula $\mathbb{E}X_{n}=0$
+\end_inset
+
+, and the expectation of 
+\begin_inset Formula $S_{n-1}X_{n}$
+\end_inset
+
+ exists because both of them have finite second moment (so one can use Cauchy-Sc
+hwartz to bound the product).
+ Using an induction argument we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}S_{T\wedge n}^{2}= & \sigma^{2}\sum_{m=1}^{n}\mathbb{P}\left[T\ge m\right]\text{ (1)}\\
+\Rightarrow\mathbb{E}\left[S_{T\wedge n}^{2}-S_{T\wedge m}^{2}\right]= & \sigma^{2}\sum_{k=m+1}^{n}\mathbb{P}\left[T\ge k\right],\forall n>m
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This equality implies that 
+\begin_inset Formula $S_{T\wedge n}^{2}$
+\end_inset
+
+ is a Cauchy sequence in L1.
+ Thus the limit of 
+\begin_inset Formula $S_{T\wedge n}^{2}$
+\end_inset
+
+ exists.
+ If we let 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ in (1), we have 
+\begin_inset Formula $\mathbb{E}S_{T}^{2}=\sigma^{2}\mathbb{E}T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\mathcal{F}'_{n}=\sigma(X_{n},X_{n+1},...).$
+\end_inset
+
+ Tail 
+\begin_inset Formula $\sigma-field$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{T}=\bigcap_{n=1}^{\infty}\mathcal{F}'_{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+(i) 
+\begin_inset Formula $\{X_{n}\rightarrow0\}.$
+\end_inset
+
+ We have 
+\begin_inset Formula $\left\{ X_{n}\rightarrow0\right\} \in\mathcal{F}'_{m},\forall m\in\mathbb{N},$
+\end_inset
+
+ since 
+\begin_inset Formula $X_{1},...,X_{m-1}$
+\end_inset
+
+ does not affect whether 
+\begin_inset Formula $X_{n}\rightarrow0$
+\end_inset
+
+ or not.
+ So 
+\begin_inset Formula $\left\{ X_{n}\rightarrow0\right\} \in\bigcap_{m=1}^{\infty}\mathcal{F}'_{m}=\mathcal{T}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+(ii) 
+\begin_inset Formula $\{S_{n}\text{ converges}\}.$
+\end_inset
+
+ We have 
+\begin_inset Formula $\left\{ S_{n}\text{ converges}\right\} \in\mathcal{F}'_{m},\forall m\in\mathbb{N},$
+\end_inset
+
+ since 
+\begin_inset Formula $X_{1},...,X_{m}$
+\end_inset
+
+ does not affect whether 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ converges or not.
+ Put it another way, 
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+ converges iff 
+\begin_inset Formula $S'_{n}=\sum_{i=m}^{n}X_{i}$
+\end_inset
+
+ converges.
+ 
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\{S_{n}\text{ converges}\}\in\bigcap_{m=1}^{\infty}\mathcal{F}'_{n}=\mathcal{T}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iii) Let 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ be fixed and arbitrary, then:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left\{ X_{n}>b_{n}\text{ i.o.}\right\} = & \bigcap_{n=1}^{\infty}\bigcup_{i=n}^{\infty}\left\{ \omega\mid X_{i}(\omega)>b_{i}\right\} \\
+= & \bigcap_{n=m}^{\infty}\bigcup_{i=n}^{\infty}\left\{ \omega\mid X_{i}(\omega)>b_{i}\right\} \\
+\in & \mathcal{F}'_{m}\\
+\Rightarrow\left\{ X_{n}>b_{n}\text{ i.o.}\right\} \in & \bigcap_{m=1}^{\infty}\mathcal{F}'_{m}=\mathcal{T}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iv) This statement is not true.
+ Counter example: 
+\begin_inset Formula $X_{1}=Bernoulli(0.5).$
+\end_inset
+
+ 
+\begin_inset Formula $X_{2}=X_{3}=...=1$
+\end_inset
+
+ constant.
+ 
+\begin_inset Formula $b_{n}=n-1.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\mathbb{P}\left[S_{n}>b_{n}\text{ i.o.}\right]=\frac{1}{2}.$
+\end_inset
+
+ But if we take out 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbb{P}\left[S_{n}>b_{n}\text{ i.o.}\right]=1.$
+\end_inset
+
+ Thus this event depends on 
+\begin_inset Formula $X_{1}.$
+\end_inset
+
+ So it does not belong to the tail 
+\begin_inset Formula $\sigma-field.$
+\end_inset
+
+ Another way to note this is that 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are independent, thus those event that belongs to tail 
+\begin_inset Formula $\sigma-field$
+\end_inset
+
+ has probability of either 0 or 1 according to the Komogorov theorem.
+ But our event has probability 
+\begin_inset Formula $1/2,$
+\end_inset
+
+ so it does not belong to the tail 
+\begin_inset Formula $\sigma-field.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+(v) Fix 
+\begin_inset Formula $m\in\mathbb{N}.$
+\end_inset
+
+ Consider the two set 
+\begin_inset Formula $A=\left\{ \omega\bigg|\lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}{\sum{}_{i=1}^{n}X}=0\right\} ,B=\left\{ \omega\bigg|\lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}{\sum_{i=m}^{n}X_{i}}=0\right\} $
+\end_inset
+
+.
+ We will prove that the two sets are equal.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sqrt{\sum_{i=1}^{n}X_{i}^{2}}$
+\end_inset
+
+ is an non-negative increasing sequence.
+ Thus there are exactly three cases:
+\end_layout
+
+\begin_layout Proof
+(a) First, for those 
+\begin_inset Formula $\omega$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lim\sum_{i=1}^{n}X_{i}^{2}=0$
+\end_inset
+
+, then both limits in A and B do not exist since all 
+\begin_inset Formula $X_{i}=0.$
+\end_inset
+
+ So 
+\begin_inset Formula $\omega\not\in A,\omega\not\in B.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+(b) Second for those 
+\begin_inset Formula $\omega$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lim\sum_{i=1}^{n}X_{i}^{2}=a,a\in(0,\infty).$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\sum_{i=m}^{n}X_{i}^{2}=b,b\in[0,a].$
+\end_inset
+
+ If 
+\begin_inset Formula $b=0.$
+\end_inset
+
+ Then the limit in A goes to some number not zero, and the limit in B does
+ not exist.
+ So 
+\begin_inset Formula $\omega\not\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega\not\in B.$
+\end_inset
+
+ If 
+\begin_inset Formula $b>0.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}=\frac{\sqrt{a}}{\sqrt{b}}>1$
+\end_inset
+
+ and is finite.
+ Thus: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}{\sum{}_{i=1}^{n}X}=0\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}{\sum{}_{i=1}^{n}X}\frac{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}=0\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}{\sum{}_{i=1}^{n}X_{i}}=0\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sum{}_{i=1}^{n}X_{i}}{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}=\pm\infty\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sum{}_{i=m}^{n}X_{i}}{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}=\pm\infty\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}{\sum{}_{i=m}^{n}X_{i}}=0
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For (4) is true because the expression is different from that in (3) by
+ a finite amount.
+ 
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\omega\in A\Leftrightarrow\omega\in B$
+\end_inset
+
+ in this case.
+ 
+\end_layout
+
+\begin_layout Proof
+(c) Third, for those 
+\begin_inset Formula $\omega$
+\end_inset
+
+ such that 
+\begin_inset Formula $\lim\sum_{i=1}^{n}X_{i}^{2}=\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Then:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}{\sum{}_{i=1}^{n}X}=0\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sum{}_{i=1}^{n}X_{i}}{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}=\pm\infty\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sum_{i=m}^{n}X_{i}}{\sqrt{\sum_{i=1}^{n}X_{i}^{2}}}=\pm\infty\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sum_{i=m}^{n}X_{i}}{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}=\pm\infty\\
+\Leftrightarrow & \lim_{n\rightarrow\infty}\frac{\sqrt{\sum_{i=m}^{n}X_{i}^{2}}}{\sum{}_{i=m}^{n}X_{i}}=0
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $(6)\Leftrightarrow(7)$
+\end_inset
+
+ is true because the different between the expression in (7) and (6) is
+ a finite amount.
+ 
+\begin_inset Formula $(7)\Rightarrow(8)$
+\end_inset
+
+ is true because the expression in (8) is larger in magnitude as the denominator
+ is smaller in magnitude.
+ 
+\begin_inset Formula $(8)\Rightarrow7$
+\end_inset
+
+ is true because the ratio 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{\sum_{i=1}^{\infty}X_{i}^{2}}{\sum_{i=m}^{\infty}Xi^{2}}=1.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+In conclusion, 
+\begin_inset Formula $\omega\in A\Leftrightarrow\omega\in B.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $A=B.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $A\in\mathcal{F}'_{m}$
+\end_inset
+
+ for arbitrary 
+\begin_inset Formula $m\in\mathbb{N}.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $A$
+\end_inset
+
+ is in the tail 
+\begin_inset Formula $\sigma-field.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Problem
+Large Deviation Theorem
+\end_layout
+
+\begin_layout Proof
+(a) 
+\begin_inset Formula $a>1.$
+\end_inset
+
+ We check the two condition:
+\end_layout
+
+\begin_layout Proof
+(H1) 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\varphi(\theta)= & \mathbb{E}\exp(\theta X_{i})\\
+= & \int_{0}^{\infty}\exp(\theta x)\exp(-x)dx\\
+= & \int_{0}^{\theta}\exp((\theta-1)x)dx\\
+= & \frac{\exp((\theta-1)x)}{\theta-1}\bigg|_{0}^{\infty}\\
+= & \frac{1}{1-\theta}\frac{1}{\exp((1-\theta)x)}\bigg|_{\infty}^{0}\text{ for \theta<1}\\
+= & \frac{1}{1-\theta}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\theta_{-}=-\infty,\theta_{+}=\infty$
+\end_inset
+
+.
+ And 
+\begin_inset Formula $\varphi(\theta)<\infty,\forall\theta\in(-\infty,1).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+(H2) The exponential distribution is a continuous distribution, and it obviously
+ is not a point mass at 1.
+ 
+\end_layout
+
+\begin_layout Proof
+Now we find the solution to: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+a= & \frac{1}{(1-\theta)^{2}}(1-\theta)\\
+\Leftrightarrow1-\theta= & \frac{1}{a}\\
+\Leftrightarrow\theta= & 1-\frac{1}{a}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By the Large Deviation Theorem, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+n^{-1}\log\mathbb{P}\left[S_{n}\ge na\right]\rightarrow & -a(1-\frac{1}{a})+\log\frac{1}{1-(1-\frac{1}{a})}\\
+= & 1-a+\log a
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(b) The Large Deviation Theorem is similar for 
+\begin_inset Formula $a<1$
+\end_inset
+
+ except that 
+\begin_inset Formula $\theta_{a}\in(\theta_{-},0).$
+\end_inset
+
+ Following the same step we have 
+\begin_inset Formula $\theta_{a}=1-\frac{1}{a}.$
+\end_inset
+
+ And 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+n^{-1}\log\mathbb{P}\left[S_{n}\le na\right]\rightarrow & 1-a+\log a,\text{ for a < 1}.
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+Statement 2.6.1 in Durrett's book.
+ Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be i.i.d and 
+\begin_inset Formula $S_{n}=X_{1}+...+X_{n}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\mathbb{P}\left[S_{n}\ge na\right]\le\exp(n\gamma(\alpha))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+From the first part of Section 2.6 in Durrett's book, denote 
+\begin_inset Formula $\pi_{n}=\mathbb{P}\left[S_{n}\ge na\right]$
+\end_inset
+
+, we have: 
+\begin_inset Formula $\pi_{m+n}\ge\pi_{m}\pi_{n}.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\pi_{mn}\ge\pi_{n}^{m}.$
+\end_inset
+
+ Fix n.
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+m\log\pi_{n}\le & \log\pi_{mn}\\
+\Rightarrow\log\pi_{n}\le & n\frac{1}{mn}\log\pi_{mn},\forall m
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let the 
+\begin_inset Formula $m\rightarrow\infty$
+\end_inset
+
+ we have, and using the fact that 
+\begin_inset Formula $\lim_{i\rightarrow\infty}\frac{1}{i}\log\pi_{i}=\gamma(a)$
+\end_inset
+
+ (as derived from Lemma 2.6.1 in Durrett's book), we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\log\pi_{n}\le & n\gamma(a)\\
+\Rightarrow\pi_{n}\le & \exp(n\gamma(a))
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Oriented First Passage Percolution
+\end_layout
+
+\begin_layout Proof
+Upper Bound.
+ Consider a path where at each point, we choose the smaller edge.
+ Then each of the chosen edge has the distribution of 
+\begin_inset Formula $\min(X,X^{'})$
+\end_inset
+
+ for 
+\begin_inset Formula $X,X'$
+\end_inset
+
+ iid Exponential(1).
+ We have 
+\begin_inset Formula $\min(X,X')\sim Exponential(1/2).$
+\end_inset
+
+ Thus the sample mean according to the Law of Large Number 
+\begin_inset Formula $S_{\pi}/d=\frac{1}{d}\sum\min(X_{i},X_{i}')\rightarrow\frac{1}{2}$
+\end_inset
+
+ a.s.
+ So an upper bound is 
+\begin_inset Formula $1/2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Lower Bound.
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\frac{H_{d}}{d}\le a\right]\le & \mathbb{P}\left[\frac{S_{\pi}}{d}\le a\text{ for all possible path}\pi\right]\\
+= & \mathbb{P}\left[\bigcup_{\pi_{0}}\left(\frac{S_{\pi_{0}}}{d}\le a\right)\right]\\
+\le & \sum\left(\mathbb{P}\left[\frac{S_{\pi_{0}}}{d}\le a\right]\right)\\
+\le & 2^{d}\mathbb{P}\left[\frac{S_{\pi_{0}}}{d}\le a\right]\\
+\le & 2^{d}\exp(d\gamma(a))\text{ (From Lemma 1)}\\
+\le & \exp\left(d\log2+d\gamma(a)\right)\\
+= & \exp\left(d\left(\log2+1-a+\log a\right)\right)\text{ (From Q.4)}\\
+= & \exp\left(d(\log(2a)+1-a)\right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The last expression goes to infinity as 
+\begin_inset Formula $d\rightarrow\infty$
+\end_inset
+
+ iff 
+\begin_inset Formula $\log(2a)+1-a<0.$
+\end_inset
+
+ Solving the equation 
+\begin_inset Formula $\log(2a)+1-a=0$
+\end_inset
+
+ we have one root 
+\begin_inset Formula $a^{*}\approx0.231,$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall a<a^{*},\log(2a)+1-a<0$
+\end_inset
+
+.
+ So picking any 
+\begin_inset Formula $a<a^{*}$
+\end_inset
+
+ we have: 
+\begin_inset Formula $\lim_{d\rightarrow\infty}\mathbb{P}\left[\frac{H_{d}}{d}\le a\right]\rightarrow0$
+\end_inset
+
+ So a lower bound would be 0.23.
+ 
+\end_layout
+
+\end_body
+\end_document

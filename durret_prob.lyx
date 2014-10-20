@@ -1678,8 +1678,174 @@ Note that we already prove that part
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Stopping Times
+\end_layout
 
+\begin_layout Standard
+General Setting: 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ i.i.d on 
+\begin_inset Formula $\left(S,\mathcal{S}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S_{n}=X_{1}+...+X_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{1}
+\Omega= & \left\{ \left(\omega_{1},\omega_{2},...\right)\mid\omega_{i}\in S\right\} \\
+\mathcal{F}= & \mathcal{S}\times\mathcal{S}\times...\\
+\mathbb{P}= & \mu\times\mu\times...\\
+X_{n}(\omega)= & \omega_{n}\\
+\mathcal{F}_{n}= & \sigma\left(X_{1},...,X_{n}\right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+A Stopping Time T is a random variable from 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{N}\cap\left\{ \infty\right\} $
+\end_inset
+
+ such that: 
+\begin_inset Formula $\left\{ T=n\right\} \in\mathcal{F}_{n},\forall n\in\mathbb{N}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+E.g.
+ The random variable 
+\begin_inset Formula $T=\inf\left\{ n\mid S_{n}\in A\right\} $
+\end_inset
+
+ is a stopping time.
+ Because:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left\{ T=n\right\} = & \left\{ S_{1}\in A^{c},...S_{n-1}\in A^{c},S_{n}\in A\right\} \in\mathcal{F}_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The minimum of two stopping times 
+\begin_inset Formula $S,T$
+\end_inset
+
+ is denoted as 
+\begin_inset Formula $S\wedge T,$
+\end_inset
+
+ while the maximum is 
+\begin_inset Formula $S\vee T.$
+\end_inset
+
+ Both of them are stopping time.
+ Also 
+\begin_inset Formula $S+T$
+\end_inset
+
+ is a stopping time.
+ In the discrete setting that we are on 
+\begin_inset Formula $ST$
+\end_inset
+
+ is also a stopping time, however in the continuous case it might not as
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ or 
+\begin_inset Formula $T$
+\end_inset
+
+ can be smaller than 1, making the other possible to be larger than n.
+ The difference 
+\begin_inset Formula $S-T$
+\end_inset
+
+ is not a stopping time in both discrete and continuous case.
+ 
+\end_layout
+
+\begin_layout Theorem
+Assume 
+\begin_inset Formula $\mathbb{P}\left[T<\infty\right]>0.$
+\end_inset
+
+ Then conditional on 
+\begin_inset Formula $\left\{ T<\infty\right\} ,\left\{ X_{N+n},n\ge1\right\} $
+\end_inset
+
+ is independent of 
+\begin_inset Formula $\mathcal{F}_{N}$
+\end_inset
+
+ and has the same distribution as the original sequence.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Wald's equation.
+ Let 
+\begin_inset Formula $\mathbb{E}\left|X_{i}\right|<\infty,\mathbb{E}T<\infty.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\mathbb{E}S_{T}=\mathbb{E}X_{1}\mathbb{E}T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Wald's second equation.
+ Let 
+\begin_inset Formula $\mathbb{E}X_{n}=0,$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{E}X_{n}^{2}=\sigma^{2}<\infty,\mathbb{E}T<\infty.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\mathbb{E}S_{T}^{2}=\sigma^{2}\mathbb{E}T$
+\end_inset
+
+.
+  
 \end_layout
 
 \end_body
