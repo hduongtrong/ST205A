@@ -1,0 +1,607 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STAT 205A - Homework 9
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Conditional Expectation
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(\Omega_{1},\mathcal{F},\nu_{x})$
+\end_inset
+
+ be the probability space for 
+\begin_inset Formula $X,$
+\end_inset
+
+ 
+\begin_inset Formula $(\Omega_{2},\mathcal{G},\nu_{y})$
+\end_inset
+
+ be the probability space for 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Let the product:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\Omega=\Omega_{1}\times\Omega_{2}= & \left\{ (\omega_{1},\omega_{2})\mid\omega_{1}\in\Omega_{1},\omega_{2}\in\Omega_{2}\right\} \\
+\mathcal{S}= & \sigma\left(\left\{ S_{1}\times S_{2}\mid S_{1}\in\mathcal{F},S_{2}\in\mathcal{G}\right\} \right)\\
+\nu= & \nu_{x}\times\nu_{y}\\
+\nu(S_{1}\times S_{2})= & \nu_{x}(S_{1})\nu_{y}(S_{2}),\forall S_{1}\in\mathcal{F},S_{2}\in\mathcal{G}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Z=\mathbb{E}\left[h(X,Y)\mid\mathcal{G}\right]$
+\end_inset
+
+, then by definition of conditional expectation, 
+\begin_inset Formula $Z$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{G}-$
+\end_inset
+
+measurable.
+ Since 
+\begin_inset Formula $h$
+\end_inset
+
+ is bounded measurable, it is absolutely integrable so we can interchange
+ integrals.
+ By the definition of conditional expectation we have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[Z\mathbb{I}_{G}\right]= & \mathbb{E}\left[h(X,Y)\mathbb{I}_{G}\right],\forall G\in\mathcal{G}\\
+= & \int h(X,Y)\mathbb{I}_{G}\nu(dx,dy)\\
+= & \int\left(\int h(x,Y)\mathbb{I}_{G}\mu(Y,dx)\right)\nu_{y}(dy)\\
+= & \int\mathbb{I}_{G}\left(\int h(x,Y)\mu(Y,dx)\right)\nu_{y}(dy)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $\int h(x,Y)\mu(Y,dx)$
+\end_inset
+
+ are 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ measurable function, that have the same expectation on all measurable set
+ in 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+.
+ Thus they are equal almost surely.
+ 
+\end_layout
+
+\begin_layout Problem
+Conditional Independence Definition 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(b)\Rightarrow(a)$
+\end_inset
+
+ Given (b), (a) is true as we can apply (b) for the case 
+\begin_inset Formula $h_{1}(X)=\mathbb{I}_{A_{1}},h_{2}(X)=\mathbb{I}_{A_{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(a)\Rightarrow(b)$
+\end_inset
+
+ Given (a) is true.
+ 
+\end_layout
+
+\begin_layout Proof
+First step, since (a) is true, (b) is true for any simple function 
+\begin_inset Formula $h_{1}(X_{1}),h_{2}(X_{2})$
+\end_inset
+
+ each of the form 
+\begin_inset Formula $\sum a_{i}\mathbb{I}_{A_{i}},$
+\end_inset
+
+ by the linearlity of expectation.
+ 
+\end_layout
+
+\begin_layout Proof
+Second step, from the first step, we have (b) is true for any bounded positive
+ measurable function 
+\begin_inset Formula $h_{i}(X_{i}),i=1,2$
+\end_inset
+
+ by the Monotone Convergence Theorem
+\end_layout
+
+\begin_layout Proof
+Third step, from the second step, for any bounded measurable function, define
+ 
+\begin_inset Formula $h_{i}^{+}$
+\end_inset
+
+ as the positive part of 
+\begin_inset Formula $h_{i},$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{i}^{-}$
+\end_inset
+
+ as the negative part, then from 
+\begin_inset Formula $h_{i}^{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $-h_{i}^{-}$
+\end_inset
+
+ are positive bounded measurable function, so (b) is true for both of these
+ function as by second step.
+ Thus (b) is also true for 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(c)\Rightarrow(b)$
+\end_inset
+
+ Given (c) we have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})\mid\mathcal{G}\right]= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})\mid\mathcal{G},X_{2}\right]\mid\mathcal{G}\right]\\
+= & \mathbb{E}\left[h_{2}(X_{2})\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G},X_{2}\right]\right];\mbox{ }h_{2}(X_{2})\mbox{ is }\sigma(X_{2})-measurable\\
+= & \mathbb{E}\left[h_{2}(X_{2})\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]\mid\mathcal{G}\right];\mbox{ because of (c)}\\
+= & \mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]\mathbb{E}\left[h_{2}(X_{2})\mid\mathcal{G}\right];\mbox{ }\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]\mbox{ is }\mathcal{G}-measurable
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(b)\Rightarrow(c)$
+\end_inset
+
+ Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be a 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+-measurable r.v.
+ From (b) we have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & \mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})Y\right]\\
+= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})Y\mid\mathcal{G}\right]\right]\mbox{; Tower Property}\\
+= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})\mid\mathcal{G}\right]Y\right]\mbox{; Y is }\mbox{\mathcal{G}-}measurable\\
+= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]\mathbb{E}\left[h_{2}(X_{2})\mid\mathcal{G}\right]Y\right];\mbox{ from (b)}\\
+=^{(*)} & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]h_{2}(X_{2})Y\right];\mbox{ why?}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The last statement is true for only 
+\begin_inset Formula $h_{2}(X_{2})$
+\end_inset
+
+ that is independent of 
+\begin_inset Formula $\mathcal{G}.$
+\end_inset
+
+ So we have to limit the scope of 
+\begin_inset Formula $h_{2}(X_{2})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Z=\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G},X_{2}\right],$
+\end_inset
+
+ since 
+\begin_inset Formula $h_{2}(X_{2})Y$
+\end_inset
+
+ is 
+\begin_inset Formula $\sigma(\mathcal{G},X_{2})-measurable,$
+\end_inset
+
+ we have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & \mathbb{E}\left[Zh_{2}(X_{2})Y\right]\\
+= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G},X_{2}\right]h_{2}(X_{2})Y\right];\mbox{ definition of }Z\\
+= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})Y\mid\mathcal{G},X_{2}\right]\right];\mbox{ }h_{2}(X_{2})Y\mbox{ is }\mathcal{G}-measurable\\
+= & \mathbb{E}\left[h_{1}(X_{1})h_{2}(X_{2})Y\right];\mbox{ Tower Property}\\
+= & \mathbb{E}\left[\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]h_{2}(X_{2})Y\right];\mbox{ because of (*)}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\mathbb{E}\left[\left(Z-\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]\right)h_{2}(X_{2})Y\right]=0,$
+\end_inset
+
+ by the 
+\begin_inset Formula $\pi-\lambda$
+\end_inset
+
+ theorem, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\left(Z-\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]\right)X\right]=0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+for all 
+\begin_inset Formula $X$
+\end_inset
+
+ that is 
+\begin_inset Formula $\sigma(\mathcal{G},X_{2})-$
+\end_inset
+
+measurable.
+ Take 
+\begin_inset Formula $X=Z-\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]$
+\end_inset
+
+ then we have 
+\begin_inset Formula $Z=\mathbb{E}\left[h_{1}(X_{1})\mid\mathcal{G}\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Conditional Independence with respect to different 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-algebra.
+ 
+\end_layout
+
+\begin_layout Problem
+(a) 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ conditional independent given 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(b) 
+\begin_inset Formula $X,Z$
+\end_inset
+
+ conditional independent given 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $h$
+\end_inset
+
+ bounded and measurable, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{E}\left[h(X)\mid Y,Z\right]= & \mathbb{E}\left[h(X)\mid Z\right]\mbox{ by (a) and 2(c)}\\
+\mathbb{E}\left[h(Y)\mid X,Z\right]= & \mathbb{E}\left[h(Y)\mid Z\right]\mbox{ by (a) 2(c)}\\
+\mathbb{E}\left[h(X)\mid Z,\mathcal{F}\right]= & \mathbb{E}\left[h(X)\mid\mathcal{F}\right]\mbox{ by (b) and 2(c)}\\
+\mathbb{E}\left[h(X)\mid Z,\mathcal{F}\right]= & \mathbb{E}\left[h(X)\mid Z\right]\mbox{ because }\mathcal{F}\subset\sigma(Z)\\
+\Rightarrow\mathbb{E}\left[h(X)\mid\mathcal{F}\right]= & \mathbb{E}\left[h(X)\mid Z\right]
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & \mathbb{E}\left[h(X)\mid Y,\mathcal{F}\right]\\
+= & \mathbb{E}\left[\mathbb{E}\left[h(X)\mid Y,Z\right]\mid Y,\mathcal{F}\right]\mbox{ Tower Property}\\
+= & \mathbb{E}\left[\mathbb{E}\left[h(X)\mid Z\right]\mid Y,\mathcal{F}\right]\mbox{ by (1)}\mbox{ }\\
+= & \mathbb{E}\left[\mathbb{E}\left[h(X)\mid\mathcal{F}\right]\mid Y,\mathcal{F}\right]\mbox{ by (5)}\\
+= & \mathbb{E}\left[h(X)\mid\mathcal{F}\right]\mbox{ Tower Property}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So by 2(c) we have 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ are conditionally independent given 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Super martingale
+\end_layout
+
+\begin_layout Proof
+Given 
+\begin_inset Formula $X_{n},Y_{n}$
+\end_inset
+
+ sunmartingale, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{n+1}+Y_{n+1}\mid\mathcal{F}_{n}\right]= & \mathbb{E}\left[X_{n+1}\mid\mathcal{F}_{n}\right]+\mathbb{E}\left[Y_{n}+1\mid\mathcal{F}_{n}\right]\\
+\ge & X_{n}+Y_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $X_{n}+Y_{n}$
+\end_inset
+
+ is a submargingale.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\max(X_{n+1},Y_{n+1})\mid\mathcal{F}_{n}\right]\ge & \mathbb{E}\left[X_{n+1}\mid\mathcal{F}_{n}\right]\ge X_{n}\\
+\mathbb{E}\left[\max(X_{n+1},Y_{n+1})\mid\mathcal{F}_{n}\right]\ge & \mathbb{E}\left[Y_{n+1}\mid\mathcal{F}_{n}\right]\ge Y_{n}\\
+\Rightarrow\mathbb{E}\left[\max(X_{n+1},Y_{n+1})\mid\mathcal{F}_{n}\right]\ge & \max(X_{n}+Y_{n})
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\max(X_{n},Y_{n})$
+\end_inset
+
+ is a submartingale.
+\end_layout
+
+\begin_layout Problem
+Counter Example
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ be i.i.d with 
+\begin_inset Formula $\mathbb{P}\left[W_{i}=1\right]=\mathbb{P}\left[W_{i}=-1\right]=1/2$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $X_{n}=-\sum_{i=1}^{n}W_{i},Y_{n}=\sum_{i=1}^{n+1}W_{i}.$
+\end_inset
+
+ Then 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale w.r.t.
+ 
+\begin_inset Formula $\sigma(W_{1},...,W_{n}),$
+\end_inset
+
+ thus it is a submartingale.
+ 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is a martingale w.r.t.
+ 
+\begin_inset Formula $\sigma(W_{1},...,W_{n+1})$
+\end_inset
+
+, thus it is a submartingale.
+ 
+\end_layout
+
+\begin_layout Proof
+We will prove by contradiction, assuming that 
+\begin_inset Formula $X_{n}+Y_{n}=W_{n+1}$
+\end_inset
+
+ is a submartingale.
+ Since 
+\begin_inset Formula $\sup_{n>0}\mathbb{E}\left[W_{n}^{+}\right]=1<\infty$
+\end_inset
+
+, by the Doob's first martingale convergence theorem, we have 
+\begin_inset Formula $W_{n}$
+\end_inset
+
+ converges pointwise to a random variable.
+ But 
+\begin_inset Formula $W_{n}$
+\end_inset
+
+ are i.i.d.
+ non constant.
+ Thus we have contradiction.
+ So 
+\begin_inset Formula $W_{n+1}$
+\end_inset
+
+ is not a submartingale.
+ 
+\end_layout
+
+\end_body
+\end_document
