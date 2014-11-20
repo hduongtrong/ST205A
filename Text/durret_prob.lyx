@@ -77,11 +77,11 @@ theorems-sec-bytype
 
 \begin_body
 
-\begin_layout Standard
-Durret Probability
+\begin_layout Title
+Durrett Probability
 \end_layout
 
-\begin_layout Standard
+\begin_layout Author
 Hoang Duong
 \end_layout
 
@@ -230,12 +230,12 @@ system with
 \end_layout
 
 \begin_layout Definition
-Semialgebra.
+Semi-algebra.
  A collection of set 
 \begin_inset Formula $\mathcal{S}$
 \end_inset
 
- is a semialgebra if it is closed under intersection, and if 
+ is a semi-algebra if it is closed under intersection, and if 
 \begin_inset Formula $S\in\mathcal{S}$
 \end_inset
 
@@ -260,7 +260,7 @@ If
 \begin_inset Formula $\mathcal{S}$
 \end_inset
 
- is a semialgebra, then 
+ is a semi-algebra, then 
 \begin_inset Formula $\mathcal{F}=\left\{ \mbox{finite disjoint unions of sets in }\mathcal{S}\right\} $
 \end_inset
 
@@ -1768,7 +1768,7 @@ Let
 \begin_inset Formula $\theta>0,\mathbb{P}\left[S_{n}\ge na\right]\rightarrow0$
 \end_inset
 
- exponentiaally rapidly and we will identify:
+ exponentially rapidly and we will identify:
 \end_layout
 
 \begin_layout Standard
@@ -1813,7 +1813,7 @@ This Lemma implies that
 \end_inset
 
  exists.
- (1) can also be rewritted as 
+ (1) can also be rewritten as 
 \begin_inset Formula $\mathbb{P}\left[S_{n}\ge na\right]\le\exp(n\gamma(a))$
 \end_inset
 
@@ -1864,7 +1864,7 @@ From the definition, we can conclude that
 \begin_inset Formula $\gamma$
 \end_inset
 
- is concave and henc Lipschitz continuous on compact subset of 
+ is concave and hence Lipschitz continuous on compact subset of 
 \begin_inset Formula $\left\{ a\mid\gamma(a)>-\infty\right\} .$
 \end_inset
 
@@ -2465,7 +2465,7 @@ Absolutely Continuous.
 \begin_inset Formula $\nu$
 \end_inset
 
- is absolutely continuous wrt 
+ is absolutely continuous w.r.t 
 \begin_inset Formula $\mu,$
 \end_inset
 
@@ -2502,7 +2502,7 @@ Radon-Nikodym Theorem.
 \begin_inset Formula $\nu$
 \end_inset
 
- is absolutely continuous wrt 
+ is absolutely continuous w.r.t 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -3045,7 +3045,7 @@ measurable, if
 \begin_inset Formula $Z=\mathbb{E}\left[X\mid\mathcal{G}\right]$
 \end_inset
 
- it is enough to prive 
+ it is enough to prove 
 \begin_inset Formula $\mathbb{E}\left[Z\mathbb{I}_{A}\right]=\mathbb{E}\left[X\mathbb{I}_{A}\right],\forall A\in\mathcal{A}$
 \end_inset
 
@@ -3224,41 +3224,873 @@ When
 
 \end_layout
 
+\begin_layout Section
+Martingale
+\end_layout
+
 \begin_layout Subsection
-Regular Conditional Probability
+Definitions
+\end_layout
+
+\begin_layout Definition
+Martingale.
+ Let 
+\begin_inset Formula $\left(\Omega,\mathcal{F},\mathbb{P},\left\{ \mathcal{F}_{n}\right\} \right)$
+\end_inset
+
+ be a filtration.
+ 
+\begin_inset Formula $X_{n}\in\mathcal{F}_{n}$
+\end_inset
+
+ is a martingale w.r.t 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+ iff:
+\end_layout
+
+\begin_layout Definition
+(i) 
+\begin_inset Formula $\mathbb{E}\left|X_{n}\right|<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(ii) 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is adapted to 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(iii) 
+\begin_inset Formula $\mathbb{E}\left[X_{n+1}\mid\mathcal{F}_{n}\right]=X_{n},\forall n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+If in the last condition 
+\begin_inset Formula $=$
+\end_inset
+
+ is replaced by 
+\begin_inset Formula $\ge,$
+\end_inset
+
+ we have submartingale, if replaced by 
+\begin_inset Formula $\le,$
+\end_inset
+
+ we have super martingale.
+ 
 \end_layout
 
 \begin_layout Standard
-Let 
-\begin_inset Formula $\left(\Omega,\mathcal{F},\mathbb{P}\right)$
-\end_inset
-
- be a probability space, 
-\begin_inset Formula $X:\left(\Omega,\mathcal{F}\right)\rightarrow\left(S,\mathcal{S}\right)$
-\end_inset
-
- a measurable map, and 
-\begin_inset Formula $\mathcal{G}\subset\mathcal{F}$
-\end_inset
-
- be a 
-\begin_inset Formula $\sigma-$
-\end_inset
-
-field.
+Using an induction argument, we have the a similar statement in (iii) for
  
-\begin_inset Formula $\mu:\Omega\times\mathcal{S}\rightarrow\left[0,1\right]$
+\begin_inset Formula $X_{n+k}$
 \end_inset
 
- is said to be a regular conditional distribution for 
+ and 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ for 
+\begin_inset Formula $k>0$
+\end_inset
+
+ is true.
+ 
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale w.r.t 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a convex function with 
+\begin_inset Formula $\mathbb{E}\left|\varphi(X_{n})\right|<\infty$
+\end_inset
+
+ for all n then 
+\begin_inset Formula $\varphi(X_{n})$
+\end_inset
+
+ is a submartingale w.r.t.
+ 
+\begin_inset Formula $\mathcal{F}_{n}.$
+\end_inset
+
+ (by Jensen inequality)
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a submartingale w.r.t.
+ 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is an increasing convex function with 
+\begin_inset Formula $\mathbb{E}\left|\varphi(X_{n})\right|<\infty,\forall n$
+\end_inset
+
+, then 
+\begin_inset Formula $\varphi(X_{n})$
+\end_inset
+
+ is a submartingale w.r.t.
+ 
+\begin_inset Formula $\mathcal{F}_{n}.$
+\end_inset
+
+ Consequently, (i) If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a submartingale then 
+\begin_inset Formula $(X_{n}-a)^{+}$
+\end_inset
+
+ is a submartingale.
+ (ii) If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a supermartingale then 
+\begin_inset Formula $X_{n}\wedge a$
+\end_inset
+
+ is a supermartingale.
+ 
+\end_layout
+
+\begin_layout Definition
+Predictable.
+ 
+\begin_inset Formula $H_{n}$
+\end_inset
+
+ is predictable iff 
+\begin_inset Formula $H_{n}$
+\end_inset
+
+ is adapted to 
+\begin_inset Formula $\mathcal{F}_{n-1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X_{n},n\ge0$
+\end_inset
+
+ be a supermartingale.
+ If 
+\begin_inset Formula $H_{n}\ge0$
+\end_inset
+
+ is predictable and each 
+\begin_inset Formula $H_{n}$
+\end_inset
+
+ is bounded then 
+\begin_inset Formula $(H\cdot X)_{n}$
+\end_inset
+
+ is a supermartingale.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $N$
+\end_inset
+
+ is a ST and 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a supermartingale, then 
+\begin_inset Formula $X_{N\wedge n}$
+\end_inset
+
+ is a supermartingale.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Upcrossing.
+ Let 
+\begin_inset Formula $X_{n},n\ge0$
+\end_inset
+
+ is a submartingale.
+ Let 
+\begin_inset Formula $a<b,N_{0}=-1$
+\end_inset
+
+, and for 
+\begin_inset Formula $k\ge1$
+\end_inset
+
+ let:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{alignat*}{1}
+N_{2k-1}= & \inf\left\{ m>N_{2k-2}\mid X_{m}\le a\right\} \\
+N_{2k}= & \inf\left\{ m>N_{2k-1}\mid X_{m}\ge b\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Then 
+\begin_inset Formula $N_{j}$
+\end_inset
+
+ are stopping times.
+ 
+\begin_inset Formula $U_{n}=\sup\left\{ k\mid N_{2k}\le n\right\} $
+\end_inset
+
+ is defined as the number of upcrossings completed by time 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+Upcrossing inequality.
+ If 
+\begin_inset Formula $X_{m},m\ge0$
+\end_inset
+
+ is a submartingale then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+(b-a)\mathbb{E}U_{n}\le & \mathbb{E}\left[X_{n}-a\right]^{+}-\mathbb{E}\left[X_{0}-a\right]^{+}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Martingale Convergence Theorem.
+ If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a submartingale with 
+\begin_inset Formula $\sup\mathbb{E}X_{n}^{+}<\infty$
+\end_inset
+
+ then as 
+\begin_inset Formula $n\rightarrow\infty,$
+\end_inset
+
+
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ converges a.s.
+ to a limit 
 \begin_inset Formula $X$
 \end_inset
 
- given 
-\begin_inset Formula $\mathcal{G}$
+ with 
+\begin_inset Formula $\mathbb{E}\left|X\right|<\infty$
 \end_inset
 
- if:
+.
+ 
+\end_layout
+
+\begin_layout Corollary
+If 
+\begin_inset Formula $X_{n}\ge0$
+\end_inset
+
+ is a supermartingale then as 
+\begin_inset Formula $n\rightarrow\infty,$
+\end_inset
+
+ 
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ a.s.
+ and 
+\begin_inset Formula $\mathbb{E}X_{n}\le\mathbb{E}X_{0}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+Doob's decomposition.
+ Any submartingale 
+\begin_inset Formula $X_{n},n\ge0$
+\end_inset
+
+ can be written in a unique way as 
+\begin_inset Formula $X_{n}=M_{n}+A_{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $M_{n}$
+\end_inset
+
+ is a martingale and 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ is predictable increasing sequence with 
+\begin_inset Formula $A_{0}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Examples
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be a martingale with 
+\begin_inset Formula $\left|X_{n+1}-X_{n}\right|\le M<\infty$
+\end_inset
+
+.
+ Let 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+C= & \left\{ \lim X_{n}\mbox{ exists and is finite}\right\} \\
+D= & \left\{ \lim\sup X_{n}=+\infty\wedge\lim\inf X_{n}=-\infty\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Then 
+\begin_inset Formula $\mathbb{P}\left[C\cup D\right]=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Second Borel-Centelli Lemma, II.
+ Let 
+\begin_inset Formula $\mathcal{F}_{n},n\ge0$
+\end_inset
+
+ be a filtration with 
+\begin_inset Formula $\mathcal{F}_{0}=\left\{ 0,\Omega\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $A_{n},n\ge0$
+\end_inset
+
+ a sequence of events with 
+\begin_inset Formula $A_{n}\in\mathcal{F}_{n}.$
+\end_inset
+
+ Then
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\left\{ A_{n}i.o.\right\} = & \left\{ \sum_{n=1}^{\infty}\mathbb{P}\left[A_{n}\mid\mathcal{F}_{n-1}\right]=\infty\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Radon-Nikodym Derivatives.
+ Suppose 
+\begin_inset Formula $\mu_{n}\ll v_{n},\forall n.$
+\end_inset
+
+ Let 
+\begin_inset Formula $X_{n}=d\mu_{n}/d\nu_{n}$
+\end_inset
+
+ and let 
+\begin_inset Formula $X=\lim\sup X_{n}$
+\end_inset
+
+.
+ Then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mu(A)= & \int_{A}Xd\nu+\mu\left(A\cap\left\{ X=\infty\right\} \right)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Kakutani Dichotomy for infinite product measures.
+ Let 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu$
+\end_inset
+
+ be measures on a sequence space 
+\begin_inset Formula $\left(R^{N},\mathcal{R}^{N}\right)$
+\end_inset
+
+ that make the coordinates 
+\begin_inset Formula $\xi_{n}(\omega)=\omega_{n}$
+\end_inset
+
+ independent.
+ Let 
+\begin_inset Formula $F_{n}(x)=\mu(\xi_{n}\le x),G_{n}(x)=\nu(\xi_{n}\le x).$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $F_{n}\ll G_{n}$
+\end_inset
+
+ and let 
+\begin_inset Formula $q_{n}=dF_{n}/dG_{n}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $\mathcal{F}_{n}=\sigma(\xi_{m}\mid m\le n),$
+\end_inset
+
+ let 
+\begin_inset Formula $\mu_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu_{n}$
+\end_inset
+
+ be the restriction of 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{F}_{n},$
+\end_inset
+
+ and let:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+X_{n}=\frac{d\mu_{n}}{d\nu_{n}}= & \prod_{m=1}^{n}q_{m}.
+\end{alignat*}
+
+\end_inset
+
+ Radon-Nikodym Derivatives Theorem implies that 
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ 
+\begin_inset Formula $\nu-a.s.$
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{m=1}^{\infty}\log q_{m}>-\infty$
+\end_inset
+
+ is a tail event, so the Kolmogorov 0-1 law implies 
+\begin_inset Formula $\nu(X=0)\in\left\{ 0,1\right\} $
+\end_inset
+
+.
+ And it follows from Radon-Nikodym theorem that either 
+\begin_inset Formula $\mu\ll\nu$
+\end_inset
+
+ or 
+\begin_inset Formula $\mu\perp\nu$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\mu\ll\nu$
+\end_inset
+
+ or 
+\begin_inset Formula $\mu\perp\nu,$
+\end_inset
+
+ according as 
+\begin_inset Formula $\prod_{m=1}^{\infty}\int\sqrt{q_{m}}dG_{m}>0$
+\end_inset
+
+ or 
+\begin_inset Formula $=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Doob's inequality, Convergence in 
+\begin_inset Formula $L^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a submartingale and N is a ST with 
+\begin_inset Formula $\mathbb{P}\left[N\le k\right]=1$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}X_{0}\le & \mathbb{E}X_{n}\le\mathbb{E}X_{k}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Doob's inequality.
+ Let 
+\begin_inset Formula $X_{m}$
+\end_inset
+
+ be a submartingale.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\bar{X}_{n}= & \max_{0\le m\le n}X_{m}^{+}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\lambda>0,$
+\end_inset
+
+ and 
+\begin_inset Formula $A=\left\{ \bar{X}_{n}\ge\lambda\right\} .$
+\end_inset
+
+ Then
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lambda\mathbb{P}\left[A\right]\le & \mathbb{E}X_{n}\mathbb{I}_{A}\le\mathbb{E}X_{n}^{+}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{p}$
+\end_inset
+
+ maximum inequality.
+ If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a submartingale then for 
+\begin_inset Formula $1<p<\infty,$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\bar{X}_{n}^{p}\right]\le & \left(\frac{p}{p-1}\right)^{p}\mathbb{E}\left[X_{n}^{+}\right]^{p}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Consequently, if 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is a martingale and 
+\begin_inset Formula $Y_{n}^{*}=\max_{0\le m\le n}\left|Y_{m}\right|,$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left|Y_{n}^{*}\right|^{p}\le & \left(\frac{p}{p-1}\right)^{p}\mathbb{E}\left|Y_{n}\right|^{p}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ be a submartingale and 
+\begin_inset Formula $\log^{+}x=\max\left(\log x,0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\bar{X}_{n}\le & \left(1+e^{-1}\right)^{-1}\left\{ 1+\mathbb{E}\left[X_{n}^{+}\log^{+}\left(X_{n}^{+}\right)\right]\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{p}$
+\end_inset
+
+ convergence theorem.
+ If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale with 
+\begin_inset Formula $\sup\mathbb{E}\left|X_{n}\right|^{p}<\infty$
+\end_inset
+
+ where 
+\begin_inset Formula $p>1,$
+\end_inset
+
+ then 
+\begin_inset Formula $X_{n}\rightarrow X$
+\end_inset
+
+ a.s.
+ and in 
+\begin_inset Formula $L^{p}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Orthogonality of Martingale Increments.
+ Let 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ be a martingale with 
+\begin_inset Formula $\mathbb{E}X_{n}^{2}<\infty,\forall n.$
+\end_inset
+
+ If 
+\begin_inset Formula $m\le n$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\in\mathcal{F}_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}Y^{2}<\infty$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\left(X_{n}-X_{m}\right)Y\right]= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Conditional Variance Formula.
+ If 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale with 
+\begin_inset Formula $\mathbb{E}X_{n}^{2}<\infty,\forall n$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\left(X_{n}-X_{m}\right)^{2}\mid\mathcal{F}_{m}\right]= & \mathbb{E}\left[X_{n}^{2}\mid\mathcal{F}_{m}\right]-X_{m}^{2}
+\end{alignat*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -1,0 +1,902 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205 - Homework 10
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}\xi_{i},$
+\end_inset
+
+ where 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ are independent, 
+\begin_inset Formula $\mathbb{E}\xi_{i}=0$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm Var}\xi_{i}<\infty$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s_{n}^{2}=\sum_{i=1}^{n}{\rm Var}\xi_{i}.$
+\end_inset
+
+ We know that 
+\begin_inset Formula $S_{n}-s_{n}^{2}$
+\end_inset
+
+ is a martingale.
+ Suppose also that 
+\begin_inset Formula $\left|\xi_{i}\right|\le K$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $K.$
+\end_inset
+
+ Show that:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\max_{m\le n}\left|S_{m}\right|<x\right]\le & s_{n}^{-2}\left(K+x\right)^{2},x>0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $T=\min\left\{ m\mid\left|S_{m}\right|\ge x\right\} $
+\end_inset
+
+ then 
+\begin_inset Formula $T$
+\end_inset
+
+ is a stopping time, thus 
+\begin_inset Formula $T\wedge n$
+\end_inset
+
+ is also a stopping time with 
+\begin_inset Formula $\mathbb{P}\left[T\wedge n\le n\right]=1$
+\end_inset
+
+.
+ Thus we can apply the theorem 5.4.1 in Durrett for the martingale 
+\begin_inset Formula $S_{n}^{2}-s_{n}^{2}$
+\end_inset
+
+ and have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+S_{1}^{2}-s_{1}^{2}\le & \mathbb{E}\left[S_{T\wedge n}^{2}-s_{T\wedge n}^{2}\right]\\
+\Leftrightarrow0\le & \mathbb{E}\left[\left(S_{T}^{2}-s_{T}^{2}\right)\mathbb{I}_{\left\{ T\le n\right\} }\right]+\mathbb{E}\left[\left(S_{n}^{2}-s_{n}^{2}\right)\mathbb{I}_{\left\{ T>n\right\} }\right]\\
+\le & \mathbb{E}\left[\left((x+K)^{2}-s_{T}^{2}\right)\mathbb{I}_{\left\{ T\le n\right\} }\right]+\mathbb{E}\left[\left(x^{2}-s_{n}^{2}\right)\mathbb{I}_{\left\{ T>n\right\} }\right]\\
+\le & \mathbb{E}\left[\left(x+K\right)^{2}\mathbb{I}_{\left\{ T\le n\right\} }\right]+\mathbb{E}\left[\left(x^{2}-s_{n}^{2}\right)\mathbb{I}_{\left\{ T>n\right\} }\right]\\
+= & \left(x+K\right)^{2}\left(1-\mathbb{P}\left[T>n\right]\right)+\left(x^{2}-s_{n}^{2}\right)\mathbb{P}\left[T>n\right]\\
+= & (x+K)^{2}-\left[\left(x+K\right)^{2}-\left(x^{2}-s_{n}^{2}\right)\right]\mathbb{P}\left[T>n\right]\\
+\Rightarrow\mathbb{P}\left[T>n\right]\le & \frac{\left(x+K\right)^{2}}{K^{2}+2xK+s_{n}^{2}}\\
+\le & \frac{(K+x)^{2}}{s_{n}^{2}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And since 
+\begin_inset Formula $\mathbb{P}\left[T>n\right]=\mathbb{P}\left[\max_{m\le n}\left|S_{m}<x\right|\right],$
+\end_inset
+
+ we have the proof.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{n}\right)$
+\end_inset
+
+ be a martingale with 
+\begin_inset Formula $X_{0}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}X_{n}^{2}<\infty.$
+\end_inset
+
+Using the fact that 
+\begin_inset Formula $\left(X_{n}+c\right)^{2}$
+\end_inset
+
+ is a submartingale, show that:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\max_{m\le n}X_{m}\ge x\right]\le & \frac{\mathbb{E}X_{n}^{2}}{x^{2}+\mathbb{E}X_{n}^{2}},x>0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We will use Doob's inequality (or Theorem 5.4.1), we have 
+\begin_inset Formula $B\coloneqq\left\{ \max_{m\le n}X_{m}\ge x\right\} \subset\left\{ \max_{m\le n}\left(X_{m}+c\right)^{2}\ge\left(x+c\right)^{2}\right\} \coloneqq A$
+\end_inset
+
+ for 
+\begin_inset Formula $c\ge0,$
+\end_inset
+
+ since 
+\begin_inset Formula $X_{m}\ge x\Leftrightarrow X_{m}+c\ge x+c\Rightarrow\left(X_{m}+c\right)^{2}\ge\left(x+c\right)^{2}$
+\end_inset
+
+.
+ Thus applying the Doob's inequality we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{P}\left[B\right]\le & \mathbb{P}\left[A\right]\\
+\le & \frac{\mathbb{E}\left[\left(X_{n}+c\right)^{2}\mathbb{I}_{A}\right]}{\left(x+c\right)^{2}}\\
+\le & \frac{\mathbb{E}\left[\left(X_{n}+c\right)^{2}\right]}{\left(x+c\right)^{2}}\\
+= & \frac{\mathbb{E}X_{n}^{2}+2c\mathbb{E}X_{n}+c^{2}}{\left(x+c\right)^{2}}\\
+= & \frac{\mathbb{E}X_{n}^{2}+c^{2}}{\left(x+c\right)^{2}}
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+for the last statement is true because 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale, thus 
+\begin_inset Formula $\mathbb{E}X_{n}=\mathbb{E}X_{0}=0$
+\end_inset
+
+.
+ Now let 
+\begin_inset Formula $\mathbb{E}X_{n}^{2}=a$
+\end_inset
+
+, we want:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{a+c^{2}}{(x+c)^{2}}\le & \frac{a}{x^{2}+a}\\
+\Leftrightarrow ax^{2}+a^{2}+c^{2}x^{2}+ac^{2}\le & ax^{2}+2axc+ac^{2}\\
+\Leftrightarrow a^{2}+c^{2}x^{2}\le & 2axc\\
+\Leftrightarrow(a-cx)^{2}\le & 0\\
+\Leftrightarrow a= & cx\\
+\Leftrightarrow c= & \frac{a}{x}=\frac{\mathbb{E}X_{n}^{2}}{x}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus if we apply (5) for 
+\begin_inset Formula $c=\frac{\mathbb{E}X_{n}^{2}}{x}$
+\end_inset
+
+ we have the proof.
+ 
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $X_{n},Y_{n}$
+\end_inset
+
+ martingale with 
+\begin_inset Formula $\mathbb{E}\left(X_{n}^{2}+Y_{n}^{2}\right)<\infty$
+\end_inset
+
+.
+ Show that:
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{E}\left[X_{n}Y_{n}\right]-\mathbb{E}\left[X_{0}Y_{0}\right]= & \sum_{m=1}^{n}\mathbb{E}\left[\left(X_{m}-X_{m-1}\right)\left(Y_{m}-Y_{m-1}\right)\right]
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From 
+\begin_inset Formula $\mathbb{E}\left(X_{n}^{2}+Y_{n}^{2}\right)<\infty$
+\end_inset
+
+ we also have 
+\begin_inset Formula $X_{n},Y_{n}$
+\end_inset
+
+ are bounded.
+ So we can use the property of conditional expectation 
+\begin_inset Formula $\mathbb{E}\left[X_{n+1}Y_{n}\mid\mathcal{F}_{n}\right]=Y_{n}\mathbb{E}\left[X_{n+1}\mid\mathcal{F}_{n}\right]=Y_{n}X_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+We will prove (6) by induction.
+ 
+\end_layout
+
+\begin_layout Proof
+(i) For 
+\begin_inset Formula $n=1.$
+\end_inset
+
+ We need to prove:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{1}Y_{1}-X_{0}Y_{0}\right]= & \mathbb{E}\left[\left(X_{1}-X_{0}\right)\left(Y_{1}-Y_{0}\right)\right]\\
+\Leftrightarrow\mathbb{E}\left[X_{1}Y_{0}\right]+\mathbb{E}\left[X_{0}Y_{1}\right]= & 2\mathbb{E}\left[X_{0}Y_{0}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Using tower property we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{1}Y_{0}\right]= & \mathbb{E}\left[\mathbb{E}\left[X_{1}Y_{0}\mid\mathcal{F}_{0}\right]\right]\\
+= & \mathbb{E}\left[Y_{0}\mathbb{E}\left[X_{1}\mid\mathcal{F}_{0}\right]\right]\\
+= & \mathbb{E}\left[Y_{0}X_{0}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Similarly:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{0}Y_{1}\right]= & \mathbb{E}\left[X_{0}Y_{0}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus we have statement (6) is true for 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(ii) Assuming statement (6) is true for case 
+\begin_inset Formula $n=k$
+\end_inset
+
+ for 
+\begin_inset Formula $k\ge1,$
+\end_inset
+
+ which means we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{E}\left[X_{k}Y_{k}\right]-\mathbb{E}\left[X_{0}Y_{0}\right]= & \sum_{m=1}^{k}\mathbb{E}\left[\left(X_{m}-X_{m-1}\right)\left(Y_{m}-Y_{m-1}\right)\right]
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iii) We need to show that statement (6) is also true for 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+.
+ Indeed using the same argument as (i) we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{k+1}Y_{k+1}-X_{k}Y_{k}\right]= & \mathbb{E}\left[\left(X_{k+1}-X_{k}\right)\left(Y_{k+1}-Y_{k}\right)\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Combining this face with (7) we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{k+1}Y_{k+1}-X_{0}Y_{0}\right]= & \mathbb{E}\left[X_{k+1}Y_{k+1}-X_{k}Y_{k}\right]+\mathbb{E}\left[X_{k}Y_{k}-X_{0}Y_{0}\right]\\
+= & \mathbb{E}\left[\left(X_{k+1}-X_{k}\right)\left(Y_{k+1}-Y_{k}\right)\right]+\sum_{m=1}^{k}\mathbb{E}\left[\left(X_{m}-X_{m-1}\right)\left(Y_{m}-Y_{m-1}\right)\right]\\
+= & \sum_{m=1}^{k+1}\mathbb{E}\left[\left(X_{m}-X_{m-1}\right)\left(Y_{m}-Y_{m-1}\right)\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By the induction principle, we have (6) is true for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{n},\mathcal{F}_{n}\right),n\ge0$
+\end_inset
+
+ be a positive submartingale with 
+\begin_inset Formula $X_{0}=0.$
+\end_inset
+
+ Let 
+\begin_inset Formula $V_{n}$
+\end_inset
+
+ be random variables such that
+\end_layout
+
+\begin_layout Problem
+(i) 
+\begin_inset Formula $V_{n}\in\mathcal{F}_{n-1},n\ge1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(ii) 
+\begin_inset Formula $B\ge V_{1}\ge V_{2}\ge...\ge0,$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Prove that for 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\max_{i\le j\le n}V_{j}X_{j}>\lambda\right]\le & \lambda^{-1}\sum_{j=1}^{n}\mathbb{E}\left[V_{j}\left(X_{j}-X_{j-1}\right)\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We will prove that 
+\begin_inset Formula $Y_{n}\coloneqq\sum_{j=1}^{n}V_{j}\left(X_{j}-X_{j-1}\right)$
+\end_inset
+
+ is a submartingale.
+ 
+\end_layout
+
+\begin_layout Proof
+(i) First 
+\begin_inset Formula $\mathbb{E}\left[V_{j}\left(X_{j}-X_{j-1}\right)\right]\le B\mathbb{E}\left[X_{j}-X_{j}-1\right].$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\mathbb{E}Y_{n}\le B\mathbb{E}X_{n}<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(ii) 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is adapted to 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iii) We have 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[Y_{n+1}\mid\mathcal{F}_{n}\right]= & \mathbb{E}\left[V_{n+1}\left(X_{n+1}-X_{n}\right)\mid\mathcal{F}_{n}\right]+\mathbb{E}Y_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Applying theorem 
+\begin_inset Formula $5.2.5$
+\end_inset
+
+ for 
+\begin_inset Formula $X_{n+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{n+1}$
+\end_inset
+
+ we have 
+\begin_inset Formula $X_{n+1}V_{n+1}$
+\end_inset
+
+ is a submartingale (since 
+\begin_inset Formula $V_{n+1}$
+\end_inset
+
+ is adapted to 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+), thus we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[V_{n+1}X_{n+1}\mid\mathcal{F}_{n}\right]\ge & \mathbb{E}\left[V_{n}X_{n}\mid\mathcal{F}_{n}\right]=V_{n}X_{n}\ge V_{n+1}X_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[V_{n+1}\left(X_{n+1}-X_{n}\right)\mid\mathcal{F}_{n}\right]\ge & 0\\
+\Rightarrow\mathbb{E}\left[Y_{n+1}\mid\mathcal{F}_{n}\right]\ge & \mathbb{E}Y_{n}
+\end{alignat*}
+
+\end_inset
+
+So 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+is a submartingale.
+ 
+\end_layout
+
+\begin_layout Proof
+We also have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sum_{j=1}^{n}V_{j}\left(X_{j}-X_{j-1}\right)= & V_{n}X_{n}+\sum_{j=1}^{n-1}X_{j}\left(V_{j}-V_{j+1}\right)\ge V_{n}X_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Combining this fact with Doob's inequality we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\max V_{j}X_{j}\ge\lambda\right]\le & \mathbb{P}\left[\max_{m}\sum_{j=1}^{m}V_{j}\left(X_{j}-X_{j-1}\right)>\lambda\right]\\
+\le & \lambda^{-1}\mathbb{E}\left[\sum_{j=1}^{m}V_{j}\left(V_{j}-V_{j-1}\right)\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+The Switching Principle.
+ Suppose 
+\begin_inset Formula $X_{n}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{n}^{2}$
+\end_inset
+
+ are supermartingale with respect to 
+\begin_inset Formula $\mathcal{F}_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $N$
+\end_inset
+
+ is a stopping time so that 
+\begin_inset Formula $X_{N}^{1}\ge X_{N}^{2}.$
+\end_inset
+
+ Then:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{alignat*}{1}
+Y_{n}= & X_{n}^{1}\mathbb{I}_{\left\{ N>n\right\} }+X_{n}^{2}\mathbb{I}_{\left\{ N\le n\right\} }\mbox{ is a supermartingale}\\
+Z_{n}= & X_{n}^{1}\mathbb{I}_{\left\{ N\ge n\right\} }+X_{n}^{2}\mathbb{I}_{\left\{ N<n\right\} }\mbox{ is a supermartingale}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The first two condition for a supermartingale of finite expectation and
+ adaptiveness are met.
+ We check the final condition for 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+ & \mathbb{E}\left[Y_{n+1}-Y_{n}\mid\mathcal{F}_{n}\right]\nonumber \\
+= & \mathbb{E}\left[X_{n+1}^{1}\mathbb{I}_{\left\{ N>n+1\right\} }-X_{n}^{1}\mathbb{I}_{\left\{ N>n\right\} }+X_{n+1}^{2}\mathbb{I}_{\left\{ N\le n+1\right\} }-X_{n}^{2}\mathbb{I}_{\left\{ N\le n\right\} }\mid\mathcal{F}_{n}\right]\nonumber \\
+= & \mathbb{E}\left[\left(X_{n+1}^{1}-X_{n}^{1}\right)\mathbb{I}_{\left\{ N>n\right\} }-X_{n+1}^{1}\mathbb{I}_{\left\{ N=n+1\right\} }+\left(X_{n+1}^{2}-X_{n}^{2}\right)\mathbb{I}_{\left\{ N\le n\right\} }+X_{n+1}^{2}\mathbb{I}_{\left\{ N=n+1\right\} }\mid\mathcal{F}_{n}\right]\nonumber \\
+= & \mathbb{I}_{\left\{ N>n\right\} }\mathbb{E}\left[\left(X_{n+1}^{1}-X_{n}^{1}\right)\mid\mathcal{F}_{n}\right]+\mathbb{I}_{\left\{ N\le n\right\} }\mathbb{E}\left[\left(X_{n+1}^{2}-X_{n}^{2}\right)\right]+\mathbb{E}\left[\left(X_{N}^{2}-X_{N}^{1}\right)\mathbb{I}_{\left\{ N=n+1\right\} }\mid\mathcal{F}_{n}\right]
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now we have 
+\begin_inset Formula $X_{n}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{n}^{2}$
+\end_inset
+
+ are supermartingale, and 
+\begin_inset Formula $X_{N}^{2}\ge X_{N}^{1}.$
+\end_inset
+
+ Thus we have 
+\begin_inset Formula $\mathbb{E}\left[Y_{n+1}-Y_{n}\mid\mathcal{F}_{n}\right]\le0$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is a supermartingale.
+\end_layout
+
+\begin_layout Proof
+Similarly we have 
+\begin_inset Formula $Z_{n}$
+\end_inset
+
+ is a supermartingale.
+ 
+\end_layout
+
+\begin_layout Problem
+Dubins' inequality.
+ If 
+\begin_inset Formula $\left(X_{n}\right)$
+\end_inset
+
+ is a positive martingale then the number 
+\begin_inset Formula $U$
+\end_inset
+
+ of upcrossings of 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ sastifies:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[U\ge k\right]\le & \left(\frac{a}{b}\right)^{k}\mathbb{E}\min\left\{ X_{0}/a,1\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $N_{0}=-1$
+\end_inset
+
+ and for 
+\begin_inset Formula $j\ge1$
+\end_inset
+
+ let:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+N_{2j-1}= & \inf\left\{ m>N_{2j-2}\mid X_{m}\le a\right\} \\
+N_{2j}= & \inf\left\{ m>N_{2j-1}\mid X_{m}\ge b\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Y_{n}=1$
+\end_inset
+
+ for 
+\begin_inset Formula $0\le n<N_{1}$
+\end_inset
+
+ and for 
+\begin_inset Formula $j\ge1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+Y_{n}= & \begin{cases}
+\left(b/a\right)^{j-1}\left(X_{n}/a\right) & \mbox{ for }N_{2j-1}\le n<N_{2j}\\
+\left(b/a\right)^{j} & \mbox{ for }N_{2j}\le n<N_{2j+1}
+\end{cases}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(i) From the switching principle we proved above, and using the induction
+ argument we have 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is a supermartingale.
+ Thus by theorem 5.2.6 in Durrett, we have 
+\begin_inset Formula $Y_{N_{2k}\wedge n}$
+\end_inset
+
+ is a supermartingale.
+ 
+\end_layout
+
+\begin_layout Proof
+(ii) Now since 
+\begin_inset Formula $Y_{n\wedge N_{2k}}$
+\end_inset
+
+ is a supermartigale, we have 
+\begin_inset Formula $\mathbb{E}Y_{n\wedge N_{2k}}\le\mathbb{E}Y_{0}$
+\end_inset
+
+.
+ Now we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+X_{0}\le a & \Leftrightarrow N_{1}=0\Leftrightarrow Y_{0}=X_{0}/a\\
+X_{0}>a & \Leftrightarrow N_{1}>0\Leftrightarrow Y_{0}=1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}Y_{0}= & \mathbb{E}\left[\frac{X_{0}}{a}\mathbb{I}_{\left\{ X_{0}/a\le1\right\} }+\mathbb{I}_{\left\{ X_{0}/a>1\right\} }\right]=\mathbb{E}\min\left\{ X_{0}/a,1\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}\mathbb{E}Y_{n\wedge N_{2k}}\le & \mathbb{E}Y_{0}\\
+\Rightarrow\lim_{n\rightarrow\infty}\mathbb{E}\left[Y_{n}\mathbb{I}_{\left\{ N_{2k}>n\right\} }+Y_{N_{2k}}\mathbb{I}_{\left\{ N_{2k}\le n\right\} }\right]\le & \mathbb{E}\min\left\{ X_{0}/a,1\right\} \\
+\Rightarrow\lim_{n\rightarrow\infty}\left(\frac{b}{a}\right)^{k}\mathbb{E}\mathbb{I}_{\left\{ N_{2k}\le n\right\} }\le & \mathbb{E}\min\left\{ X_{0}/a,1\right\} \\
+\Rightarrow\mathbb{P}\left[U\ge k\right]\le & \left(\frac{a}{b}\right)^{k}\mathbb{E}\min\left\{ X_{0}/a,1\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
