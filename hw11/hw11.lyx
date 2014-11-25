@@ -1,0 +1,904 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ST205 - Homework 11
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{n}\right)$
+\end_inset
+
+ be a submartingale such that 
+\begin_inset Formula $\sup_{n}X_{n}<\infty$
+\end_inset
+
+ a.s.
+ and 
+\begin_inset Formula $\mathbb{E}\sup_{n}\left(X_{n}-X_{n-1}\right)^{+}<\infty$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ converges a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $N=\inf\left\{ n\mid X_{n}>M\right\} $
+\end_inset
+
+ for 
+\begin_inset Formula $M$
+\end_inset
+
+ fixed.
+ By OST, we have 
+\begin_inset Formula $X_{n\wedge N}$
+\end_inset
+
+ is also a submartingale.
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+X_{n\wedge N}^{+}\le & M+\sup_{n}\left(X_{n}-X_{n-1}\right)^{+}\\
+\Rightarrow\mathbb{E}X_{n\wedge N}^{+}\le & M+\mathbb{E}\sup_{n}\left(X_{n}-X_{n-1}\right)^{+}<\infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By Martingale Convergence Theorem, we have: 
+\begin_inset Formula $X_{n\wedge N}$
+\end_inset
+
+ converges almost surely.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M\rightarrow\infty$
+\end_inset
+
+ and and since 
+\begin_inset Formula $\sup_{n}X_{n}<\infty,$
+\end_inset
+
+ 
+\begin_inset Formula $X_{n\wedge N}\rightarrow X_{n},$
+\end_inset
+
+ thus we have 
+\begin_inset Formula $(X_{n})_{n}$
+\end_inset
+
+ converges 
+\begin_inset Formula $a.s.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+For 
+\begin_inset Formula $p_{i}\in\left[0,1\right],\forall i\in\mathbb{N},$
+\end_inset
+
+ prove that:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{alignat*}{1}
+\prod_{m=1}^{\infty}\left(1-p_{m}\right)=0\Leftrightarrow & \sum_{m=1}^{\infty}p_{m}=\infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+.
+ Given 
+\begin_inset Formula $\sum_{i=1}^{\infty}p_{m}=\infty$
+\end_inset
+
+.
+ Otherwise, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\log(1-x)= & -x-\frac{x^{2}}{2}-\frac{x^{3}}{3}-...,\forall x\in[0,1)\\
+\Rightarrow\log(1-x)\le & -x\\
+\Rightarrow\sum_{m=1}^{\infty}\log\left(1-p_{m}\right)\le & \sum_{m=1}^{\infty}-p_{m}\rightarrow-\infty\\
+\Rightarrow\prod_{m=1}^{\infty}\left(1-p_{m}\right)= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+.
+ Given 
+\begin_inset Formula $\prod_{m=1}^{\infty}\left(1-p_{m}\right)=0$
+\end_inset
+
+.
+ (We don't need this direction for Problem 2.)
+\end_layout
+
+\begin_layout Problem
+For a sequence 
+\begin_inset Formula $(A_{n})$
+\end_inset
+
+ of events, show that:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sum_{n=2}^{\infty}\mathbb{P}\left[A_{n}\mid\bigcap_{m=1}^{n-1}A_{m}^{c}\right]=\infty\Rightarrow & \mathbb{P}\left[\bigcup_{m=1}^{\infty}A_{m}\right]=1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We have: 
+\begin_inset Formula $\mathbb{P}\left[\bigcup_{m=1}^{\infty}\right]=1\Leftrightarrow\mathbb{P}\left[\bigcap_{m=1}^{\infty}A_{m}^{c}\right]=0$
+\end_inset
+
+.
+ Now set: 
+\begin_inset Formula $p_{1}=\mathbb{P}\left[A_{1}\right],p_{n}=\left[A_{n}\mid\bigcap_{m=1}^{n-1}A_{n}^{c}\right]$
+\end_inset
+
+.
+ Then we have: 
+\begin_inset Formula $\mathbb{P}\left[\bigcap_{m=1}^{\infty}A_{m}^{c}\right]=\prod_{m=1}^{\infty}\left(1-p_{m}\right)$
+\end_inset
+
+.
+ Since we have 
+\begin_inset Formula $\sum_{m=1}^{\infty}p_{m}=\infty$
+\end_inset
+
+, thus by Lemma 1, 
+\begin_inset Formula $\prod_{m=1}^{\infty}\left(1-p_{m}\right)=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{n}\right)$
+\end_inset
+
+ be a martingale and write 
+\begin_inset Formula $\Delta_{n}=X_{n}-X_{n-1}.$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $b_{m}\uparrow\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{m=1}^{\infty}b_{m}^{-2}\mathbb{E}\Delta_{m}^{2}<\infty^{(*)}.$
+\end_inset
+
+ Prove that 
+\begin_inset Formula $X_{n}/b_{n}\rightarrow0$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale, we have 
+\begin_inset Formula $Y_{n}=\sum_{m=1}^{n}\Delta_{m}/b_{m}$
+\end_inset
+
+ is also a martingale as 
+\begin_inset Formula $\mathbb{E}\left[X_{n+1}-X_{n}\mid\mathcal{F}_{n}\right]=0,\forall n\in\mathbb{N}$
+\end_inset
+
+.
+ Combining this fact with 
+\begin_inset Formula $(*),$
+\end_inset
+
+ and applying Question 3 of Homework 10, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}Y_{n}^{2}= & \mathbb{E}Y_{0}^{2}+\sum_{m=1}^{n}\frac{\mathbb{E}\Delta_{m}^{2}}{b_{m}^{2}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Also because of 
+\begin_inset Formula $(*)$
+\end_inset
+
+, we have 
+\begin_inset Formula $\sup_{n}\mathbb{E}Y_{n}^{2}<\infty.$
+\end_inset
+
+ Applying the Martingale Convergence Theorem, we have: 
+\begin_inset Formula $Y_{n}\rightarrow Y_{\infty}$
+\end_inset
+
+a.s.
+ and in 
+\begin_inset Formula $L^{2}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Thus by Kronecker's lemma:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{X_{n}}{b_{n}}= & \frac{\sum_{m=1}^{n}\Delta_{m}}{b_{n}}\rightarrow^{a.s.}0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $(X_{n})$
+\end_inset
+
+ be a martingale with 
+\begin_inset Formula $\sup_{n}\mathbb{E}\left|Y_{n}\right|<\infty$
+\end_inset
+
+.
+ Show that there is a representation 
+\begin_inset Formula $X_{n}=Y_{n}-Z_{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $\left(Y_{n}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(Z_{n}\right)$
+\end_inset
+
+ are non-negative martingale such that 
+\begin_inset Formula $\sup_{n}\mathbb{E}Y_{n}<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\sup_{n}\mathbb{E}Z_{n}<\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Assuming uniform integrability.
+ 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale and 
+\begin_inset Formula $\sup_{n}\mathbb{E}\left|X_{n}\right|<\infty,$
+\end_inset
+
+ by the Martingale Convergence Theorem, we have: 
+\begin_inset Formula $X_{n}\rightarrow^{a.s.}X_{\infty}.$
+\end_inset
+
+ Define:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+Y_{n}= & \mathbb{E}\left[X_{\infty}^{+}\mid\mathcal{F}_{n}\right]\\
+Z_{n}= & \mathbb{E}\left[X_{\infty}^{-}\mid\mathcal{F}_{n}\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+then we have 
+\begin_inset Formula $Y_{n},Z_{n}$
+\end_inset
+
+ are non-negative martingale (by uniform integrability), and 
+\begin_inset Formula $X_{n}=Y_{n}-Z_{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{n}\right)$
+\end_inset
+
+ be adapted to 
+\begin_inset Formula $\left(\mathcal{F}_{n}\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $0\le X_{n}\le1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\alpha,\beta>0$
+\end_inset
+
+ with 
+\begin_inset Formula $\alpha+\beta=1$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $X_{0}=x_{0}$
+\end_inset
+
+ and:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X_{n+1}=\alpha+\beta X_{n}\mid\mathcal{F}_{n}\right]= & X_{n}\\
+\mathbb{P}\left[X_{n+1}=\beta X_{n}\mid\mathcal{F}_{n}\right]= & X_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Show that 
+\begin_inset Formula $X_{n}\rightarrow X_{\infty}$
+\end_inset
+
+ a.s., where 
+\begin_inset Formula $\mathbb{P}\left[X_{\infty}=1\right]=x_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{P}\left[X_{\infty}=0\right]=1-x_{0}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+We already have 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{F}_{n}-$
+\end_inset
+
+adapted, and finite expectation.
+ We now check:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[X_{n+1}\mid\mathcal{F}_{n}\right]= & X_{n}(\alpha+\beta X_{n})+(1-X_{n})\beta X_{n}=X_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ is a martingale.
+ Also 
+\begin_inset Formula $X_{n}\in[0,1],$
+\end_inset
+
+ thus 
+\begin_inset Formula $\sup_{n}\mathbb{E}X_{n}^{+}<\infty.$
+\end_inset
+
+ Thus by the Martingale Convergence Theorem, we have 
+\begin_inset Formula $X_{n}\rightarrow X_{\infty}$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+Given 
+\begin_inset Formula $X_{n}=x,X_{n+1}=\alpha+\beta x$
+\end_inset
+
+ or 
+\begin_inset Formula $\beta x$
+\end_inset
+
+ for 
+\begin_inset Formula $\alpha,\beta>0$
+\end_inset
+
+ .
+ Consider 
+\begin_inset Formula $x=\alpha+\beta x$
+\end_inset
+
+ or 
+\begin_inset Formula $x=\beta x$
+\end_inset
+
+, which are true iff 
+\begin_inset Formula $x=1$
+\end_inset
+
+ or 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $X_{\infty}\in\left\{ 0,1\right\} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+And since 
+\begin_inset Formula $\mathbb{E}X_{\infty}=\mathbb{E}X_{0}=x_{0}\Rightarrow\mathbb{P}\left[X_{\infty}=1\right]=x_{0},$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{E}\left[X_{\infty}=0\right]=1-x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Suppose 
+\begin_inset Formula $\mathcal{F}_{n}\uparrow\mathcal{F}_{\infty}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{n}\rightarrow Y_{\infty}$
+\end_inset
+
+ in 
+\begin_inset Formula $L^{1}.$
+\end_inset
+
+ Show that 
+\begin_inset Formula $\mathbb{E}\left[Y_{n}\mid\mathcal{F}_{n}\right]\rightarrow\mathbb{E}\left[Y_{\infty}\mid\mathcal{F}_{\infty}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $L^{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+By triangle inequality we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+ & \mathbb{E}\left|\mathbb{E}\left[Y_{n}\mid\mathcal{F}_{n}\right]-\mathbb{E}\left[Y_{\infty}\mid\mathcal{F}_{\infty}\right]\right|\\
+\le & \mathbb{E}\left|\mathbb{E}\left[Y_{n}\mid\mathcal{F}_{n}\right]-\mathbb{E}\left[Y_{\infty}\mid\mathcal{F}_{n}\right]\right|+\\
++ & \mathbb{E}\left|\mathbb{E}\left[Y_{\infty}\mid\mathcal{F}_{n}\right]-\mathbb{E}\left[Y_{\infty}\mid\mathcal{F}_{\infty}\right]\right|
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By Jensen inequality (or just the fact that taking absolute value makes
+ real number bigger), we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+(2)\le & \mathbb{E}\left[\mathbb{E}\left|Y_{n}-Y_{\infty}\right|\mid\mathcal{F}_{n}\right]=\mathbb{E}\left[Y_{n}-Y_{\infty}\right]\rightarrow0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By theorem 5.5.7, 
+\begin_inset Formula $(3)\rightarrow0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\mathbb{E}\left|\mathbb{E}\left[Y_{n}\mid\mathcal{F}_{n}\right]-\mathbb{E}\left[Y_{\infty}\mid\mathcal{F}_{\infty}\right]\right|\rightarrow0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ be the total assets of an insurance company at the end of year 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Suppose that in year 
+\begin_inset Formula $n$
+\end_inset
+
+ the company receives premium of c and pays claims totaling 
+\begin_inset Formula $\xi_{n},$
+\end_inset
+
+ where 
+\begin_inset Formula $\xi_{n}$
+\end_inset
+
+ are independent with 
+\begin_inset Formula $\mathcal{N}\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ distribution, where 
+\begin_inset Formula $0<\mu<c$
+\end_inset
+
+.
+ The company is ruined if its assets fall to 
+\begin_inset Formula $0$
+\end_inset
+
+ or below.
+ Show:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[{\rm ruin}\right]\le & \exp\left\{ -2\left(c-\mu\right)S_{0}/\sigma^{2}\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(a) We have 
+\begin_inset Formula $S_{n}=S_{0}+\sum_{i=1}^{n}\left(c-\xi_{i}\right).$
+\end_inset
+
+ Let:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+Y_{n}= & \exp\left\{ \frac{2\left(\mu-c\right)}{\sigma^{2}}\left(S_{n}-S_{0}\right)\right\} \\
+\Rightarrow\mathbb{E}\left[Y_{n+1}\mid\mathcal{F}_{n}\right]= & Y_{n}\mathbb{E}\left[\exp\left\{ \frac{2\left(\mu-c\right)}{\sigma^{2}}\left(c-\xi_{n+1}\right)\right\} \mid\mathcal{F}_{n}\right]\\
+= & Y_{n}\mathbb{E}\left[\exp\left\{ \frac{2\left(\mu-c\right)}{\sigma^{2}}\left(c-\xi_{n+1}\right)\right\} \right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $X_{n}\sim\mathcal{N}(a,b^{2}),$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\exp\left\{ \lambda X_{n}\right\} \right]= & \exp\left\{ \lambda a+\lambda^{2}b^{2}/2\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus for 
+\begin_inset Formula $X_{n}=c-\xi_{n+1}\sim\mathcal{N}\left(c-\mu,\sigma^{2}\right),$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\exp\left\{ \frac{2\left(\mu-c\right)}{\sigma^{2}}X_{n}\right\} \right]= & \exp\left\{ \frac{2\left(\mu-c\right)}{\sigma^{2}}\left(c-\mu\right)+\frac{4\left(\mu-c\right)^{2}}{\sigma^{4}}\frac{\sigma^{2}}{2}\right\} =1\\
+\Rightarrow\mathbb{E}\left[Y_{n+1}\mid\mathcal{F}_{n}\right]= & Y_{n}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+It is obvious that 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is adapted to 
+\begin_inset Formula $\mathcal{F}_{n},$
+\end_inset
+
+ and have finite expectation (since expectation of Gaussian is finite),
+ thus 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ is a martingale.
+ 
+\end_layout
+
+\begin_layout Proof
+(b) Let 
+\begin_inset Formula $T=\inf\left\{ n,S_{n}\le0\right\} .$
+\end_inset
+
+ Applying the Optional Sampling Theorem, we have 
+\begin_inset Formula $Y_{n\wedge T}$
+\end_inset
+
+ is a martingale.
+ Now we have 
+\begin_inset Formula $\mathbb{E}Y_{n\wedge T}=\mathbb{E}Y_{0}<\infty$
+\end_inset
+
+, and since 
+\begin_inset Formula $Y_{n\wedge T}>0,$
+\end_inset
+
+ thus 
+\begin_inset Formula $\sup_{n}\mathbb{E}Y_{n}^{+}<\infty$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $Y_{n\wedge T}$
+\end_inset
+
+ converges to a limit 
+\begin_inset Formula $Y_{\infty}$
+\end_inset
+
+ by Martingale Convergence Theorem, and 
+\begin_inset Formula $\mathbb{E}Y_{\infty}=\mathbb{E}Y_{0}=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Now we have 
+\begin_inset Formula $Y_{n\wedge T}=Y_{T}\mathbb{I}_{\left\{ T<n\right\} }+Y_{n}\mathbb{I}_{\left\{ T\ge n\right\} }$
+\end_inset
+
+.
+ Thus:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{E}Y_{n\wedge T}= & \mathbb{E}\left[Y_{T}\mathbb{I}_{\left\{ T<n\right\} }+Y_{n}\mathbb{I}_{\left\{ T\ge n\right\} }\right]\\
+\ge & \mathbb{E}\left[\exp\left\{ -\frac{2\left(\mu-c\right)}{\sigma^{2}}S_{0}\right\} \mathbb{I}_{\left\{ T<n\right\} }\right]+\mathbb{E}\left[Y_{n}\mathbb{I}_{\left\{ T\ge n\right\} }\right]\\
+\ge & \exp\left\{ -\frac{2\left(\mu-c\right)}{\sigma^{2}}S_{0}\right\} \mathbb{P}\left[T<n\right]
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $(5)$
+\end_inset
+
+ is true because 
+\begin_inset Formula $S_{T}\le0\Leftrightarrow\left(\mu-c\right)S_{T}\ge0\Leftrightarrow\left(\mu-c\right)\left(S_{T}-S_{0}\right)\ge\left(\mu-c\right)\left(0-S_{0}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+In (6) taking 
+\begin_inset Formula $n\rightarrow\infty,$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[{\rm ruin}\right]\le & \exp\left\{ -\frac{2\left(c-\mu\right)}{\sigma^{2}}S_{0}\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\end_layout
+
+\end_body
+\end_document
