@@ -250,7 +250,7 @@ For a sequence
 
 \begin_layout Proof
 We have: 
-\begin_inset Formula $\mathbb{P}\left[\bigcup_{m=1}^{\infty}\right]=1\Leftrightarrow\mathbb{P}\left[\bigcap_{m=1}^{\infty}A_{m}^{c}\right]=0$
+\begin_inset Formula $\mathbb{P}\left[\bigcup_{m=1}^{\infty}A_{m}\right]=1\Leftrightarrow\mathbb{P}\left[\bigcap_{m=1}^{\infty}A_{m}^{c}\right]=0$
 \end_inset
 
 .
@@ -893,10 +893,6 @@ In (6) taking
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 
 \end_layout
 

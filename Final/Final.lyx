@@ -1,0 +1,1795 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STATISTICS 205A - FALL 2014 FINAL
+\end_layout
+
+\begin_layout Author
+Hoang Duong
+\end_layout
+
+\begin_layout Lemma
+For 
+\begin_inset Formula $p_{i}\in\left[0,1\right],\forall i\in\mathbb{N},$
+\end_inset
+
+ prove that:
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\begin{alignat*}{1}
+\prod_{m=1}^{\infty}\left(1-p_{m}\right)=0\Leftrightarrow & \sum_{m=1}^{\infty}p_{m}=\infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+As proved in Homework 11, problem 2.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.dropbox.com/sh/lpohr53eycs7ayo/AACfCHL-bvuW37iROcFLLxTsa/SolHW11.pdf?dl
+=0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+For a sequence of sets 
+\begin_inset Formula $A_{n},n\in\mathbb{N},$
+\end_inset
+
+ and set 
+\begin_inset Formula $A,$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{alignat*}{1}
+C\coloneqq\lim_{m\rightarrow\infty} & \left[B_{m}\cap A\right]=\left[\lim B_{m}\right]\cap A\coloneqq D
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+It is an obvious lemma.
+ Let 
+\begin_inset Formula $\omega\in C$
+\end_inset
+
+ then 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is in infinitely many 
+\begin_inset Formula $B_{m}\cap A$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\omega\in A$
+\end_inset
+
+, and 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is in infinitely many 
+\begin_inset Formula $B_{m}.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\omega\in D$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+On the other hand, if 
+\begin_inset Formula $\omega\in C,\Rightarrow\omega\in A,$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega$
+\end_inset
+
+is in infinitely many 
+\begin_inset Formula $B_{m}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is in infinitely many 
+\begin_inset Formula $B_{m}\cap A$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\omega\in C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(A_{n},n\ge1\right)$
+\end_inset
+
+ be a sequence of events.
+ Prove that 
+\begin_inset Formula $\mathbb{P}\left[A_{n}i.o.\right]=1$
+\end_inset
+
+ iff:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sum_{n}\mathbb{P}\left[A\cap A_{n}\right]= & \infty,\forall A:\mathbb{P}\left[A\right]>0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Firstly, we will prove the 
+\begin_inset Formula $"\Leftarrow"$
+\end_inset
+
+ direction.
+ Fix 
+\begin_inset Formula $m\in\mathbb{N}.$
+\end_inset
+
+ We observe that:
+\begin_inset Formula 
+\begin{alignat}{1}
+\sum_{n=1}^{\infty}\mathbb{P}\left[A\cap A_{n}\right]=\infty, & \forall A:\mathbb{P}\left[A\right]>0\\
+\Leftrightarrow\sum_{n=m}^{\infty}\mathbb{P}\left[A\cap A_{n}\right]=\infty, & \forall A:\mathbb{P}\left[A\right]>0\\
+\Leftrightarrow\sum_{n=m}^{\infty}\mathbb{P}\left[A_{n}\mid A\right]\mathbb{P}\left[A\right]=\infty, & \forall A:\mathbb{P}\left[A\right]>0\\
+\Leftrightarrow\sum_{n=m}^{\infty}\mathbb{P}\left[A_{n}\mid A\right]=\infty, & \forall A:\mathbb{P}\left[A\right]>0\\
+\Leftrightarrow\prod_{n=m}^{\infty}\left(1-\mathbb{P}\left[A_{n}\mid A\right]\right)=0, & \forall A:\mathbb{P}\left[A\right]>0\\
+\Leftrightarrow\prod_{n=m}^{\infty}\mathbb{P}\left[A_{n}^{c}\mid A\right]=0, & \forall A:\mathbb{P}\left[A\right]>0
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $(2)\Leftrightarrow(3)$
+\end_inset
+
+ because of Bayes's theorem for 
+\begin_inset Formula $\mathbb{P}\left[A\right]>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(4)\Leftrightarrow(5)$
+\end_inset
+
+ because of Lemma 1.
+ 
+\end_layout
+
+\begin_layout Proof
+On the other hand we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{P}\left[\bigcup_{n=m}^{\infty}A_{n}\right]= & 1\\
+\Leftrightarrow\mathbb{P}\left[\bigcap_{n=m}^{\infty}A_{n}^{c}\right]= & 0
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now by contradiction, assuming that 
+\begin_inset Formula $\mathbb{P}\left[\bigcap_{n=m}^{\infty}A_{n}^{c}\right]>0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula 
+\begin{alignat*}{1}
+A^{*}= & \bigcap_{n=m}^{\infty}A_{n}^{c}\\
+\Rightarrow A^{*}\subset & A_{n}^{c},\forall n\ge m\\
+\Rightarrow\mathbb{P}\left[A_{n}^{c}\mid A^{*}\right]= & \frac{\mathbb{P}\left[A_{n}^{c}\cap A^{*}\right]}{\mathbb{P}\left[A^{*}\right]}=\frac{\mathbb{P}\left[A^{*}\right]}{\mathbb{P}\left[A^{*}\right]}=1,\forall n\ge m\\
+\Rightarrow\prod_{n}\mathbb{P}\left[A_{n}^{c}\mid A^{*}\right]= & 1,\forall n\ge m\\
+\Rightarrow\prod_{n=m}^{\infty}\mathbb{P}\left[A_{n}^{c}\mid A^{*}\right]= & 1
+\end{alignat*}
+
+\end_inset
+
+, which is a contradiction with (6).
+ Thus we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\bigcap_{n=m}^{\infty}A_{n}^{c}\right]= & 0
+\end{alignat*}
+
+\end_inset
+
+,for 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ arbitrary.
+ So it is true for all 
+\begin_inset Formula $m\in\mathbb{N}.$
+\end_inset
+
+ As such:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[\lim_{m\rightarrow\infty}\bigcup_{n=m}^{\infty}A_{m}\right]= & 1
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Secondly, we will proceed to proving the 
+\begin_inset Formula $"\Rightarrow"$
+\end_inset
+
+ direction also by contradiction.
+ Assuming the opposite that 
+\begin_inset Formula $\exists A:\mathbb{P}\left[A\right]>0,$
+\end_inset
+
+ such that:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sum_{n}\mathbb{P}\left[A\cap A_{n}\right]< & \infty
+\end{alignat*}
+
+\end_inset
+
+Then, by the Borel-Centelli Lemma 1, we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbb{P}\left[\lim_{m\rightarrow\infty}\bigcup_{n=m}^{\infty}\left(A_{n}\bigcap A\right)\right]= & 0\\
+\Rightarrow\mathbb{P}\left[\lim_{m\rightarrow\infty}\left(\left(\bigcup_{n=m}^{\infty}A_{m}\right)\bigcap A\right)\right]= & 0\\
+\Rightarrow\mathbb{P}\left[\left(\lim_{m\rightarrow\infty}\left(\bigcup_{n=m}^{\infty}A_{m}\right)\right)\bigcap A\right]= & 0
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $(9)\Leftrightarrow(10)$
+\end_inset
+
+ because 
+\begin_inset Formula $(B\cap A)\cup\left(C\cap A\right)=\left(B\cup C\right)\cap A$
+\end_inset
+
+ (and use induction we get the general case).
+ 
+\begin_inset Formula $(10)\Leftrightarrow(11)$
+\end_inset
+
+ because of Lemma 2.
+ 
+\end_layout
+
+\begin_layout Proof
+Denote:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+B= & \left(\lim_{m\rightarrow\infty}\left(\bigcup_{n=m}^{\infty}A_{m}\right)\right)\\
+\Rightarrow\mathbb{P}\left[B\right]= & 1\\
+\Rightarrow\mathbb{P}\left[B^{c}\right]= & 0\\
+\Rightarrow\mathbb{P}\left[A\backslash B\right]\le & \mathbb{P}\left[B^{c}\right]=0\\
+\Rightarrow\mathbb{P}\left[B\cap A\right]= & \mathbb{P}\left[A\right]-\mathbb{P}\left[A\backslash B\right]=\mathbb{P}\left[A\right]>0
+\end{alignat*}
+
+\end_inset
+
+, which is a contradiction with 
+\begin_inset Formula $(11)$
+\end_inset
+
+.
+ So we also have the proof of the 
+\begin_inset Formula $"\Rightarrow"$
+\end_inset
+
+ direction.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X_{1},X_{2},X_{3}$
+\end_inset
+
+ be i.i.d taking values in a finite set, and not constant.
+ Is it necessarily true that 
+\begin_inset Formula $\mathbb{P}\left[X_{3}=X_{2}\mid X_{2}\neq X_{1}\right]\le\mathbb{P}\left[X_{3}=X_{2}\right]?$
+\end_inset
+
+ Give proof or a counter-example.
+ 
+\end_layout
+
+\begin_layout Proof
+We will prove that the inequality is true.
+ Assuming that 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ takes values in the finite set 
+\begin_inset Formula $\left\{ a_{1},a_{2},...,a_{n}\right\} $
+\end_inset
+
+ with corresponding probability 
+\begin_inset Formula $\left\{ p_{1},p_{2},...,p_{n}\right\} ,$
+\end_inset
+
+ for 
+\begin_inset Formula $p_{1}+p_{2}+...+p_{n}=1$
+\end_inset
+
+.We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X_{3}=X_{2}\mid X_{2}\neq X_{1}\right]= & \frac{\mathbb{P}\left[X_{3}=X_{2}\wedge X_{2}\neq X_{1}\right]}{\mathbb{P}\left[X_{2}\neq X_{1}\right]}\\
+\mathbb{P}\left[X_{3}=X_{2}\wedge X_{2}\neq X_{1}\right]= & p_{1}^{2}(1-p_{1})+p_{2}^{2}(1-p_{2})+...+p_{n}^{2}(1-p_{n})\\
+\mathbb{P}\left[X_{3}=X_{2}\right]= & p_{1}^{2}+p_{2}^{2}+...+p_{n}^{2}\\
+\mathbb{P}\left[X_{2}\neq X_{1}\right]= & 1-\mathbb{P}\left[X_{2}=X_{1}\right]\\
+= & 1-p_{1}^{2}-p_{2}^{2}-...-p_{n}^{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus the inequality we need to prove is equivalent to:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[X_{3}=X_{2}\wedge X_{2}\neq X_{1}\right]\le & \mathbb{P}\left[X_{3}=X_{2}\right]\mathbb{P}\left[X_{2}\neq X_{1}\right]\\
+\Leftrightarrow\sum_{i=1}^{n}p_{i}^{2}-\sum_{i=1}^{n}p_{i}^{3}\le & \left(\sum_{i=1}^{n}p_{i}^{2}\right)\left(1-\sum_{i=1}^{n}p_{i}^{2}\right)\\
+\Leftrightarrow p_{1}^{3}+p_{2}^{3}+...+p_{n}^{3}\ge & \left(p_{1}^{2}+p_{2}^{2}+...+p_{n}^{2}\right)^{2}\\
+\Leftrightarrow(p_{1}+p_{2}+...+p_{n})(p_{1}^{3}+p_{2}^{3}+...+p_{n}^{3})\ge & \left(p_{1}^{2}+p_{2}^{2}+...+p_{n}^{2}\right)^{2}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The last inequality is true according to Cauchy-Schwarz inequality applied
+ to two sequences: 
+\begin_inset Formula $\left(\sqrt{p_{i}}\right)_{i=1}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\sqrt{p_{i}^{3}}\right)_{i=1}^{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+The equality holds iff 
+\begin_inset Formula $p_{1}=p_{2}=...=p_{n}=1/n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{i},i\ge1\right)$
+\end_inset
+
+ be i.i.d but not necessarily integrable.
+ Let 
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(i) Prove that 
+\begin_inset Formula $\lim\sup_{n}S_{n}=\infty$
+\end_inset
+
+ a.s.
+ iff 
+\begin_inset Formula $\exists$
+\end_inset
+
+ a stopping time 
+\begin_inset Formula $T<\infty$
+\end_inset
+
+ a.s.
+ such that 
+\begin_inset Formula $\mathbb{E}S_{T}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(ii) Now assume 
+\begin_inset Formula $\mathbb{E}X_{1}^{+}=\infty$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\lim\sup_{n}n^{-1}S_{n}=\infty$
+\end_inset
+
+ a.s.
+ iff 
+\begin_inset Formula $\exists$
+\end_inset
+
+ a stopping time 
+\begin_inset Formula $T<\infty$
+\end_inset
+
+ a.s.
+ such that 
+\begin_inset Formula $\mathbb{E}S_{T}>\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+(i) 
+\begin_inset Formula $"\Rightarrow"$
+\end_inset
+
+ direction.
+ If 
+\begin_inset Formula $\lim\sup_{n}S_{n}=\infty$
+\end_inset
+
+ a.s., then choose 
+\begin_inset Formula $T=\inf\left\{ n\mid S_{n}>1\right\} ,$
+\end_inset
+
+ then 
+\begin_inset Formula $T<\infty$
+\end_inset
+
+ a.s., and 
+\begin_inset Formula $S_{T}>0,\forall\omega,$
+\end_inset
+
+ thus 
+\begin_inset Formula $\mathbb{E}S_{T}>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $"\Leftarrow"$
+\end_inset
+
+ direction.
+ Assuming that 
+\begin_inset Formula $\exists T$
+\end_inset
+
+ a stopping time, 
+\begin_inset Formula $T<\infty$
+\end_inset
+
+ a.s., and 
+\begin_inset Formula $\mathbb{E}S_{T}>0.$
+\end_inset
+
+ We need to prove 
+\begin_inset Formula $\lim\sup_{n}S_{n}=\infty$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+According to Theorem 4.1.2 in Durrett, for 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ a random walk on 
+\begin_inset Formula $\mathbb{R},$
+\end_inset
+
+ there are only four possibilities, one of which has probability one:
+\end_layout
+
+\begin_layout Proof
+(a) 
+\begin_inset Formula $S_{n}=0,\forall n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(b) 
+\begin_inset Formula $S_{n}\rightarrow\infty.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(c) 
+\begin_inset Formula $S_{n}\rightarrow-\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(d) 
+\begin_inset Formula $-\infty=\lim\inf S_{n}<\lim\sup S_{n}=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Applying this theorem to our problem.
+ First we note that case (a) can not happen, because otherwise 
+\begin_inset Formula $\lim S_{T}=0$
+\end_inset
+
+ for any stopping time, which is a contradiction.
+ If case (b) or case (d) happens with probability one, then we have the
+ proof.
+ 
+\end_layout
+
+\begin_layout Proof
+We only need to deal with case (c), when 
+\begin_inset Formula $S_{n}\rightarrow-\infty$
+\end_inset
+
+ a.s.
+ Thus 
+\begin_inset Formula $\lim\mathbb{E}S_{n}=-\infty.$
+\end_inset
+
+ According to Theorem 4.1.3 in Durrett, for 
+\begin_inset Formula $T$
+\end_inset
+
+ is a stopping time with 
+\begin_inset Formula $\mathbb{P}\left[T<\infty\right]=1,$
+\end_inset
+
+ condition on 
+\begin_inset Formula $\left\{ T<\infty\right\} ,\left\{ X_{T+n},n\ge1\right\} $
+\end_inset
+
+ is independent of 
+\begin_inset Formula $\mathcal{F}_{T}$
+\end_inset
+
+ and has the same distribution as the original sequence.
+ Now since for our case 
+\begin_inset Formula $T<\infty$
+\end_inset
+
+ a.s., conditioning on this event is the same as no conditioning.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\mathbb{E}S_{T}=\mu>0$
+\end_inset
+
+, and 
+\begin_inset Formula $M\in\mathbb{N}$
+\end_inset
+
+ be arbitrary.
+ Then 
+\begin_inset Formula $\exists k\in\mathbb{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $k\mu>M.$
+\end_inset
+
+ Let 
+\begin_inset Formula $T_{1},T_{2},...,T_{k}$
+\end_inset
+
+ be independent copy of 
+\begin_inset Formula $T,$
+\end_inset
+
+ then applying Theorem 4.1.3 mentioned above, we have : 
+\begin_inset Formula $\mathbb{E}S_{T_{1}+T_{2}+...+T_{k}}=k\mu>M$
+\end_inset
+
+.
+ This contradicts with the fact that 
+\begin_inset Formula $\lim\mathbb{E}S_{n}=-\infty$
+\end_inset
+
+.
+ So case (c) cannot happen.
+ As such, we complete the proof for part (i)
+\end_layout
+
+\begin_layout Proof
+(ii) 
+\begin_inset Formula $"\Rightarrow"$
+\end_inset
+
+ direction.
+ If 
+\begin_inset Formula $\lim\sup n^{-1}S_{n}=\infty$
+\end_inset
+
+ a.s., then choose 
+\begin_inset Formula $T=\inf\left\{ n\mid n^{-1}S_{n}>1\right\} ,$
+\end_inset
+
+ then 
+\begin_inset Formula $T<\infty$
+\end_inset
+
+ a.s.
+ We also have 
+\begin_inset Formula $S_{T}>T>0,$
+\end_inset
+
+ thus 
+\begin_inset Formula $\mathbb{E}S_{T}>-\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $"\Leftarrow"$
+\end_inset
+
+ direction.
+ First, if 
+\begin_inset Formula $\mathbb{E}X^{-}<\infty,$
+\end_inset
+
+ then according to Theorem 2.4.5 in Durrett, we have 
+\begin_inset Formula $S_{n}/n\rightarrow\infty$
+\end_inset
+
+ a.s.
+ As such, 
+\begin_inset Formula $\lim\sup n^{-1}S_{n}\rightarrow\infty$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+We consider the harder case when 
+\begin_inset Formula $\mathbb{E}X^{-}=\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+We want to apply Theorem 2.5.9 and 2.3.7 in Durrett for 
+\begin_inset Formula $a_{n}=n$
+\end_inset
+
+.
+ We check the conditions: 
+\begin_inset Formula $\mathbb{E}\left|X_{1}\right|\ge\mathbb{E}\left|X^{+}\right|=\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\sum_{n}\mathbb{P}\left[\left|X_{1}\right|\ge n\right]\ge & \sum_{n}\mathbb{P}\left[X_{1}^{+}\ge n\right]\\
+\ge & \int_{0}^{\infty}\mathbb{P}\left[X_{1}^{+}>x\right]dx\\
+= & \mathbb{E}X_{1}^{+}=\infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus we have: 
+\begin_inset Formula $\lim\sup_{n}\left|S_{n}\right|/n=\infty.$
+\end_inset
+
+ So 
+\begin_inset Formula $\lim\sup_{n}S_{n}/n$
+\end_inset
+
+ is either 
+\begin_inset Formula $\infty$
+\end_inset
+
+ or 
+\begin_inset Formula $-\infty$
+\end_inset
+
+.
+ Assuming that 
+\begin_inset Formula $\lim\sup_{n}S_{n}/n=-\infty,$
+\end_inset
+
+ then 
+\begin_inset Formula $\lim\inf_{n}S_{n}/n\le\lim\sup_{n}S_{n}/n=-\infty.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $\lim S_{n}/n=-\infty,$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbb{E}(S_{n}/n)=-\infty.$
+\end_inset
+
+ But again using a similar argument as in part (i), let 
+\begin_inset Formula $\mathbb{E}S_{T}=\mu>-\infty.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\forall N\in\mathbb{N},$
+\end_inset
+
+ exists 
+\begin_inset Formula $M>N$
+\end_inset
+
+ of the form 
+\begin_inset Formula $T_{1}+T_{2}+...+T_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbb{E}S_{M}=k\mu\Rightarrow\mathbb{E}S_{M}/M=k\mu/M\ge\mu>-\infty,$
+\end_inset
+
+ which is a contradiction.
+ Thus 
+\begin_inset Formula $\lim\sup S_{n}/n=\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\mu$
+\end_inset
+
+ be a probability measure on 
+\begin_inset Formula $\left[1/4,3/4\right]$
+\end_inset
+
+ with mean 
+\begin_inset Formula $1/2$
+\end_inset
+
+.
+ Describe a joint distribution for random variable 
+\begin_inset Formula $(X,Y)$
+\end_inset
+
+ such that:
+\end_layout
+
+\begin_layout Problem
+(i) 
+\begin_inset Formula $X$
+\end_inset
+
+ has distribution 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(ii) 
+\begin_inset Formula $Y$
+\end_inset
+
+ has the uniform distribution on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(iii) 
+\begin_inset Formula $\mathbb{E}\left[Y\mid X\right]=X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Denote 
+\begin_inset Formula $S_{x}=[1/4,3/4],\mathcal{S}_{x}=\mathcal{B}(S_{x}),S_{y}=[0,1],\mathcal{S}_{y}=\mathcal{B}(S_{y})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Q(x,B)$
+\end_inset
+
+ be the conditional distribution of 
+\begin_inset Formula $Y$
+\end_inset
+
+ given 
+\begin_inset Formula $X.$
+\end_inset
+
+ By Proposition 5 in the note of conditional distribution, we have the joint
+ distribution 
+\begin_inset Formula $\nu$
+\end_inset
+
+ satisfy:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\nu(A\times B)= & \int_{A}Q(x,B)\mu(dx),\forall A\in\mathcal{S}_{x},B\in\mathcal{S}_{y}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This joint distribution satisfies:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lambda(B)=\nu(S_{x}\times B)= & \int_{S_{x}}Q(x,B)\mu(dx),\forall B\in\mathcal{S}_{y}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ denotes the Lebesgue measure, and:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\int_{S_{y}}yQ(X(\omega),dy)= & X(\omega)
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Proposition 5.27 page 96 Breiman (1992).
+ 
+\end_layout
+
+\begin_layout Proposition
+Let 
+\begin_inset Formula $X_{1},X_{2},...$
+\end_inset
+
+ be a submartingale, 
+\begin_inset Formula $a>0,T=\inf\left\{ n:X_{n}\ge a\right\} $
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathbb{E}\left[\sup_{n}\left(X_{n+1}-X_{n}\right)^{+}\right]<\infty,$
+\end_inset
+
+ then for 
+\begin_inset Formula $X_{n\wedge T},$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\lim\sup\mathbb{E}\left|X_{n\wedge T}\right|< & \infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For any 
+\begin_inset Formula $n,$
+\end_inset
+
+ 
+\begin_inset Formula $X_{T}^{+}\le a+U,$
+\end_inset
+
+ where 
+\begin_inset Formula $U=\sup_{n}\left(X_{n+1}-X_{n}\right)^{+}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+By Theorem 5.2.9 in Durrett (Optional Stopping Theorem), we have: 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}X_{n\wedge T}\ge & \mathbb{E}X_{1\wedge T}=\mathbb{E}X_{1}\\
+\Rightarrow\mathbb{E}X_{n\wedge T}^{-}\le & \mathbb{E}X_{n\wedge T}^{+}-\mathbb{E}X_{1}\\
+\Rightarrow\mathbb{E}\left|X_{n\wedge T}\right|\le & 2\mathbb{E}X_{n\wedge T}^{+}-\mathbb{E}X_{1}\le2a+2\mathbb{E}U-\mathbb{E}X_{1}\\
+\Rightarrow\lim\sup\mathbb{E}\left|X_{n\wedge T}\right|< & \infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(Theorem 5.28 page 96 Breiman (1992))
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\left\{ \left(X_{n},\mathcal{F}_{n}\right)\right\} _{n\ge1}$
+\end_inset
+
+ be a martingale such that
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[\sup_{n\ge1}\left|X_{n+1}-X_{n}\right|\right]< & \infty
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula 
+\begin{alignat*}{1}
+A_{1}= & \left\{ \omega:\lim X_{n}\mbox{ exists and is finite}\right\} \\
+A_{2}= & \left\{ \omega:\lim\sup X_{n}=\infty,\lim\inf X_{n}=-\infty\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+then 
+\begin_inset Formula $\mathbb{P}\left[A_{1}\cup A_{2}\right]=1$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+Consider 
+\begin_inset Formula $T=\inf\left\{ n:X_{n}\ge K\right\} ,$
+\end_inset
+
+ then by Proposition 1, and Martingale Convergence Theorem, we have 
+\begin_inset Formula $X_{n\wedge T}\rightarrow X$
+\end_inset
+
+ a.s.
+ On the set 
+\begin_inset Formula $F_{K}=\left\{ \omega:\sup_{n}X_{n}<K\right\} ,X_{n}=X_{n\wedge T},\forall n.$
+\end_inset
+
+ Hence on 
+\begin_inset Formula $F_{K},$
+\end_inset
+
+ 
+\begin_inset Formula $\lim_{n}X_{n}$
+\end_inset
+
+ exists and is finite a.s.
+ Thus this limit exists and is finite a.s.
+ on the set 
+\begin_inset Formula $\bigcup_{K=1}^{\infty}F_{K},$
+\end_inset
+
+ but this set is exactly the set 
+\begin_inset Formula $\left\{ \lim\sup X_{n}<\infty\right\} .$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Similarly, using the MG sequence 
+\begin_inset Formula $-X_{1},-X_{2},...,$
+\end_inset
+
+ we conclude that 
+\begin_inset Formula $\lim_{n}X_{n}$
+\end_inset
+
+ exists and is finite a.s.
+ on the set 
+\begin_inset Formula $\left\{ \lim\inf X_{n}>-\infty\right\} .$
+\end_inset
+
+ Hence 
+\begin_inset Formula $\lim X_{n}$
+\end_inset
+
+ exists and is finite for almost all 
+\begin_inset Formula $\omega$
+\end_inset
+
+ in the set 
+\begin_inset Formula $\left\{ \lim\inf X_{n}>-\infty\right\} \cup\left\{ \lim\sup X_{n}<\infty\right\} .$
+\end_inset
+
+ Thus the theorem is proved.
+ 
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X_{n},n\ge0\right)$
+\end_inset
+
+ be a martingale w.r.t.
+ a filtration 
+\begin_inset Formula $(\mathcal{F}_{n}).$
+\end_inset
+
+ Write 
+\begin_inset Formula $\Delta_{n}=X_{n}-X_{n-1}.$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $\mathbb{E}\sup_{n\ge1}\left|\Delta_{n}\right|<\infty.$
+\end_inset
+
+ Consider the events
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\begin{alignat*}{1}
+A\coloneqq & \left\{ \sum_{n}\Delta_{n}^{2}<\infty\right\} \\
+B\coloneqq & \left\{ X_{n}\mbox{ converges to a finite limit}\right\} 
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Prove that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ a.s.
+ 
+\end_layout
+
+\begin_layout Proof
+From Theorem 1, with similar notation 
+\begin_inset Formula $A_{1},A_{2}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\mathbb{P}\left[A_{1}\cup A_{2}\right]=1$
+\end_inset
+
+.
+ We just need to prove that 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ happens with probability 0.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(\xi_{m},1\le m<\infty\right)$
+\end_inset
+
+ be i.i.d with exponential(1) distribution.
+ Consider the 
+\begin_inset Quotes eld
+\end_inset
+
+alternating signs random walk
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{alignat*}{1}
+S_{n}= & \sum_{m=1}^{n}(-1)^{m-1}\xi_{m}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $T^{*}=\inf\left\{ n\ge1:S_{n}<0\right\} $
+\end_inset
+
+ and for 
+\begin_inset Formula $x>0,$
+\end_inset
+
+ let 
+\begin_inset Formula $U_{x}=\inf\left\{ n:S_{n}\ge x\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(a) Show that 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}S_{\min\left(U_{x}+1,T^{*}\right)}= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(b) Find the distribution of 
+\begin_inset Formula $M\coloneqq\sup_{n\le T^{*}}S_{n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+[Hint: for (b) use the memoryless property of the exponential to analyze
+ overshoots.]
+\end_layout
+
+\begin_layout Proof
+(a) Define a sequence 
+\begin_inset Formula $(e_{n})_{n=1}^{\infty}$
+\end_inset
+
+ as 
+\begin_inset Formula $e_{2k}=0,\forall k\in\mathbb{N},e_{2k+1}=1,\forall k\in\mathbb{N}$
+\end_inset
+
+, then it is obvious that 
+\begin_inset Formula $S_{n}-e_{n}=\sum_{m=1}^{n}(-1)(\xi_{m}-1)$
+\end_inset
+
+ is a martingale since 
+\begin_inset Formula $\xi_{m}-1$
+\end_inset
+
+ are i.i.d with mean zero.
+ We have
+\begin_inset Formula 
+\begin{alignat*}{1}
+U_{x}+1= & \inf\left\{ n:S_{n-1}\ge x\right\} 
+\end{alignat*}
+
+\end_inset
+
+ is a stopping time.
+ 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ is a stopping time.
+ Thus 
+\begin_inset Formula $N=\min\left\{ U_{x}+1,T^{*}\right\} $
+\end_inset
+
+ is also a stopping time.
+ 
+\end_layout
+
+\begin_layout Proof
+First we will prove that 
+\begin_inset Formula $N<\infty.$
+\end_inset
+
+ Indeed, consider the even subsequence of 
+\begin_inset Formula $S_{n},$
+\end_inset
+
+ which is 
+\begin_inset Formula $S_{2k}=(\xi_{1}-\xi_{2})+(\xi_{3}-\xi_{4})+...+(\xi_{2k-1}-\xi_{2k})$
+\end_inset
+
+ is a random walk (of Laplace random variable).
+ Thus by Theorem 4.1.2 in Durrett, either 
+\begin_inset Formula $\lim\inf S_{2k}=-\infty$
+\end_inset
+
+ or 
+\begin_inset Formula $\lim\sup S_{2k}=\infty$
+\end_inset
+
+ with probability 1 (since we can rule out the case of 
+\begin_inset Formula $S_{2k}=0,\forall k$
+\end_inset
+
+).
+ So 
+\begin_inset Formula $N<\infty.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Second, we will prove that 
+\begin_inset Formula $e_{N}=1.$
+\end_inset
+
+ Indeed, observe that 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ must be even because if it was even, then 
+\begin_inset Formula $S_{T^{*}-1}$
+\end_inset
+
+ is smaller, as such 
+\begin_inset Formula $S_{T^{*}-1}<0,$
+\end_inset
+
+ which contradicts with the definition of 
+\begin_inset Formula $T^{*}.$
+\end_inset
+
+ Similarly, 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+ must be odd, since if it was even, 
+\begin_inset Formula $S_{U_{x}-1}$
+\end_inset
+
+ is bigger, as such 
+\begin_inset Formula $S_{U_{x}-1}>x,$
+\end_inset
+
+ which contradicts with the definition of 
+\begin_inset Formula $U_{x}.$
+\end_inset
+
+ As such 
+\begin_inset Formula $U_{x}+1$
+\end_inset
+
+ is even.
+ So 
+\begin_inset Formula $N$
+\end_inset
+
+ is even, which implies 
+\begin_inset Formula $e_{N}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Now applying the Optional Stopping Theorem to the martingale 
+\begin_inset Formula $S_{n}-e_{n}$
+\end_inset
+
+ and the finite stopping time 
+\begin_inset Formula $N,$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[S_{0}-e_{0}\right]= & \mathbb{E}\left[S_{N}-e_{N}\right]\\
+\Rightarrow0= & \mathbb{E}S_{N}-0\\
+\mathbb{E}S_{N}= & 0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(b) Since 
+\begin_inset Formula $S_{1}\ge0,$
+\end_inset
+
+ we have 
+\begin_inset Formula $M$
+\end_inset
+
+ is a non-negative random variable.
+ We have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[M<x\right]= & \mathbb{P}\left[\sup_{n\le T^{*}}S_{n}<x\right]\\
+= & \mathbb{P}\left[T^{*}+1\le U_{x}\right]\coloneqq p
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From (a) we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+0= & \mathbb{P}\left[T^{*}<U_{x}+1\right]\mathbb{E}\left[S_{T^{*}}-e_{T^{*}}\mid T^{*}<U_{x}+1\right]+\\
++ & \mathbb{P}\left[T^{*}\ge U_{x}+1\right]\mathbb{E}\left[S_{U_{x}+1}-e_{U_{x}+1}\mid T^{*}\ge U_{x}+1\right]\\
+= & \mathbb{P}\left[T^{*}<U_{x}+1\right]\mathbb{E}\left[S_{T^{*}}\mid T^{*}\le U_{x}-1\right]+\\
++ & \left(1-\mathbb{P}\left[T^{*}<U_{x}+1\right]\right)\mathbb{E}\left[S_{U_{x}+1}\mid T^{*}\ge U_{x}+1\right]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And since 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{x}+1$
+\end_inset
+
+ are both even, 
+\begin_inset Formula $T^{*}<U_{x}+1\Leftrightarrow T^{*}\le U_{x}-1.$
+\end_inset
+
+ So 
+\begin_inset Formula $p=\mathbb{P}\left[T^{*}<U_{x}+1\right].$
+\end_inset
+
+ So we have:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+p= & \frac{\mathbb{E}\left[S_{U_{x}+1}\mid T^{*}\ge U_{x}+1\right]}{\mathbb{E}\left[S_{U_{x}+1}\mid T^{*}\ge U_{x}+1\right]+\mathbb{E}\left[S_{T^{*}}\mid T^{*}\le U_{x}-1\right]}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now consider:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{E}\left[S_{U_{x}+1}\mid T^{*}\ge U_{x}+1\right]=
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(a) Consider events 
+\begin_inset Formula $\left(A_{n}\right)$
+\end_inset
+
+ adapted to a filtration 
+\begin_inset Formula $\left(\mathcal{F}_{n}\right).$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $\mathbb{P}\left[A_{n}\mid\mathcal{F}_{n-1}\right]\ge0.6$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $M_{k}=\sum_{i=1}^{k}\mathbb{I}_{A_{i}}$
+\end_inset
+
+.
+ Find a constant 
+\begin_inset Formula $C$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[M_{k}\le0.55k-C\mbox{ for some }k\ge0\right]\le & 0.05
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(b) You are planning a tennis tournament with n players.
+ When player 
+\begin_inset Formula $i$
+\end_inset
+
+ plays against player 
+\begin_inset Formula $j\neq i,$
+\end_inset
+
+ player 
+\begin_inset Formula $i$
+\end_inset
+
+ will win with some probability 
+\begin_inset Formula $p_{ij}=1-p_{ji},$
+\end_inset
+
+ independent of other matches.
+ The number 
+\begin_inset Formula $\left(p_{ij}\right)$
+\end_inset
+
+ are unknown to you, but suppose there is some 
+\begin_inset Quotes eld
+\end_inset
+
+best
+\begin_inset Quotes erd
+\end_inset
+
+ player 
+\begin_inset Formula $i$
+\end_inset
+
+ (you don't know which player) such that 
+\begin_inset Formula $p_{ij}\ge0.6$
+\end_inset
+
+ for all 
+\begin_inset Formula $j\neq i$
+\end_inset
+
+.
+ You want an algorithm for scheduling matches in such a way that after a
+ deterministic number 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+ of matches you can announce a winner and know that with chance 
+\begin_inset Formula $\ge95\%$
+\end_inset
+
+ the announced winner is the best player.
+ Describe how to do this using 
+\begin_inset Formula $t_{n}\le Bn$
+\end_inset
+
+ matches, for some constant 
+\begin_inset Formula $B$
+\end_inset
+
+ not depending on 
+\begin_inset Formula $n.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+We have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\mathbb{P}\left[M_{k}\le0.55k-C\mbox{ for some }k\ge0\right]\le & 0.05\\
+\Leftrightarrow\mathbb{P}\left[M_{k}>0.55k-C,\forall k\ge0\right]\ge & 0.95
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From the Conditional Borel-Cantelli Lemma, we have: 
+\begin_inset Formula $\lim M_{k}=\infty,$
+\end_inset
+
+ as 
+\begin_inset Formula $\sum_{n}\mathbb{P}\left[A_{n}\mid\mathcal{F}_{n-1}\right]=\infty.$
+\end_inset
+
+ Moreover, we have:
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{M_{k}}{\sum\mathbb{P}\left[A_{n}\mid\mathcal{F}_{n-1}\right]}
+\end{alignat*}
+
+\end_inset
+
+converges to 1 a.s., as a result of Dubins and Freedman (1965).
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Reference:
+\end_layout
+
+\begin_layout Proof
+Durrett, R (2013).
+ Probability Theory.
+\end_layout
+
+\begin_layout Proof
+Breiman, L (1992).
+ Probability.
+\end_layout
+
+\begin_layout Proof
+Dubins, L.E., Freedman, D.A., (1965).
+ A Sharper Form of The Borel-Cantelli Lemma And The Strong Law
+\end_layout
+
+\end_body
+\end_document
